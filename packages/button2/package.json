@@ -1,13 +1,13 @@
 {
-  "name": "@acme/ui",
+  "name": "@acme/button2",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
+    "./button2": {
+      "types": "./src/button2.tsx",
+      "import": "./dist/button2.mjs",
+      "require": "./dist/button2.js"
     }
   },
   "scripts": {

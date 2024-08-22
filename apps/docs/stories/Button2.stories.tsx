@@ -1,21 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@acme/button/button";
+import { Button2 } from "@acme/button2/button2";
 
-const meta: Meta<typeof Button> = {
-  title: "Buttons/Button",
-  component: Button,
+const meta: Meta<typeof Button2> = {
+  component: Button2,
   argTypes: {
     type: {
       control: { type: "radio" },
       options: ["button", "submit", "reset"],
     },
   },
-  tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Button2>;
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -24,7 +22,7 @@ type Story = StoryObj<typeof Button>;
  */
 export const Primary: Story = {
   render: (props) => (
-    <Button
+    <Button2
       {...props}
       onClick={(): void => {
         // eslint-disable-next-line no-alert -- alert for demo
@@ -32,9 +30,9 @@ export const Primary: Story = {
       }}
     >
       Hello
-    </Button>
+    </Button2>
   ),
-  name: "Button",
+  name: "Button2",
   args: {
     children: "Hello",
     type: "button",
