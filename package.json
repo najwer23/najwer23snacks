@@ -10,11 +10,11 @@
     "changeset": "changeset",
     "clean": "turbo run clean && rm -rf node_modules",
     "start": "yarn dev",
-    "deploy": "yarn --cwd ./apps/storybook deploy",
+    "deploy": "yarn --cwd ./apps/docs deploy",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "release": "turbo run build --filter=storybook^... && changeset publish",
+    "release": "turbo run build --filter=docs^... && changeset publish",
     "version-packages": "changeset version"
   },
   "devDependencies": {
