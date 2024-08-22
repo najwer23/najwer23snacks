@@ -1,24 +1,24 @@
 {
+  "name": "snacks",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "release": "turbo run build --filter=storybook^... && changeset publish",
+    "version-packages": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
     "prettier": "^3.3.3",
     "turbo": "^2.0.14"
   },
-  "name": "snacks",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "packageManager": "yarn@4.4.0"
 }

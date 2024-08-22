@@ -1,16 +1,16 @@
 {
-  "name": "docs",
+  "name": "storybook",
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://najwer23.github.io/snacks",
+  "type": "module",
   "scripts": {
-    "deploy": "yarn run build-storybook && gh-pages -d storybook-static",
-    "dev": "storybook dev -p 6006",
     "build": "storybook build --docs",
     "build-storybook": "storybook build",
-    "preview-storybook": "serve storybook-static",
     "clean": "rm -rf .turbo && rm -rf node_modules",
-    "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
+    "deploy": "yarn run build-storybook && gh-pages -d storybook-static",
+    "dev": "storybook dev -p 6006",
+    "lint": "eslint ./stories/*.stories.tsx --max-warnings 0",
+    "preview-storybook": "serve storybook-static"
   },
   "dependencies": {
     "react": "^18.3.1",
