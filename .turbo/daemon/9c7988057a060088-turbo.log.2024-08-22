@@ -61,3 +61,20 @@
 2024-08-22T15:59:34.906437Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
 2024-08-22T15:59:37.306558Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".gitignore")}
 2024-08-22T15:59:37.306577Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-08-22T16:01:26.507057Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package.json")}
+2024-08-22T16:01:26.507068Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All(DefaultGlobalFileChanged))
+2024-08-22T16:01:57.406918Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/11.cookie")}
+2024-08-22T16:01:57.406926Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-08-22T16:01:57.905816Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages/ui/tsup.config.bundled_newrqtw5j1l.mjs")}
+2024-08-22T16:01:57.905824Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@acme/ui"), path: AnchoredSystemPathBuf("packages/ui") }}))
+2024-08-22T16:01:59.906560Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/docs/vite.config.ts.timestamp-1724342519852-7203074c403ff.mjs")}
+2024-08-22T16:01:59.906568Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("docs"), path: AnchoredSystemPathBuf("apps/docs") }}))
+2024-08-22T16:02:15.606808Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package.json")}
+2024-08-22T16:02:15.606828Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All(DefaultGlobalFileChanged))
+2024-08-22T16:02:25.507479Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages/ui/node_modules")}
+2024-08-22T16:02:25.507488Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@acme/ui"), path: AnchoredSystemPathBuf("packages/ui") }}))
+2024-08-22T16:02:25.507498Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-08-22T16:03:05.806844Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".yarn/releases/yarn-1.22.22.cjs"), AnchoredSystemPathBuf(".yarnrc"), AnchoredSystemPathBuf(".yarn/releases"), AnchoredSystemPathBuf(".yarn")}
+2024-08-22T16:03:05.806853Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-08-22T16:03:21.007054Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package.json")}
+2024-08-22T16:03:21.007069Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All(DefaultGlobalFileChanged))

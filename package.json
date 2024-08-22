@@ -11,14 +11,14 @@
     "release": "turbo run build --filter=docs^... && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "prettier": "^3.2.5",
+    "@changesets/cli": "^2.27.7",
+    "prettier": "^3.3.3",
     "turbo": "^2.0.14"
   },
-  "name": "design-system",
-  "packageManager": "yarn@1.22.22",
+  "name": "snacks",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "packageManager": "yarn@4.4.0"
 }
