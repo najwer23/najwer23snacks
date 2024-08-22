@@ -1,6 +1,5 @@
 {
   "name": "snacks",
-  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
