@@ -9,6 +9,8 @@
     "build": "turbo run build",
     "changeset": "changeset",
     "clean": "turbo run clean && rm -rf node_modules",
+    "start": "yarn dev",
+    "deploy": "yarn --cwd ./apps/storybook deploy",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
