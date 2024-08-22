@@ -1,7 +1,7 @@
 {
-  "name": "@snakcs/docs",
-  "version": "0.0.0",
-  "homepage": "https://najwer23.github.io/snacks",
+  "name": "@najwer23snacks/docs",
+  "version": "1.0.3",
+  "homepage": "https://najwer23.github.io/najwer23snacks",
   "type": "module",
   "scripts": {
     "build": "storybook build --docs",

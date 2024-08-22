@@ -1,5 +1,6 @@
 {
-  "name": "snacks",
+  "name": "najwer23snacks",
+  "version": "1.0.3",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -13,7 +14,7 @@
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "release": "turbo run build --filter=docs^... && changeset publish",
+    "release": "turbo run build --filter=@najwer23snacks/docs^... && changeset publish",
     "version-packages": "changeset version"
   },
   "devDependencies": {
