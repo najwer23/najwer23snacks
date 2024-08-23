@@ -1,5 +1,9 @@
 This project features a simple and reusable button component built with React and TypeScript. The button is designed to be accessible and customizable, making it suitable for various applications.
 
+# Advantages
+- Small size
+- CSS modules
+
 # Install
 ```js
 yarn add @najwer23snacks/button --dev

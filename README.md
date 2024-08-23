@@ -1,5 +1,7 @@
 # @najwer23snacks
 
+### A bundle of React components to use in your application!
+
 Turborepo is an advanced build system designed for managing monorepos, which can significantly enhance the development of design systems, particularly when integrated with React.js and Storybook. This combination allows developers to create, manage, and document UI components efficiently.
 
 ## Turborepo
@@ -21,7 +23,7 @@ Storybook serves as an isolated environment for developing and showcasing UI com
 ncu -u
 ```
 
-## Yarn update
+## Yarn Update
 
 ```
 yarn set version latest

@@ -9,11 +9,11 @@ export default [
     input: "./src/Button.tsx",
     output: [
       {
-        file: "dist/Button.js",
+        file: "dist/button.js",
         format: "cjs",
       },
       {
-        file: "dist/Button.mjs",
+        file: "dist/button.mjs",
         format: "es",
       },
     ],
