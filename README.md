@@ -1,6 +1,8 @@
 # Turborepo Design System for React.js with Storybook
 
-[https://najwer23.github.io/najwer23snacks](https://najwer23.github.io/najwer23snacks)
+- [Web](https://najwer23.github.io/najwer23snacks)
+- [NPM](https://www.npmjs.com/search?q=najwer23snacks)
+- [Github](https://github.com/najwer23/najwer23snacks)
 
 ## Self Update
 
