@@ -1,4 +1,4 @@
-# Turborepo Design System for React.js with Storybook
+# @najwer23snacks
 
 Turborepo is an advanced build system designed for managing monorepos, which can significantly enhance the development of design systems, particularly when integrated with React.js and Storybook. This combination allows developers to create, manage, and document UI components efficiently.
 
