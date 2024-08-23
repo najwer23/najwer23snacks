@@ -62,6 +62,16 @@ yarn changeset
 yarn release
 ```
 
+# Let's connect!
+
+- [Portfolio](https://najwer23.github.io/)
+- [Github](https://github.com/najwer23)
+- [Linkedin](https://www.linkedin.com/in/najwer23/)
+
+# Author
+
+Mariusz Najwer
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
