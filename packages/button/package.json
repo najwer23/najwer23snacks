@@ -43,8 +43,8 @@
     "gh-pages",
     "typescript",
     "vite",
-    "css modules",
     "front-end",
-    "button"
+    "button",
+    "emotion"
   ]
 }
