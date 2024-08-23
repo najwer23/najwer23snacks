@@ -28,6 +28,15 @@ export const Example = () => {
 }
 ```
 
+# Demo
+- [https://najwer23.github.io/najwer23snacks](https://najwer23.github.io/najwer23snacks)
+
+# Let's connect!
+
+- [Portfolio](https://najwer23.github.io/)
+- [Github](https://github.com/najwer23)
+- [Linkedin](https://www.linkedin.com/in/najwer23/)
+
 # Author
 
 Mariusz Najwer
