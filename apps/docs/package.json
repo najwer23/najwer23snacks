@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "homepage": "https://najwer23.github.io/najwer23snacks",
   "type": "module",
-  "private": "true",
+  "private": true,
   "scripts": {
     "build": "storybook build --docs",
     "build-storybook": "storybook build",

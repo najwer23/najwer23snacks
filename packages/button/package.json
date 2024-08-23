@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/button",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "sideEffects": false,
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
@@ -29,24 +29,22 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
+    "react": "^18.3.1",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "react": "^18.2.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-		"react",
-		"storybook",
-		"design-system",
-		"gh-pages",
-		"typescript",
-		"vite",
-		"css modules",
-		"front-end",
+    "react",
+    "storybook",
+    "design-system",
+    "gh-pages",
+    "typescript",
+    "vite",
+    "css modules",
+    "front-end",
     "button"
-	]
+  ]
 }
