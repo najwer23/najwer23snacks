@@ -3,9 +3,15 @@
   "version": "1.0.3",
   "sideEffects": false,
   "license": "MIT",
+  "main": "./dist/button2.js",
+  "module": "./dist/button2.mjs",
+  "types": "./dist/button2.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "exports": {
-    "./button2": {
-      "types": "./src/button2.tsx",
+    ".": {
+      "types": "./dist/button2.tsx",
       "import": "./dist/button2.mjs",
       "require": "./dist/button2.js"
     }
