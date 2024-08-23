@@ -1,12 +1,20 @@
+This project features a simple and reusable button component built with React and TypeScript. The button is designed to be accessible and customizable, making it suitable for various applications.
+
 ```typescript
 import { Button } from "@najwer23snacks/button";
 
 export const Example = () => {
-    return <Button
-        ariaLabel="button-click"
-        onClick={() => { }}
-        text="Button"
-        type="button"
-    />
+    const handleClick = () => {
+        console.log("Button clicked!");
+    };
+
+    return (
+        <Button
+            ariaLabel="button-click"
+            onClick={handleClick}
+            text="Button"
+            type="button"
+        />
+    );
 }
 ```

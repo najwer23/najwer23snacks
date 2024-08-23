@@ -2,18 +2,19 @@
   "name": "@najwer23snacks/button",
   "version": "1.0.9",
   "sideEffects": false,
+  "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
-  "main": "./dist/Button.js",
-  "module": "./dist/Button.mjs",
-  "types": "./dist/Button.d.ts",
+  "main": "./dist/button.js",
+  "module": "./dist/button.mjs",
+  "types": "./dist/button.d.ts",
   "files": [
     "dist/**"
   ],
   "exports": {
     ".": {
-      "types": "./dist/Button.d.ts",
-      "import": "./dist/Button.mjs",
-      "require": "./dist/Button.js"
+      "types": "./dist/button.d.ts",
+      "import": "./dist/button.mjs",
+      "require": "./dist/button.js"
     }
   },
   "scripts": {
@@ -36,5 +37,16 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+		"react",
+		"storybook",
+		"design-system",
+		"gh-pages",
+		"typescript",
+		"vite",
+		"css modules",
+		"front-end",
+    "button"
+	]
 }
