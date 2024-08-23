@@ -2,6 +2,7 @@
   "name": "docs",
   "version": "1.0.3",
   "homepage": "https://najwer23.github.io/najwer23snacks",
+  "private": "true",
   "type": "module",
   "scripts": {
     "build": "storybook build --docs",
