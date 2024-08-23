@@ -1,5 +1,11 @@
 # @najwer23snacks/button
 
+## 1.1.0
+
+### Minor Changes
+
+- Rollup and css-modules
+
 ## 1.0.9
 
 ### Patch Changes

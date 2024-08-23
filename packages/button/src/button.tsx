@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import styles from "./Button.module.css"
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -6,19 +6,8 @@ export interface ButtonProps
 }
 
 export const Button = ({ children, ...other }: ButtonProps): JSX.Element => {
-
-  const color = 'white'
-  
   return (
-    <button type="button" {...other} className={css`
-      padding: 32px;
-      background-color: hotpink;
-      font-size: 24px;
-      border-radius: 4px;
-      &:hover {
-        color: ${color};
-      }
-    `}>
+    <button type="button" {...other} className={styles.test}>
       {children}
     </button>
   );
