@@ -3,24 +3,22 @@
   "version": "1.0.8",
   "sideEffects": false,
   "license": "MIT",
-  "main": "./dist/button.js",
-  "module": "./dist/button.mjs",
-  "types": "./dist/button.d.ts",
+  "main": "./dist/Button.js",
+  "module": "./dist/Button.mjs",
+  "types": "./dist/Button.d.ts",
   "files": [
     "dist/**"
   ],
   "exports": {
     ".": {
-      "types": "./dist/button.d.ts",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
+      "types": "./dist/Button.d.ts",
+      "import": "./dist/Button.mjs",
+      "require": "./dist/Button.js"
     }
   },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "build2": "tsup src/button.tsx --format esm,cjs --dts --out-dir dist",
-    "dev2": "tsup src/button.tsx --watch --format esm,cjs --dts --out-dir dist",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
