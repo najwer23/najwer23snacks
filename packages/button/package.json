@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/button",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "sideEffects": false,
   "license": "MIT",
   "main": "./dist/Button.js",
