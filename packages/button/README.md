@@ -26,7 +26,7 @@ export const Example = () => {
     };
 
     return (
-        <Button onClick={() => {}}>
+        <Button onClick={handleClick}>
             Click!
         </Button>
     );
