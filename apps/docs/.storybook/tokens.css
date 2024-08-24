@@ -14,4 +14,12 @@
   --n23snack-button-font-weight: 700;
   --n23snack-button-font-family: var(--n23snack-font-family);
   --n23snack-button-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* TextBox */
+  --n23snack-textbox-h1-font-color: black;
+  --n23snack-textbox-h2-font-color: black;
+  --n23snack-textbox-h3-font-color: black;
+  --n23snack-textbox-p-font-color: black;
+  --n23snack-textbox-a-font-color: orange;
+  --n23snack-textbox-a-font-color-hover: orangered;
 }
