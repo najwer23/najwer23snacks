@@ -12,6 +12,7 @@ A design system is a comprehensive collection of reusable components, guidelines
 4. Design Tokens
 
 # Benefits of Using a Design System
+
 - Increased Efficiency: By providing pre-made components, design systems reduce the time spent on repetitive tasks, allowing teams to focus on more complex design challenges.
 
 - Consistency Across Products: A design system ensures that all products share a unified look and feel, which enhances brand recognition and user experience. This is crucial for companies with multiple products or teams working in silos.
