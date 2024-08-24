@@ -33,6 +33,11 @@ export const Example = () => {
 
 ```css
 :root {
+  /* Fonts */
+  --n23snack-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+    Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+  /* TextBox */
   --n23snack-textbox-h1-font-color: black;
   --n23snack-textbox-h2-font-color: black;
   --n23snack-textbox-h3-font-color: black;
