@@ -16,7 +16,8 @@
     "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css}\"",
     "lint": "turbo run lint",
     "release": "turbo run build --filter=docs^... && yarn version-packages && changeset publish",
-    "version-packages": "changeset version"
+    "version-packages": "changeset version",
+    "plop": "plop"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
@@ -24,6 +25,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@types/rollup-plugin-peer-deps-external": "^2.2.5",
     "husky": "^9.1.4",
+    "plop": "^4.0.1",
     "postcss": "^8.4.41",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",

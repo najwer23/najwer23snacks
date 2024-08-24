@@ -1,0 +1,15 @@
+import { rollup } from "../../rollup.global.mjs"
+
+export default rollup(
+  "src/{{name}}.tsx",
+  [
+    {
+      file: "dist/{{lowerCase name}}.js",
+      format: "cjs",
+    },
+    {
+      file: "dist/{{lowerCase name}}.mjs",
+      format: "es",
+    },
+  ],
+)

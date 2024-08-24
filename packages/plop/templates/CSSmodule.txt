@@ -1,0 +1,5 @@
+@layer n23snacks{{name}} {
+  .test {
+    color: red
+  }
+}
