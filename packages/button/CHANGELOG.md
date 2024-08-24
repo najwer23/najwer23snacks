@@ -1,10 +1,16 @@
 # @najwer23snacks/button
 
+## 1.2.0
+
+### Minor Changes
+
+- Classic Button with CSS tokens
+
 ## 1.1.5
 
 ### Patch Changes
 
-- Removed pkgs from packahe.json
+- Removed pkgs from package.json
 
 ## 1.1.0
 
