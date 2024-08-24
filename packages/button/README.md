@@ -1,4 +1,4 @@
-This project features a simple and reusable button component built with React and TypeScript. The button is designed to be accessible and customizable, making it suitable for various applications.
+This project features a simple and reusable button component built with React, TypeScript and CSS module. The button is designed to be accessible and customizable, making it suitable for various applications.
 
 # Advantages
 
@@ -35,10 +35,6 @@ export const Example = () => {
     );
 }
 ```
-
-# Demo
-
-[https://najwer23.github.io/najwer23snacks](https://najwer23.github.io/najwer23snacks)
 
 # Let's connect!
 
