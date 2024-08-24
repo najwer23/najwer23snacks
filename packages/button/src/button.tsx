@@ -1,7 +1,6 @@
-import styles from "./Button.module.css"
+import styles from './Button.module.css';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
@@ -11,4 +10,4 @@ export const Button = ({ children, ...other }: ButtonProps): JSX.Element => {
       {children}
     </button>
   );
-}
+};
