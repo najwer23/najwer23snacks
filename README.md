@@ -70,7 +70,6 @@ yarn release
 git log --pretty=oneline
 ```
 
-
 # Let's connect!
 
 - [Portfolio](https://najwer23.github.io/)
