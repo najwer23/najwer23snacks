@@ -1,6 +1,8 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as o}from"./index-CcnH5Kt0.js";import{ae as t}from"./index-ByB_y7bV.js";import"./index-RYns6xqu.js";import"./iframe-eRGyBmaG.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function i(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(t,{title:"Doc"}),`
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as o}from"./index-CcnH5Kt0.js";import{ae as t}from"./index-BBLPT3KM.js";import"./index-RYns6xqu.js";import"./iframe-D6G1Cinp.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function i(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(t,{title:"Doc"}),`
 `,n.jsx(e.h1,{id:"najwer23snacks---design-system",children:"@najwer23snacks - Design System"}),`
-`,n.jsx(e.h3,{id:"a-bundle-of-react-components-to-use-in-your-application",children:"A bundle of React components to use in your application!"}),`
+`,n.jsxs(e.blockquote,{children:[`
+`,n.jsx(e.p,{children:"A bundle of React components to use in your application!"}),`
+`]}),`
 `,n.jsx(e.p,{children:'A design system is a comprehensive collection of reusable components, guidelines, and standards that help teams create consistent and cohesive digital products. It serves as a "single source of truth," ensuring that design and development processes are streamlined across various platforms and teams.'}),`
 `,n.jsxs(e.ol,{children:[`
 `,n.jsx(e.li,{children:"Reusable UI Components"}),`
