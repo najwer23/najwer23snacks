@@ -1,5 +1,11 @@
 # @najwer23snacks/button
 
+## 1.1.5
+
+### Patch Changes
+
+- Removed pkgs from packahe.json
+
 ## 1.1.0
 
 ### Minor Changes
