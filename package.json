@@ -12,7 +12,8 @@
     "start": "yarn dev",
     "deploy": "yarn --cwd ./apps/docs deploy",
     "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md,css}\"",
+    "format:check": "prettier --c \"**/*.{json,mdx,ts,tsx,md,css}\"",
+    "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css}\"",
     "lint": "turbo run lint",
     "release": "turbo run build --filter=docs^... && yarn version-packages && changeset publish",
     "version-packages": "changeset version"
