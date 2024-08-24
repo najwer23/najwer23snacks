@@ -38,7 +38,7 @@ export const Example = () => {
 
 # Demo
 
-- [https://najwer23.github.io/najwer23snacks](https://najwer23.github.io/najwer23snacks)
+[https://najwer23.github.io/najwer23snacks](https://najwer23.github.io/najwer23snacks)
 
 # Let's connect!
 
