@@ -64,6 +64,13 @@ yarn changeset
 yarn release
 ```
 
+## GIT tags
+
+```sh
+git log --pretty=oneline
+```
+
+
 # Let's connect!
 
 - [Portfolio](https://najwer23.github.io/)
