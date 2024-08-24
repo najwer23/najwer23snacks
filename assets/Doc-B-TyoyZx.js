@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as o}from"./index-CcnH5Kt0.js";import{ae as t}from"./index-BLFaCIj7.js";import"./index-RYns6xqu.js";import"./iframe-D9xeRIlD.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function i(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(t,{title:"Doc"}),`
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as t}from"./index-D4ZZd3NV.js";import"./index-RYns6xqu.js";import"./iframe-DLo5lsjy.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function o(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...i(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(t,{title:"Doc"}),`
 `,n.jsx(e.h1,{id:"najwer23snacks---design-system",children:"@najwer23snacks - Design System"}),`
 `,n.jsxs(e.blockquote,{children:[`
 `,n.jsx(e.p,{children:"A bundle of React components to use in your application!"}),`
@@ -48,6 +48,14 @@ import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as o}from"
   --n23snack-button-font-weight: 700;
   --n23snack-button-font-family: var(--n23snack-font-family);
   --n23snack-button-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* TextBox */
+  --n23snack-textbox-h1-font-color: black;
+  --n23snack-textbox-h2-font-color: black;
+  --n23snack-textbox-h3-font-color: black;
+  --n23snack-textbox-p-font-color: black;
+  --n23snack-textbox-a-font-color: orange;
+  --n23snack-textbox-a-font-color-hover: orangered;
 }
 `})}),`
 `,n.jsx(e.h1,{id:"links",children:"Links"}),`
@@ -65,4 +73,4 @@ import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as o}from"
 `,n.jsx(e.h1,{id:"author",children:"Author"}),`
 `,n.jsx(e.p,{children:"Mariusz Najwer"}),`
 `,n.jsx(e.h2,{id:"license",children:"License"}),`
-`,n.jsx(e.p,{children:n.jsx(e.a,{href:"https://opensource.org/licenses/MIT",rel:"nofollow",children:n.jsx(e.img,{src:"https://img.shields.io/badge/License-MIT-yellow.svg",alt:"License: MIT"})})})]})}function x(s={}){const{wrapper:e}={...o(),...s.components};return e?n.jsx(e,{...s,children:n.jsx(i,{...s})}):i(s)}export{x as default};
+`,n.jsx(e.p,{children:n.jsx(e.a,{href:"https://opensource.org/licenses/MIT",rel:"nofollow",children:n.jsx(e.img,{src:"https://img.shields.io/badge/License-MIT-yellow.svg",alt:"License: MIT"})})})]})}function f(s={}){const{wrapper:e}={...i(),...s.components};return e?n.jsx(e,{...s,children:n.jsx(o,{...s})}):o(s)}export{f as default};
