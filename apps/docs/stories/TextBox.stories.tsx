@@ -16,6 +16,28 @@ type Story = StoryObj<typeof meta>;
 
 const testText = 'Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.';
 
+export const All: Story = {
+  args: {
+    children: testText,
+  },
+  decorators: [
+    (Story) => {
+      return (
+        <>
+          <TextBox tag={'h1'}> {testText} </TextBox>
+          <TextBox tag={'h2'}> {testText} </TextBox>
+          <TextBox tag={'h3'}> {testText} </TextBox>
+          <Story />
+          <TextBox tag={'p'} href={'https://www.example.com'}>
+            {' '}
+            {testText}{' '}
+          </TextBox>
+        </>
+      );
+    },
+  ],
+};
+
 export const H1: Story = {
   args: {
     tag: 'h1',
