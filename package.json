@@ -17,7 +17,7 @@
     "lint": "turbo run lint",
     "release": "turbo run build --filter=docs^... && yarn version-packages && changeset publish",
     "version-packages": "changeset version",
-    "plop": "plop"
+    "plop": "plop && yarn install && yarn start"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
