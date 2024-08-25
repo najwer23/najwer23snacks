@@ -1,5 +1,5 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as t}from"./index-5GVJQiCr.js";import"./index-RYns6xqu.js";import"./iframe-Bcf3kbMu.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function o(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...i(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(t,{title:"Doc"}),`
-`,n.jsx(e.h1,{id:"najwer23snacks---design-system",children:"@najwer23snacks - Design System"}),`
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as i}from"./index-CcnH5Kt0.js";import{ae as t}from"./index-Cw8uZ29W.js";import"./index-RYns6xqu.js";import"./iframe-Dzm1Sypd.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function o(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...i(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(t,{title:"Doc"}),`
+`,n.jsx(e.h1,{id:"najwer23snacks",children:"@najwer23snacks"}),`
 `,n.jsxs(e.blockquote,{children:[`
 `,n.jsx(e.p,{children:"A bundle of React components to use in your application!"}),`
 `]}),`
