@@ -21,7 +21,7 @@ export const GridLayoutContainer600: Story = {
     padding: '0 10px 0 10px',
     children: (
       <>
-        <div>max-width: 1200px</div>
+        <div>max-width: 600px</div>
         <div>Padding: 0 10px 0 10px;</div>
       </>
     ),
