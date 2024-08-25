@@ -29,8 +29,7 @@ export const All: Story = {
           <TextBox tag={'h3'}> {testText} </TextBox>
           <Story />
           <TextBox tag={'p'} href={'https://www.example.com'}>
-            {' '}
-            {testText}{' '}
+            {testText}
           </TextBox>
         </>
       );
