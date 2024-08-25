@@ -32,3 +32,5 @@ export const Form: React.FC<{
     </form>
   );
 };
+
+Form.displayName = 'Form';
