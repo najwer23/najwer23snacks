@@ -17,47 +17,47 @@ export default function (plop) {
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/src/{{name}}.tsx',
-        templateFile: 'packages/plop/templates/Component.txt',
+        templateFile: 'plop/templates/Component.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/src/{{name}}.module.css',
-        templateFile: 'packages/plop/templates/CSSmodule.txt',
+        templateFile: 'plop/templates/CSSmodule.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/.eslintrc.js',
-        templateFile: 'packages/plop/templates/Eslintrc.txt',
+        templateFile: 'plop/templates/Eslintrc.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/global.d.ts',
-        templateFile: 'packages/plop/templates/Global.txt',
+        templateFile: 'plop/templates/Global.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/tsconfig.json',
-        templateFile: 'packages/plop/templates/TsConfig.txt',
+        templateFile: 'plop/templates/TsConfig.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/rollup.config.mjs',
-        templateFile: 'packages/plop/templates/RollupConfig.txt',
+        templateFile: 'plop/templates/RollupConfig.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/README.md',
-        templateFile: 'packages/plop/templates/Readme.txt',
+        templateFile: 'plop/templates/Readme.txt',
       },
       {
         type: 'add',
         path: 'packages/{{lowerCase name}}/package.json',
-        templateFile: 'packages/plop/templates/PackageJson.txt',
+        templateFile: 'plop/templates/PackageJson.txt',
       },
       {
         type: 'add',
         path: 'apps/docs/stories/{{name}}.stories.tsx',
-        templateFile: 'packages/plop/templates/Stories.txt',
+        templateFile: 'plop/templates/Stories.txt',
       }
     ],
   });
