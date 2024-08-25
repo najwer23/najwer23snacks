@@ -2,7 +2,7 @@ import type { StoryObj } from '@storybook/react';
 import { TextBox } from '@najwer23snacks/textbox';
 
 const meta = {
-  title: 'Unknown/TextBox',
+  title: 'Text/TextBox',
   component: TextBox,
   parameters: {
     layout: 'centered',
