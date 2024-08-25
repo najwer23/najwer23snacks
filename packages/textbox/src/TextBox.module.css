@@ -3,7 +3,10 @@
   .heading2,
   .heading3,
   .paragraph,
-  .link {
+  .heading1 a,
+  .heading2 a,
+  .heading3 a,
+  .paragraph a {
     font-family: var(--n23snack-font-family);
   }
 
@@ -41,7 +44,10 @@
     color: var(--n23snack-textbox-p-font-color);
   }
 
-  .link {
+  .heading1 a,
+  .heading2 a,
+  .heading3 a,
+  .paragraph a {
     color: var(--n23snack-textbox-a-font-color);
     text-decoration: unset;
     transition: color 0.3s ease-in-out;
