@@ -10,7 +10,7 @@
     font-size: var(--n23snack-button-font-size);
     letter-spacing: normal;
     transition: 0.1s;
-    font-family: var(--n23snack-button-font-family);
+    font-family: var(--n23snack-font-family);
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
