@@ -70,7 +70,7 @@ yarn release
 git log --pretty=oneline
 ```
 
-## Let's connect!
+# Let's connect!
 
 [![dev.to badge](https://img.shields.io/badge/-Portfolio-%239F2B68?style=flat&logo=GoogleChrome&logoColor=white)](https://najwer23.github.io/)
 [![dev.to badge](https://img.shields.io/badge/-Résumé-%23017745?style=flat&logo=AdobeAcrobatReader&logoColor=white)](https://najwer23.github.io/resume/)
