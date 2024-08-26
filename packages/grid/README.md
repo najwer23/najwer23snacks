@@ -1,4 +1,4 @@
-The Grid component is a versatile and essential tool for displaying structured data in a tabular format across various web and application interfaces. It organizes data into rows and columns, facilitating easy viewing and interaction with large datasets. Below is an overview of its key features and functionalities.
+The Grid component is a versatile and essential tool for displaying structured data across various web and application interfaces. It organizes data into rows and columns, facilitating easy viewing and interaction with large datasets. Below is an overview of its key features and functionalities.
 
 # Advantages
 
@@ -35,13 +35,6 @@ export const Example = () => {
         </Grid>
       </>
     );
-}
-```
-
-# CSS tokens
-
-```css
-:root {
 }
 ```
 

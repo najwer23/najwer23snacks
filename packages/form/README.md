@@ -27,29 +27,25 @@ export const Example = () => {
 
     return (
       <>
-        <FormStory onSubmit={handleOnSubmit}>
+        <Form onSubmit={handleOnSubmit}>
           <div>
-          <div><label>Name:</label></div>
-            <input type="text" id="numberInput" name="name" className='error' />
-          </div>
+            <div><label>Name:</label></div>
+              <input type="text" id="numberInput" name="name" className='error' />
+            </div>
+
           <br />
+
           <div>
             <div><label>Password:</label></div>
             <input type="text" id="password" name="password" />
           </div>
+
           <br />
+
           <button type="submit">Submit</button>
-          <p>Check console!</p>
-        </FormStory>
+        </Form>
       </>
     );
-}
-```
-
-# CSS tokens
-
-```css
-:root {
 }
 ```
 
