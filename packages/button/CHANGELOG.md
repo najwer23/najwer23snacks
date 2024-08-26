@@ -1,5 +1,11 @@
 # @najwer23snacks/button
 
+## 1.2.5
+
+### Patch Changes
+
+- Readm changes
+
 ## 1.2.0
 
 ### Minor Changes
