@@ -1,5 +1,6 @@
 import type { StoryObj } from '@storybook/react';
 import { Grid } from '@najwer23snacks/grid';
+import { TextBox } from '@najwer23snacks/textbox';
 
 const meta = {
   title: 'Grid/Grid',
@@ -21,8 +22,8 @@ export const GridLayoutContainer600: Story = {
     padding: '0 10px 0 10px',
     children: (
       <>
-        <div>max-width: 600px</div>
-        <div>Padding: 0 10px 0 10px;</div>
+        <TextBox>max-width: 600px</TextBox>
+        <TextBox>Padding: 0 10px 0 10px;</TextBox>
       </>
     ),
   },
@@ -35,8 +36,8 @@ export const GridLayoutContainer1200: Story = {
     padding: '0 10px 0 10px',
     children: (
       <>
-        <div>max-width: 1200px</div>
-        <div>Padding: 0 10px 0 10px;</div>
+        <TextBox>max-width: 1200px</TextBox>
+        <TextBox>Padding: 0 10px 0 10px;</TextBox>
       </>
     ),
   },
@@ -49,8 +50,8 @@ export const GridLayoutContainer1400: Story = {
     padding: '0 10px 0 10px',
     children: (
       <>
-        <div>max-width: 1400px</div>
-        <div>Padding: 0 10px 0 10px;</div>
+        <TextBox>max-width: 1400px</TextBox>
+        <TextBox>Padding: 0 10px 0 10px;</TextBox>
       </>
     ),
   },
@@ -61,8 +62,8 @@ export const GridLayoutContainer1920: Story = {
     layout: 'container',
     children: (
       <>
-        <div>max-width: 1920px</div>
-        <div>Padding: 0</div>
+        <TextBox>max-width: 1920px</TextBox>
+        <TextBox>Padding: 0</TextBox>
       </>
     ),
   },
@@ -74,8 +75,8 @@ export const GridLayoutContainerMargin: Story = {
     margin: '100px',
     children: (
       <>
-        <div>max-width: 1920px</div>
-        <div>Margin: 100px;</div>
+        <TextBox>max-width: 1920px</TextBox>
+        <TextBox>Margin: 100px;</TextBox>
       </>
     ),
   },
@@ -96,7 +97,7 @@ export const GridLayoutColumns: Story = {
     <Grid {...args}>
       {Array.from({ length: 9 }, (_, i) => (
         <div key={i}>
-          <div>{testText}</div>
+          <TextBox>{testText}</TextBox>
         </div>
       ))}
     </Grid>
@@ -121,7 +122,7 @@ export const GridLayoutMixed: Story = {
           <Grid {...args}>
             {Array.from({ length: 9 }, (_, i) => (
               <div key={i}>
-                <div>{testText}</div>
+                <TextBox>{testText}</TextBox>
               </div>
             ))}
           </Grid>
