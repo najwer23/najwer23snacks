@@ -1,9 +1,9 @@
-export interface ErrorValidatorOptions {
+export interface ValidatorOptions {
   empty?: boolean;
   email?: boolean;
 }
 
-export const validator = (value: string, errorOptions: ErrorValidatorOptions) => {
+export const validator = (value: string, errorOptions: ValidatorOptions) => {
   const validatorArr = Object.keys(Object.fromEntries(Object.entries(errorOptions).filter(([, val]) => val)));
 
   const validatorArrMsg = validatorArr

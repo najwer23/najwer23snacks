@@ -1,4 +1,4 @@
-[desc]
+The Input component is a customizable and validated input field designed for use in React applications. It provides built-in validation capabilities and error handling, making it easy to integrate user input forms with real-time feedback.
 
 # Install
 
@@ -18,7 +18,24 @@ import { Input } from "@najwer23snacks/input";
 export const Example = () => {
 
     return (
-        <>hello</>
+        <>
+        <FormStory onSubmit={handleOnSubmit}>
+          <Input
+            type="text"
+            name="name"
+            validatorOptions={{
+              empty: true,
+              email: true,
+            }} />
+
+          <Input
+            type="text"
+            name="pass"
+          />
+
+          <Button type="submit">Submit</Button>
+        </FormStory>
+      </>
     );
 }
 ```
@@ -27,6 +44,27 @@ export const Example = () => {
 
 ```css
 :root {
+  /* Fonts */
+  --n23snack-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+    Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+  /* Input */
+  --n23snacks-input-label-font-size: 16px;
+  --n23snacks-input-label-font-family: var(--n23snack-font-family);
+  --n23snacks-input-label-font-weight: 700;
+  --n23snacks-input-label-font-color: #161925;
+
+  --n23snacks-input-input-font-size: 18px;
+  --n23snacks-input-input-font-family: var(--n23snack-font-family);
+  --n23snacks-input-input-font-weight: 600;
+  --n23snacks-input-input-font-color: #161925;
+  --n23snacks-input-input-border-color: #161925;
+  --n23snacks-input-input-placeholder-font-weight: auto;
+
+  --n23snacks-input-error-font-size: 14px;
+  --n23snacks-input-error-font-family: var(--n23snack-font-family);
+  --n23snacks-input-error-font-weight: 600;
+  --n23snacks-input-error-font-color: #ff3333;
 }
 ```
 

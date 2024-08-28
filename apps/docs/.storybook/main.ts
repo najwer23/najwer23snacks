@@ -13,7 +13,11 @@ const config: StorybookConfig = {
     '../stories/**/*.stories.tsx',
     '../../../packages/**/*.stories.tsx',
   ],
-  addons: [getAbsolutePath('@storybook/addon-links'), getAbsolutePath('@storybook/addon-essentials')],
+  addons: [
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@storybook/addon-console'),
+  ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {},

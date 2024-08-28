@@ -1,4 +1,4 @@
-[desc]
+The validator function is a utility designed to validate input values based on specified validation rules. It checks for conditions such as whether a field is empty or if an email address is formatted correctly. This function is particularly useful for form validation in web applications.
 
 # Install
 
@@ -13,20 +13,19 @@ npm install @najwer23snacks/validator --save-dev
 # Example
 
 ```typescript
-import { validator } from "@najwer23snacks/validator";
+import { validator } from '@najwer23snacks/validator';
 
-export const Example = () => {
+const options = {
+  empty: true,
+  email: true,
+};
 
-    return (
-        <>hello</>
-    );
-}
-```
+const errors = validator('test@example.com', options);
 
-# CSS tokens
-
-```css
-:root {
+if (errors.length > 0) {
+  console.log('Validation Errors:', errors);
+} else {
+  console.log('Validation Passed!');
 }
 ```
 

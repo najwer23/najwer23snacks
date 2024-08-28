@@ -17,8 +17,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     name: 'test',
-    label: 'label',
-    errorOptions: {
+    label: 'Label',
+    validatorOptions: {
       empty: true,
       email: true,
     },

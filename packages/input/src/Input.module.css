@@ -1,5 +1,42 @@
 @layer n23snacksInput {
-  .test {
-    color: red;
+  .inputWrapper {
+    margin-top: 0px;
+    margin-bottom: 18px;
+  }
+
+  .inputLabel {
+    font-size: var(--n23snacks-input-label-font-size);
+    font-family: var(--n23snacks-input-label-font-family);
+    font-weight: var(--n23snacks-input-label-font-weight);
+    color: var(--n23snacks-input-label-font-color);
+    line-height: 22px;
+  }
+
+  .inputInput {
+    & input {
+      box-sizing: border-box;
+      height: 40px;
+      padding: 20px 10px;
+      color: var(--n23snacks-input-input-font-color);
+      font-family: var(--n23snacks-input-input-font-family);
+      font-weight: var(--n23snacks-input-input-font-weight);
+      font-size: var(--n23snacks-input-input-font-size);
+      width: 100%;
+      border: 1px solid var(--n23snacks-input-input-border-color);
+    }
+
+    & ::placeholder {
+      filter: brightness(150%);
+      font-weight: var(--n23snacks-input-input-placeholder-font-weight);
+    }
+  }
+
+  .inputError {
+    font-size: var(--n23snacks-input-error-font-size);
+    font-family: var(--n23snacks-input-error-font-family);
+    font-weight: var(--n23snacks-input-error-font-weight);
+    line-height: 1;
+    margin: 2px;
+    color: var(--n23snacks-input-error-font-color);
   }
 }

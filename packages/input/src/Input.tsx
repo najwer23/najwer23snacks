@@ -1,26 +1,31 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import styles from './Input.module.css';
-import { validator } from '@najwer23snacks/validator';
+import { validator, type ValidatorOptions } from '@najwer23snacks/validator';
 
 export const Input: React.FC<
   React.InputHTMLAttributes<HTMLInputElement> & {
     name?: string;
     label?: string;
     type?: string;
-    errorOptions?: object;
+    validatorOptions?: ValidatorOptions;
   }
-> = ({ errorOptions, name, label, type = 'text', ...props }): JSX.Element => {
-  const [validatorMsg, setValidatorMsg] = useState<string | null>(null);
+> = ({ validatorOptions, name, label, type = 'text', ...props }): JSX.Element => {
+  const errorRef = useRef<HTMLDivElement | null>(null);
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    let isError = false;
-    setValidatorMsg(null);
+  const handleInput = (e: React.FocusEvent<HTMLInputElement>) => {
+    if (e.target && document.activeElement !== e.currentTarget) {
+      if (errorRef.current) {
+        errorRef.current.textContent = '';
+      }
 
-    if (errorOptions) {
-      const validatorResult = validator(e.target.value, errorOptions);
-      if (validatorResult.length > 0) {
-        setValidatorMsg(validatorResult[0]);
-        isError = true;
+      if (validatorOptions) {
+        const validatorResult = validator(e.target.value, validatorOptions);
+        if (validatorResult.length > 0) {
+          errorRef.current!.textContent = validatorResult[0];
+          e.target.classList.add('error');
+        } else {
+          e.target.classList.remove('error');
+        }
       }
     }
   };
@@ -32,10 +37,18 @@ export const Input: React.FC<
       </div>
 
       <div className={styles.inputInput}>
-        <input id={name} name={name} type={type} onBlur={handleBlur} {...props} />
+        <input
+          id={name}
+          name={name}
+          type={type}
+          onInput={handleInput}
+          onBlur={handleInput}
+          {...props}
+          className={props.className}
+        />
       </div>
 
-      <div className={styles.inputError}>{validatorMsg && validatorMsg}</div>
+      <div ref={errorRef} className={styles.inputError}></div>
     </div>
   );
 };

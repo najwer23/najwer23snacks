@@ -21,4 +21,22 @@
   --n23snack-textbox-p-font-color: black;
   --n23snack-textbox-a-font-color: orange;
   --n23snack-textbox-a-font-color-hover: orangered;
+
+  /* Input */
+  --n23snacks-input-label-font-size: 16px;
+  --n23snacks-input-label-font-family: var(--n23snack-font-family);
+  --n23snacks-input-label-font-weight: 700;
+  --n23snacks-input-label-font-color: #161925;
+
+  --n23snacks-input-input-font-size: 18px;
+  --n23snacks-input-input-font-family: var(--n23snack-font-family);
+  --n23snacks-input-input-font-weight: 600;
+  --n23snacks-input-input-font-color: #161925;
+  --n23snacks-input-input-border-color: #161925;
+  --n23snacks-input-input-placeholder-font-weight: auto;
+
+  --n23snacks-input-error-font-size: 14px;
+  --n23snacks-input-error-font-family: var(--n23snack-font-family);
+  --n23snacks-input-error-font-weight: 600;
+  --n23snacks-input-error-font-color: #ff3333;
 }

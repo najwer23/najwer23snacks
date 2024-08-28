@@ -1,7 +1,7 @@
 import type { StoryObj } from '@storybook/react';
 import { Form as FormStory } from '@najwer23snacks/form';
-import { TextBox } from '@najwer23snacks/textbox';
 import { Button } from '@najwer23snacks/button';
+import { Input } from '@najwer23snacks/input';
 
 const meta = {
   title: 'Form/Form',
@@ -29,26 +29,18 @@ export const Form: Story = {
     return (
       <>
         <FormStory onSubmit={handleOnSubmit}>
-          <div>
-            <div>
-              <label>
-                <TextBox>Input with Error</TextBox>
-              </label>
-            </div>
-            <input type="text" id="numberInput" name="name" className="error" />
-          </div>
-          <br />
-          <div>
-            <div>
-              <label>
-                <TextBox>Input</TextBox>
-              </label>
-            </div>
-            <input type="text" id="password" name="password" />
-          </div>
-          <br />
+          <Input
+            type="text"
+            name="name"
+            validatorOptions={{
+              empty: true,
+              email: true,
+            }}
+          />
+
+          <Input type="text" name="pass" />
+
           <Button type="submit">Submit</Button>
-          <TextBox>Check console!</TextBox>
         </FormStory>
       </>
     );
