@@ -1,5 +1,11 @@
 # @najwer23snacks/button
 
+## 1.3.0
+
+### Minor Changes
+
+- New way building packages, Input and Validator
+
 ## 1.2.6
 
 ### Patch Changes

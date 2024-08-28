@@ -1,5 +1,11 @@
 # @najwer23snacks/form
 
+## 1.1.0
+
+### Minor Changes
+
+- New way building packages, Input and Validator
+
 ## 1.0.5
 
 ### Patch Changes

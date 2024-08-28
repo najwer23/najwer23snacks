@@ -1,5 +1,11 @@
 # docs
 
+## 1.3.0
+
+### Minor Changes
+
+- New way building packages, Input and Validator
+
 ## 1.2.1
 
 ### Patch Changes
