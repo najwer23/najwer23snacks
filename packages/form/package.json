@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/form",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "sideEffects": false,
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "module": "./dist/form.mjs",
   "types": "./dist/form.d.ts",
   "scripts": {
-    "build": "rimraf ./dist && rollup --config",
+    "build": "rollup --config",
     "dev": "yarn build --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"

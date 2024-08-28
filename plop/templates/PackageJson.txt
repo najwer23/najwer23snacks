@@ -33,7 +33,8 @@
     "vite",
     "front-end",
     "rollup",
-    "css-module"
+    "css-module",
+    "{{lowerCase name}}"
   ],
   "repository": {
     "type": "git",

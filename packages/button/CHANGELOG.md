@@ -1,5 +1,11 @@
 # @najwer23snacks/button
 
+## 1.2.6
+
+### Patch Changes
+
+- New way to bundle pkgs
+
 ## 1.2.5
 
 ### Patch Changes

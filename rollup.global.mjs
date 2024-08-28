@@ -8,7 +8,7 @@ export const rollup = (input = "", output = []) => {
   return {
     input: input,
     output: output,
-    external: ["react/jsx-runtime"],
+    external: ["react", "react-dom", "react/jsx-runtime"],
     plugins: [
       peerDepsExternal(),
       resolve(),

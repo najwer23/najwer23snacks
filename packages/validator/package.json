@@ -1,11 +1,12 @@
 {
-  "name": "@najwer23snacks/textbox",
-  "version": "1.0.6",
+  "name": "@najwer23snacks/validator",
+  "version": "0.0.1",
+  "sideEffects": false,
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
-  "main": "./dist/textbox.js",
-  "module": "./dist/textbox.mjs",
-  "types": "./dist/textbox.d.ts",
+  "main": "./dist/validator.js",
+  "module": "./dist/validator.mjs",
+  "types": "./dist/validator.d.ts",
   "scripts": {
     "build": "rollup --config",
     "dev": "yarn build --watch",
@@ -33,7 +34,7 @@
     "front-end",
     "rollup",
     "css-module",
-    "textbox"
+    "validator"
   ],
   "repository": {
     "type": "git",

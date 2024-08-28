@@ -1,5 +1,11 @@
 # @najwer23snacks/form
 
+## 1.0.5
+
+### Patch Changes
+
+- New way to bundle pkgs
+
 ## 1.0.4
 
 ### Patch Changes

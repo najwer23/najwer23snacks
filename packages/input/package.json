@@ -1,11 +1,11 @@
 {
-  "name": "@najwer23snacks/textbox",
-  "version": "1.0.6",
+  "name": "@najwer23snacks/input",
+  "version": "0.0.1",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
-  "main": "./dist/textbox.js",
-  "module": "./dist/textbox.mjs",
-  "types": "./dist/textbox.d.ts",
+  "main": "./dist/input.js",
+  "module": "./dist/input.mjs",
+  "types": "./dist/input.d.ts",
   "scripts": {
     "build": "rollup --config",
     "dev": "yarn build --watch",
@@ -17,6 +17,7 @@
     "CHANGELOG.md"
   ],
   "devDependencies": {
+    "@najwer23snacks/validator": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*"
   },
@@ -33,7 +34,7 @@
     "front-end",
     "rollup",
     "css-module",
-    "textbox"
+    "input"
   ],
   "repository": {
     "type": "git",

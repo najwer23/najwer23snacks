@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/button",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "sideEffects": false,
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "module": "./dist/button.mjs",
   "types": "./dist/button.d.ts",
   "scripts": {
-    "build": "rimraf ./dist && rollup --config",
+    "build": "rollup --config",
     "dev": "yarn build --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
