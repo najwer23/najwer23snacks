@@ -2,12 +2,14 @@ import { useState } from 'react';
 import styles from './Input.module.css';
 import { validator } from '@najwer23snacks/validator';
 
-export const Input: React.FC<{
-  name?: string;
-  label?: string;
-  type?: string;
-  errorOptions?: object;
-}> = ({ errorOptions, name, label, type = 'text', ...props }): JSX.Element => {
+export const Input: React.FC<
+  React.InputHTMLAttributes<HTMLInputElement> & {
+    name?: string;
+    label?: string;
+    type?: string;
+    errorOptions?: object;
+  }
+> = ({ errorOptions, name, label, type = 'text', ...props }): JSX.Element => {
   const [validatorMsg, setValidatorMsg] = useState<string | null>(null);
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
