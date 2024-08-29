@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Navigation: Story = {
   args: {
-    navigationMaxWidth: 1000,
+    navigationWidthMax: 1000,
     navigationTitle: (
       <TextBox href={'/'} tag={'h3'}>
         Title for Menu

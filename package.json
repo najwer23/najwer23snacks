@@ -11,7 +11,7 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "start": "yarn dev",
     "deploy": "yarn --cwd ./apps/docs deploy",
-    "dev": "run build && turbo run dev",
+    "dev": "run build && turbo run dev --concurrency 11",
     "format:check": "prettier --c \"**/*.{json,mdx,ts,tsx,md,css}\"",
     "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css}\"",
     "lint": "turbo run lint",

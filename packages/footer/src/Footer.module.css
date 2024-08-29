@@ -1,0 +1,24 @@
+@layer Footer {
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    position: relative;
+  }
+
+  .footerPush {
+    padding-bottom: 125px;
+  }
+
+  .footerContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footerContent {
+    height: 75px;
+  }
+}

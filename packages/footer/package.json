@@ -1,12 +1,12 @@
 {
-  "name": "@najwer23snacks/navigation",
-  "version": "1.0.2",
+  "name": "@najwer23snacks/footer",
+  "version": "1.0.0",
   "sideEffects": false,
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
-  "main": "./dist/navigation.js",
-  "module": "./dist/navigation.mjs",
-  "types": "./dist/navigation.d.ts",
+  "main": "./dist/footer.js",
+  "module": "./dist/footer.mjs",
+  "types": "./dist/footer.d.ts",
   "scripts": {
     "build": "rimraf ./dist && rollup --config",
     "dev": "yarn build --watch",
@@ -18,9 +18,8 @@
     "CHANGELOG.md"
   ],
   "devDependencies": {
-    "@najwer23snacks/button": "*",
     "@najwer23snacks/grid": "*",
-    "@najwer23snacks/hooks": "*",
+    "@najwer23snacks/textbox": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*"
   },
@@ -37,7 +36,7 @@
     "front-end",
     "rollup",
     "css-module",
-    "navigation"
+    "footer"
   ],
   "repository": {
     "type": "git",
