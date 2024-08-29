@@ -1,0 +1,14 @@
+@layer n23snacksNavigation {
+  .navigationTopItems {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+
+  .navigationTopItemRight {
+    min-width: 50px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}

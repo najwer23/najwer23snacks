@@ -1,0 +1,44 @@
+{
+  "name": "@najwer23snacks/hooks",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "author": "Mariusz Najwer (https://najwer23.github.io/)",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rollup --config",
+    "dev": "yarn build --watch",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "files": [
+    "dist/**",
+    "CHANGELOG.md"
+  ],
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "storybook",
+    "design-system",
+    "gh-pages",
+    "typescript",
+    "vite",
+    "front-end",
+    "rollup",
+    "css-module",
+    "hooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najwer23/najwer23snacks.git"
+  },
+  "homepage": "najwer23.github.io/najwer23snacks"
+}
