@@ -34,4 +34,4 @@ import{j as e}from"./jsx-runtime-DEdD30eg.js";import{r as f}from"./index-RYns6xq
       }} />
         </div>;
   }]
-}`,...(N=(j=b.parameters)==null?void 0:j.docs)==null?void 0:N.source}}};const I=["Default"];export{b as Default,I as __namedExportsOrder,E as default};
+}`,...(N=(j=b.parameters)==null?void 0:j.docs)==null?void 0:N.source}}};const I=["Navigation"];export{b as Navigation,I as __namedExportsOrder,E as default};
