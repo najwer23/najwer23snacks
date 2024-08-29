@@ -10,9 +10,11 @@ export const Navigation: React.FC<{
   navigationMobile: React.ReactNode;
   navigationMobileAtWidth: number;
   navigationBottom?: React.ReactNode;
+  navigationMaxWidth: number;
   hrColor1?: string;
   hrColor2?: string;
 }> = ({
+  navigationMaxWidth,
   navigationTitle,
   navigationTop,
   hrColor1,
@@ -41,7 +43,7 @@ export const Navigation: React.FC<{
 
   return (
     <>
-      <Grid layout="container" widthMax={1200} padding="0 10px 0 10px">
+      <Grid layout="container" widthMax={navigationMaxWidth} padding="0 10px 0 10px">
         <div className={styles.navigationItems}>
           <div className={styles.navigationItemLeft}>{navigationTitle}</div>
           <div className={styles.navigationItemRight}>
@@ -63,7 +65,7 @@ export const Navigation: React.FC<{
       </Grid>
 
       <div className={[styles.menuMobile, menuMobileOpen && styles.open].join(' ')}>
-        <Grid layout="container" widthMax={1200} padding="0 10px 0 10px">
+        <Grid layout="container" widthMax={navigationMaxWidth} padding="0 10px 0 10px">
           <div className={styles.navigationItems}>
             <div className={styles.navigationItemLeft}>{navigationTitle}</div>
             <div className={styles.navigationItemRight}>

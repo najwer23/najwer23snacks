@@ -3,7 +3,7 @@ import { Navigation } from '@najwer23snacks/navigation';
 import { TextBox } from '@najwer23snacks/textbox';
 
 const meta = {
-  title: 'Unknown/Navigation',
+  title: 'Menu/Navigation',
   component: Navigation,
   tags: ['autodocs'],
 };
@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    navigationMaxWidth: 1000,
     navigationTitle: (
       <TextBox href={'/'} tag={'h3'}>
         Title for Menu
@@ -23,16 +24,13 @@ export const Default: Story = {
     navigationTop: (
       <>
         <TextBox tag={'h3'} href="/1">
-          {' '}
-          Link1{' '}
+          Link1
         </TextBox>
         <TextBox tag={'h3'} href="/2">
-          {' '}
-          Link2{' '}
+          Link2
         </TextBox>
         <TextBox tag={'h3'} href="/3">
-          {' '}
-          Link3{' '}
+          Link3
         </TextBox>
       </>
     ),
