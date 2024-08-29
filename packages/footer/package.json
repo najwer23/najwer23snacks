@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/footer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
   "main": "./dist/footer.js",
@@ -18,7 +18,6 @@
   ],
   "devDependencies": {
     "@najwer23snacks/grid": "*",
-    "@najwer23snacks/textbox": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*"
   },
