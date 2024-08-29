@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
   "main": "./dist/input.js",

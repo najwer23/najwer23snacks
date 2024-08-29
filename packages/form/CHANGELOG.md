@@ -1,5 +1,11 @@
 # @najwer23snacks/form
 
+## 1.1.1
+
+### Patch Changes
+
+- Textarea
+
 ## 1.1.0
 
 ### Minor Changes
