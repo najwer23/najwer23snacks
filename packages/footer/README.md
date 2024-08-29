@@ -23,13 +23,6 @@ export const Example = () => {
 }
 ```
 
-# CSS tokens
-
-```css
-:root {
-}
-```
-
 # Let's connect!
 
 [![dev.to badge](https://img.shields.io/badge/-Portfolio-%239F2B68?style=flat&logo=GoogleChrome&logoColor=white)](https://najwer23.github.io/)
