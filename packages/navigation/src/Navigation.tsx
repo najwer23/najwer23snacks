@@ -1,24 +1,79 @@
 import styles from './Navigation.module.css';
 import { Grid } from '@najwer23snacks/grid';
-import { SingleRowChecker } from './SingleRowChecker';
+import { useWindowSize } from '@najwer23snacks/hooks';
+import { Button } from '@najwer23snacks/button';
+import { useEffect, useState } from 'react';
 
 export const Navigation: React.FC<{
-  title: React.ReactNode;
+  navigationTitle?: React.ReactNode;
   navigationTop?: React.ReactNode;
+  navigationMobile: React.ReactNode;
+  navigationMobileAtWidth: number;
   navigationBottom?: React.ReactNode;
-}> = ({ title, navigationTop, navigationBottom }): JSX.Element => {
-  return (
-    <Grid layout="container" widthMax={1200} padding="0 10px 0 10px">
-      <div className={styles.navigationTopItems}>
-        <div className={styles.navigationTopItemLeft}>1111</div>
+  hrColor1?: string;
+  hrColor2?: string;
+}> = ({
+  navigationTitle,
+  navigationTop,
+  hrColor1,
+  hrColor2,
+  navigationMobile,
+  navigationMobileAtWidth,
+  navigationBottom,
+}): JSX.Element => {
+  const [menuMobileOpen, setMenuMobileOpen] = useState<boolean>(false);
+  const { width } = useWindowSize();
 
-        <SingleRowChecker className={styles.navigationTopItemRight}>
-          <div className="child-div">Item 1 9 99 9 9 9 9 9 9 9 9 9</div>
-          <div className="child-div">Item 29 9 9 9 9 99 9 9 99 </div>
-          <div className="child-div">Item 3 9999999999</div>
-        </SingleRowChecker>
+  useEffect(() => {
+    if (width >= navigationMobileAtWidth) {
+      setMenuMobileOpen(false);
+      document.body.classList.remove(styles.menuOpen);
+    }
+  }, [width]);
+
+  useEffect(() => {
+    if (menuMobileOpen) {
+      document.body.classList.add(styles.menuOpen);
+    } else {
+      document.body.classList.remove(styles.menuOpen);
+    }
+  }, [menuMobileOpen]);
+
+  return (
+    <>
+      <Grid layout="container" widthMax={1200} padding="0 10px 0 10px">
+        <div className={styles.navigationItems}>
+          <div className={styles.navigationItemLeft}>{navigationTitle}</div>
+          <div className={styles.navigationItemRight}>
+            {width >= navigationMobileAtWidth && <>{navigationTop}</>}
+            {width < navigationMobileAtWidth && (
+              <Button onClick={() => setMenuMobileOpen((prev) => !prev)}>Menu</Button>
+            )}
+          </div>
+        </div>
+        {width >= navigationMobileAtWidth && (
+          <>
+            {hrColor1 && <div style={{ backgroundColor: hrColor1 }} className={styles.hr}></div>}
+            <div className={styles.navigationItems}>
+              <div className={styles.navigationItemLeft}>{navigationBottom}</div>
+            </div>
+            {hrColor2 && <div style={{ backgroundColor: hrColor2 }} className={styles.hr}></div>}
+          </>
+        )}
+      </Grid>
+
+      <div className={[styles.menuMobile, menuMobileOpen && styles.open].join(' ')}>
+        <Grid layout="container" widthMax={1200} padding="0 10px 0 10px">
+          <div className={styles.navigationItems}>
+            <div className={styles.navigationItemLeft}>{navigationTitle}</div>
+            <div className={styles.navigationItemRight}>
+              <Button onClick={() => setMenuMobileOpen((prev) => !prev)}>Menu</Button>
+            </div>
+          </div>
+        </Grid>
+        {navigationMobile}
       </div>
-    </Grid>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-[desc]
+The Navigation component is a responsive navigation bar designed for React applications. It provides a flexible layout that adapts to different screen sizes, ensuring a seamless user experience on both desktop and mobile devices. Below is a detailed description of its features and functionality.
 
 # Install
 
@@ -13,21 +13,21 @@ npm install @najwer23snacks/navigation --save-dev
 # Example
 
 ```typescript
-import { Navigation } from "@najwer23snacks/navigation";
+import { Navigation } from '@najwer23snacks/navigation';
 
-export const Example = () => {
-
-    return (
-        <>hello</>
-    );
-}
-```
-
-# CSS tokens
-
-```css
-:root {
-}
+const App = () => {
+  return (
+    <Navigation
+      navigationTitle="My Website"
+      navigationTop={<div>Top Links</div>}
+      navigationMobile={<div>Mobile Links</div>}
+      navigationMobileAtWidth={768}
+      navigationBottom={<div>Bottom Links</div>}
+      hrColor1="#ccc"
+      hrColor2="#eee"
+    />
+  );
+};
 ```
 
 # Let's connect!

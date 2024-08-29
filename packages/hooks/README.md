@@ -1,4 +1,4 @@
-[desc]
+This is a collection of custom React hooks that provide a wide range of functionality to enhance your application's development experience. These hooks are designed to be reusable, efficient, and easy to integrate into your projects. Whether you need to handle window resizing, manage form state, or interact with the browser's storage, this library has you covered.
 
 # Install
 
@@ -13,7 +13,18 @@ npm install @najwer23snacks/hooks --save-dev
 # Example
 
 ```typescript
-// Todo
+import { useWindowSize } from '@najwer23snacks/hooks';
+
+const MyComponent = () => {
+  const { width, height } = useWindowSize(300); // 300 ms debounce delay
+
+  return (
+    <div>
+      <p>Window width: {width}px</p>
+      <p>Window height: {height}px</p>
+    </div>
+  );
+};
 ```
 
 # Let's connect!
