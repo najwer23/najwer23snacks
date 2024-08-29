@@ -13,29 +13,28 @@ npm install @najwer23snacks/input --save-dev
 # Example
 
 ```typescript
-import { Input } from "@najwer23snacks/input";
+import { Form as FormStory } from '@najwer23snacks/form';
+import { Button } from '@najwer23snacks/button';
+import { Input } from '@najwer23snacks/input';
 
 export const Example = () => {
 
     return (
-        <>
         <FormStory onSubmit={handleOnSubmit}>
           <Input
+            label='Email'
             type="text"
             name="name"
             validatorOptions={{
               empty: true,
               email: true,
-            }} />
-
-          <Input
-            type="text"
-            name="pass"
+            }}
           />
+
+          <Input label='Password' type="password" name="pass" />
 
           <Button type="submit">Submit</Button>
         </FormStory>
-      </>
     );
 }
 ```

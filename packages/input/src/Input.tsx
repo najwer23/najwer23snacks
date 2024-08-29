@@ -3,28 +3,28 @@ import styles from './Input.module.css';
 import { validator, type ValidatorOptions } from '@najwer23snacks/validator';
 
 export const Input: React.FC<
-  React.InputHTMLAttributes<HTMLInputElement> & {
-    name?: string;
+  React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> & {
+    name: string;
     label?: string;
     type?: string;
+    kind?: 'input' | 'textarea';
     validatorOptions?: ValidatorOptions;
   }
-> = ({ validatorOptions, name, label, type = 'text', ...props }): JSX.Element => {
+> = ({ validatorOptions, name, label, type = 'text', kind = 'input', ...props }): JSX.Element => {
   const errorRef = useRef<HTMLDivElement | null>(null);
 
-  const handleInput = (e: React.FocusEvent<HTMLInputElement>) => {
-    if (e.target && document.activeElement !== e.currentTarget) {
-      if (errorRef.current) {
-        errorRef.current.textContent = '';
-      }
+  const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+    if (document.activeElement !== target) {
+      if (errorRef.current) errorRef.current.textContent = '';
 
       if (validatorOptions) {
-        const validatorResult = validator(e.target.value, validatorOptions);
+        const validatorResult = validator(target.value, validatorOptions);
         if (validatorResult.length > 0) {
           errorRef.current!.textContent = validatorResult[0];
-          e.target.classList.add('error');
+          target.classList.add('error');
         } else {
-          e.target.classList.remove('error');
+          target.classList.remove('error');
         }
       }
     }
@@ -37,15 +37,21 @@ export const Input: React.FC<
       </div>
 
       <div className={styles.inputInput}>
-        <input
-          id={name}
-          name={name}
-          type={type}
-          onInput={handleInput}
-          onBlur={handleInput}
-          {...props}
-          className={props.className}
-        />
+        {kind == 'input' && (
+          <input
+            id={name}
+            name={name}
+            type={type}
+            onInput={handleInput}
+            onBlur={handleInput}
+            {...props}
+            className={props.className}
+          />
+        )}
+
+        {kind == 'textarea' && (
+          <textarea id={name} name={name} onInput={handleInput} onBlur={handleInput} {...props}></textarea>
+        )}
       </div>
 
       <div ref={errorRef} className={styles.inputError}></div>

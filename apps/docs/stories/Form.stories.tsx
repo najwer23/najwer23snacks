@@ -30,6 +30,7 @@ export const Form: Story = {
       <>
         <FormStory onSubmit={handleOnSubmit}>
           <Input
+            label="Email"
             type="text"
             name="name"
             validatorOptions={{
@@ -38,7 +39,7 @@ export const Form: Story = {
             }}
           />
 
-          <Input type="text" name="pass" />
+          <Input label="Password" type="password" name="pass" />
 
           <Button type="submit">Submit</Button>
         </FormStory>
