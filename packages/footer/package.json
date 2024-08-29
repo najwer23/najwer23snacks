@@ -1,7 +1,6 @@
 {
   "name": "@najwer23snacks/footer",
-  "version": "1.0.0",
-  "sideEffects": false,
+  "version": "1.0.1",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
   "main": "./dist/footer.js",

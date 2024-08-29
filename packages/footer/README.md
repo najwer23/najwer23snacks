@@ -1,4 +1,4 @@
-[desc]
+The @najwer23snacks/footer package provides a customizable footer component for React applications. Designed with flexibility and responsiveness in mind, this component allows developers to easily integrate a footer into their projects while maintaining a consistent design across different screen sizes.
 
 # Install
 
