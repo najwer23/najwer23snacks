@@ -1,9 +1,9 @@
 import type { StoryObj } from '@storybook/react';
-import { Footer } from '@najwer23snacks/footer';
+import { Footer as Foot } from '@najwer23snacks/footer';
 
 const meta = {
-  title: 'Unknown/Footer',
-  component: Footer,
+  title: 'Footer/Footer',
+  component: Foot,
   tags: ['autodocs'],
 };
 
@@ -11,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Footer: Story = {
   args: {
     footerWidthMax: 1000,
   },
