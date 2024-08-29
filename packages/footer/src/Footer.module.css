@@ -20,5 +20,6 @@
 
   .footerContent {
     height: 75px;
+    display: contents;
   }
 }
