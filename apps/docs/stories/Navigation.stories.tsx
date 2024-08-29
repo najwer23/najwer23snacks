@@ -1,10 +1,10 @@
 import type { StoryObj } from '@storybook/react';
-import { Navigation } from '@najwer23snacks/navigation';
+import { Navigation as Nav } from '@najwer23snacks/navigation';
 import { TextBox } from '@najwer23snacks/textbox';
 
 const meta = {
   title: 'Menu/Navigation',
-  component: Navigation,
+  component: Nav,
   tags: ['autodocs'],
 };
 
@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Navigation: Story = {
   args: {
     navigationMaxWidth: 1000,
     navigationTitle: (
