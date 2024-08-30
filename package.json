@@ -78,5 +78,5 @@
     "url": "git+https://github.com/najwer23/najwer23snacks.git"
   },
   "license": "MIT",
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.4.1"
 }
