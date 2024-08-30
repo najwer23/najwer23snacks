@@ -1,0 +1,49 @@
+@layer najwer23snacksGrid {
+  .container {
+    max-width: var(--n23snacks-grid-widthMax);
+    min-width: var(--n23snacks-grid-widthMin);
+    padding: var(--n23snacks-grid-padding);
+    margin: var(--n23snacks-grid-margin);
+    box-sizing: border-box;
+  }
+
+  .columns {
+    display: flex;
+    column-gap: var(--n23snacks-grid-column-gap);
+    row-gap: var(--n23snacks-grid-row-gap);
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .columns > div {
+    width: calc(
+      (100% / var(--n23snacks-flex-col)) -
+        (((var(--n23snacks-flex-col) - 1) / var(--n23snacks-flex-col)) * var(--n23snacks-grid-column-gap))
+    );
+  }
+
+  /* breakpoints */
+  @media (max-width: 767.98px) {
+    .columns > div {
+      --n23snacks-flex-col: var(--n23snacks-grid-column-mobile);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    .columns > div {
+      --n23snacks-flex-col: var(--n23snacks-grid-column-tablet);
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1599.98px) {
+    .columns > div {
+      --n23snacks-flex-col: var(--n23snacks-grid-column-small-desktop);
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .columns > div {
+      --n23snacks-flex-col: var(--n23snacks-grid-column-desktop);
+    }
+  }
+}
