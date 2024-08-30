@@ -16,7 +16,7 @@
     "pub-minor": "npm version minor --force && npm publish",
     "pub-major": "npm version major --force && npm publish",
     "god": "yarn build && yarn pub && rimraf ./lib && rimraf ./.yarn/cache",
-    "plop": "plop yarn format",
+    "plop": "plop && yarn format",
     "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css,mjs}\""
   },
   "devDependencies": {
