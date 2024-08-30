@@ -19,7 +19,7 @@
 		"plop": "plop"
 	},
 	"devDependencies": {
-		"@chromatic-com/storybook": "^1.7.0",
+		"@chromatic-com/storybook": "^1.8.0",
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "0.4.4",
 		"@storybook/addon-essentials": "^8.2.9",
@@ -39,7 +39,7 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"rimraf": "^6.0.1",
-		"rollup": "^4.21.0",
+		"rollup": "^4.21.1",
 		"rollup-plugin-dts": "6.1.1",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"rollup-plugin-postcss": "^4.0.2",

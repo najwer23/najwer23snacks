@@ -1459,7 +1459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromatic-com/storybook@npm:^1.7.0":
+"@chromatic-com/storybook@npm:^1.8.0":
   version: 1.8.0
   resolution: "@chromatic-com/storybook@npm:1.8.0"
   dependencies:
@@ -6392,7 +6392,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "najwer23storybook@workspace:."
   dependencies:
-    "@chromatic-com/storybook": "npm:^1.7.0"
+    "@chromatic-com/storybook": "npm:^1.8.0"
     "@rollup/plugin-node-resolve": "npm:^15.2.3"
     "@rollup/plugin-terser": "npm:0.4.4"
     "@storybook/addon-essentials": "npm:^8.2.9"
@@ -6412,7 +6412,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     rimraf: "npm:^6.0.1"
-    rollup: "npm:^4.21.0"
+    rollup: "npm:^4.21.1"
     rollup-plugin-dts: "npm:6.1.1"
     rollup-plugin-peer-deps-external: "npm:^2.2.4"
     rollup-plugin-postcss: "npm:^4.0.2"
@@ -8110,7 +8110,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.20.0, rollup@npm:^4.21.0":
+"rollup@npm:^4.20.0, rollup@npm:^4.21.1":
   version: 4.21.1
   resolution: "rollup@npm:4.21.1"
   dependencies:
