@@ -1,0 +1,13 @@
+.yarn/*
+releases/yarn-3.6.3.cjs
+.editorconfig
+src/*
+.yarnrc.yml
+.storybook/*
+rollup.config.mjs
+tsconfig.json
+public/img/f.png
+public/index.html
+storybook-static
+templates
+plopfile.mjs

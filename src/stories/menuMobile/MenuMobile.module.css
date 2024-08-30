@@ -1,0 +1,95 @@
+@layer n23MenuMobile {
+	.menuMobile {
+		display: none;
+		box-sizing: border-box;
+		width: 100vw;
+		background-color: var(--n23-menu-mobile-background-color);
+		font-family: var(--n23-menu-mobile-font-family);
+		height: 100vh;
+		padding: 80px 20px 150px 20px;
+		overflow: auto;
+		position: fixed;
+		z-index: 8;
+		left: 0;
+		top: 0;
+
+		& ul {
+			all: unset;
+			list-style-type: none;
+		}
+
+		& ul li {
+			text-align: left;
+			font-size: var(--n23-menu-mobile-font-size);
+			font-weight: var(--n23-menu-mobile-font-weight);
+			width: 100%;
+
+			& a {
+				width: 100%;
+				cursor: pointer;
+				color: var(--n23-menu-mobile-font-color);
+				display: block;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid lightgrey;
+				text-decoration: none;
+
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+				&:active {
+					color: var(--n23-menu-mobile-font-color-active);
+				}
+			}
+		}
+
+		& ul li:last-child {
+			margin-bottom: 100px;
+		}
+
+		@media (max-width: 1199.98px) {
+			&.open {
+				display: block;
+
+				--animation-in-settings: 200ms cubic-bezier(0.25, 0, 0.3, 1) normal;
+				animation: slidein var(--animation-in-settings);
+			}
+		}
+	}
+
+	@keyframes slidein {
+		from {
+			opacity: 0;
+			transform: translateY(50%);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.menuMobileButton {
+		display: none;
+		position: fixed;
+		z-index: 9;
+		left: calc(100% - 100px);
+		right: 0;
+		bottom: 40px;
+
+		@media (max-width: 1199.98px) {
+			& {
+				display: block;
+			}
+		}
+	}
+
+	.menuOpen {
+		overflow: hidden;
+	}
+}

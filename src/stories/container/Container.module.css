@@ -1,0 +1,57 @@
+@layer n23ContainerShared {
+	.shared {
+		font-weight: var(--n23-font-weight-normal);
+		font-family: var(--n23-font-family);
+	}
+}
+
+@layer n23ContainerMain {
+	.n23main {
+		padding: 0 100px;
+
+		@media (max-width: 1199.98px) {
+			padding: 0 20px;
+		}
+	}
+}
+
+@layer n23ContainerHomeContent {
+	.n23homeContent {
+		padding: 125px 0 100px;
+
+		@media (max-width: 575.98px) {
+			padding: 30px 0 150px;
+		}
+	}
+}
+
+@layer n23ContainerSection {
+	.n23section {
+		margin-bottom: 150px;
+		padding: 40px 100px 0 100px;
+
+		@media (max-width: 1199.98px) {
+			padding: 50px 20px 0 20px;
+		}
+	}
+}
+
+@layer n23ContainerNav {
+	.n23nav {
+		padding: 35px 100px 0 100px;
+
+		@media (max-width: 1199.98px) {
+			padding: 75px 20px 0 20px;
+		}
+	}
+}
+
+@layer n23ContainerDialog {
+	.n23dialog {
+		padding: 40px;
+
+		@media (max-width: 1199.98px) {
+			padding: 25px;
+		}
+	}
+}

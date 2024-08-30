@@ -1,0 +1,10 @@
+import styles from "./{{name}}.module.css"
+import { {{name}}Types } from "./{{name}}.types";
+
+export const {{name}} = ({  }: {{name}}Types) => {
+	return (
+		<div className={styles.wrapper}>
+		"Hello"
+		</div>
+	);
+};

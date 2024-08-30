@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-yarn format
-
-git add --all

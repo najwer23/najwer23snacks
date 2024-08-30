@@ -1,64 +1,45 @@
 // https://medium.com/@aldinofrizal/file-creation-automation-with-plop-b18d09d77360
 
 export default function (plop) {
-  // package
-  plop.setGenerator('package', {
-    description: 'plop generating package.. Type name: ',
 
-    prompts: [
-      {
-        type: 'input',
-        name: 'name',
-        message: 'Package:',
-      },
-    ],
+	plop.setGenerator("controller", {
+		description: "plop generating controller..",
 
-    actions: [
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/src/{{name}}.tsx',
-        templateFile: 'plop/templates/Component.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/src/{{name}}.module.css',
-        templateFile: 'plop/templates/CSSmodule.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/.eslintrc.js',
-        templateFile: 'plop/templates/Eslintrc.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/global.d.ts',
-        templateFile: 'plop/templates/Global.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/tsconfig.json',
-        templateFile: 'plop/templates/TsConfig.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/rollup.config.mjs',
-        templateFile: 'plop/templates/RollupConfig.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/README.md',
-        templateFile: 'plop/templates/Readme.txt',
-      },
-      {
-        type: 'add',
-        path: 'packages/{{lowerCase name}}/package.json',
-        templateFile: 'plop/templates/PackageJson.txt',
-      },
-      {
-        type: 'add',
-        path: 'apps/docs/stories/{{name}}.stories.tsx',
-        templateFile: 'plop/templates/Stories.txt',
-      }
-    ],
-  });
+		prompts: [
+			{
+				type: "input",
+				name: "name",
+				message: "Component:",
+			},
+		],
+
+		actions: [
+			{
+				type: "add",
+				path: "src/stories/{{lowerCase name}}/{{name}}.stories.tsx",
+				templateFile: "templates/Story.txt",
+			},
+			{
+				type: "add",
+				path: "src/stories/{{lowerCase name}}/{{name}}.tsx",
+				templateFile: "templates/Main.txt",
+			},
+			{
+				type: "add",
+				path: "src/stories/{{lowerCase name}}/{{name}}.module.css",
+				templateFile: "templates/CSS.txt",
+			},
+			{
+				type: "add",
+				path: "src/stories/{{lowerCase name}}/index.ts",
+				templateFile: "templates/Index.txt",
+			},
+			{
+				type: "add",
+				path: "src/stories/{{lowerCase name}}/{{name}}.types.ts",
+				templateFile: "templates/Types.txt",
+			},
+		],
+	});
+
 }

@@ -1,0 +1,47 @@
+/* https://wiryawanadipa.com/blog/calculate-percentage-width-of-flex-items-when-using-gap/ */
+
+@layer n23Grid {
+	.gridContainer {
+		display: flex;
+		column-gap: var(--n23-c-column-gap);
+		row-gap: var(--n23-c-row-gap);
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.gridContainer.sameLine {
+		align-items: center;
+	}
+
+	.gridContainerChild {
+		width: calc(
+			(100% / var(--n23-flex-col)) -
+				(((var(--n23-flex-col) - 1) / var(--n23-flex-col)) * var(--n23-c-column-gap))
+		);
+	}
+
+	/* breakpoints */
+	@media (max-width: 767.98px) {
+		.gridContainerChild {
+			--n23-flex-col: var(--n23-c-column-mobile);
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 1199.98px) {
+		.gridContainerChild {
+			--n23-flex-col: var(--n23-c-column-tablet);
+		}
+	}
+
+	@media (min-width: 1200px) and (max-width: 1599.98px) {
+		.gridContainerChild {
+			--n23-flex-col: var(--n23-c-column-small-desktop);
+		}
+	}
+
+	@media (min-width: 1600px) {
+		.gridContainerChild {
+			--n23-flex-col: var(--n23-c-column-desktop);
+		}
+	}
+}
