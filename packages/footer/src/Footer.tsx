@@ -1,6 +1,5 @@
 import styles from './Footer.module.css';
 import { Grid } from '@najwer23snacks/grid';
-import { TextBox } from '@najwer23snacks/textbox';
 
 export const Footer: React.FC<{
   footerWidthMax: number;
