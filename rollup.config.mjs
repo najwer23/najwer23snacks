@@ -31,15 +31,14 @@ const getFiles = (dir, filesIn = [], query) => {
 };
 
 // Retrieve all index.ts files from the stories directory
-const filesIndexTs = getFiles('src/stories/', [], 'index.ts')
-  .map((filePath) => path.basename(path.dirname(filePath))); // Get the directory name
+const filesIndexTs = getFiles('src/stories/', [], 'index.ts').map((filePath) => path.basename(path.dirname(filePath))); // Get the directory name
 
 // Create an input object for Rollup
 const Input = Object.fromEntries(
   filesIndexTs.map((name) => [
     name.charAt(0).toUpperCase() + name.slice(1), // Capitalize first letter
-    `src/stories/${name}/index.ts`
-  ])
+    `src/stories/${name}/index.ts`,
+  ]),
 );
 
 // Rollup configuration
@@ -66,7 +65,7 @@ export default {
       },
       summary(summary) {
         console.log(summarize(summary));
-      }
+      },
     }),
   ],
 };

@@ -1,6 +1,8 @@
+This package provides a comprehensive collection of design system assets, including a variety of components, styles, and guidelines. These resources are designed to streamline the creation of cohesive and user-friendly interfaces across multiple applications and platforms, ensuring consistency and an improved user experience.
+
 # najwer23snacks
 
-[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://najwer23.github.io/najwer23snacks) [![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](https://github.com/najwer23/najwer23snacks) [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/search?q=najwer23snacks)
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://najwer23.github.io/najwer23snacks) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/najwer23/najwer23snacks) [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/search?q=najwer23snacks)
 
 A design system is a comprehensive collection of reusable components, guidelines, and standards that help teams create consistent and cohesive digital products. It serves as a "single source of truth," ensuring that design and development processes are streamlined across various platforms and teams.
 
@@ -8,6 +10,7 @@ A design system is a comprehensive collection of reusable components, guidelines
 2. Documentation and Guidelines
 3. Style Guides
 4. Design Tokens
+5. Tree shaking
 
 # Benefits of Using a Design System
 
@@ -21,53 +24,54 @@ A design system is a comprehensive collection of reusable components, guidelines
 
 - Quality Control: A design system simplifies the review process by providing clear guidelines and standards, making it easier to identify inconsistencies and maintain high-quality design.
 
-### Self Update
+# Install
 
-```
-ncu -u
-```
-
-### Yarn Update
-
-```
-yarn set version latest
+```js
+yarn add najwer23snacks --dev
 ```
 
-### Installation
-
-```sh
-yarn install
+```js
+npm install najwer23snacks --save-dev
 ```
 
-### Development
+# Example
 
-```sh
-yarn start
+```typescript
+import { Button } from "najwer23snacks/lib/button";
+
+export const Example = () => {
+    const handleClick = () => {
+        console.log("Button clicked!");
+    };
+
+    return (
+        <Button onClick={handleClick}>
+            Click!
+        </Button>
+    );
+}
 ```
 
-### Production
+# CSS tokens
 
-```sh
-yarn build
-```
+```css
+:root {
+  /* Fonts */
+  --n23snack-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+    Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 
-### Deploy to gh-pages
-
-```sh
-yarn deploy
-```
-
-### NPM packages release
-
-```sh
-yarn changeset
-yarn release
-```
-
-### GIT tags
-
-```sh
-git log --pretty=oneline
+  /* Button */
+  --n23snack-button-bg-color: #00a76f;
+  --n23snack-button-bg-color-hover: #007867;
+  --n23snack-button-bg-color-active: #004b50;
+  --n23snack-button-bg-color-focus: #00b8d9;
+  --n23snack-button-bg-color-disabled: #919eab;
+  --n23snack-button-font-color: #ffffff;
+  --n23snack-button-font-size: 18px;
+  --n23snack-button-font-weight: 700;
+  --n23snack-button-font-family: var(--n23snack-font-family);
+  --n23snack-button-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 ```
 
 # Let's connect!
