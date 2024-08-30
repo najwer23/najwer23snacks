@@ -12,10 +12,10 @@
     "start": "storybook dev -p 6006",
     "build": "rimraf ./lib && rollup -c --silent",
     "build-storybook": "storybook build",
-    "pub": "npm version patch --force && npm publish",
-    "pub-minor": "npm version minor --force && npm publish",
-    "pub-major": "npm version major --force && npm publish",
-    "god": "yarn build && yarn pub && rimraf ./lib && rimraf ./.yarn/cache",
+    "publish:patch": "yarn build && npm version patch --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
+    "publish:minor": "yarn build && npm version minor --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
+    "publish:major": "yarn build && npm version major --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
+    "god": "yarn build && yarn publish:patch && rimraf ./lib && rimraf ./.yarn/cache",
     "plop": "plop && yarn format",
     "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css,mjs}\""
   },
@@ -55,8 +55,8 @@
     "vite": "^5.4.2"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "keywords": [
     "react",
