@@ -25,6 +25,34 @@ A design system is a comprehensive collection of reusable components, guidelines
 
 - Quality Control: A design system simplifies the review process by providing clear guidelines and standards, making it easier to identify inconsistencies and maintain high-quality design.
 
+# Install
+
+```js
+yarn add najwer23snacks --dev
+```
+
+```js
+npm install najwer23snacks --save-dev
+```
+
+# Example
+
+```typescript
+import { Button } from "najwer23snacks/lib/button";
+
+export const Example = () => {
+    const handleClick = () => {
+        console.log("Button clicked!");
+    };
+
+    return (
+        <Button onClick={handleClick}>
+            Click!
+        </Button>
+    );
+}
+```
+
 # CSS tokens
 
 > Colors are the smiles of nature.
