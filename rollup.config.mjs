@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
+import outputSize, { summarize, format } from 'rollup-plugin-output-size';
 
 // import { Button } from "najwer23snacks/lib/Button";
 // https://rollupjs.org/configuration-options/
@@ -49,5 +50,13 @@ export default {
       modules: true,
     }),
     terser(),
+    outputSize({
+      handle(info) {
+        console.log(format(info));
+      },
+      summary(summary) {
+        console.log(summarize(summary));
+      }
+    }),
   ],
 };
