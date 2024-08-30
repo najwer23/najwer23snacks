@@ -11,3 +11,8 @@ public/index.html
 storybook-static
 templates
 plopfile.mjs
+.prettierrc
+.prettierignore
+.index.html
+tsconfig.node.json
+vite.config.ts
