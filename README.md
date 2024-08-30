@@ -1,5 +1,3 @@
-import { Meta } from '@storybook/blocks';
-
 <Meta title="Doc" />
 
 # najwer23snacks
