@@ -1,6 +1,6 @@
 {
   "name": "najwer23snacks",
-  "version": "0.0.21",
+  "version": "1.0.0",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
@@ -17,9 +17,11 @@
     "publish:major": "yarn build && npm version major --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
     "god": "yarn build && yarn publish:patch && rimraf ./lib && rimraf ./.yarn/cache",
     "plop": "plop && yarn format",
-    "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css,mjs}\""
+    "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css,mjs}\"",
+    "release": "yarn build && yarn && changeset && changeset version && changeset publish && rimraf ./lib && rimraf ./.yarn/cache"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "@chromatic-com/storybook": "^1.8.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "0.4.4",
