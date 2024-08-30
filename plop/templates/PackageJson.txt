@@ -8,7 +8,7 @@
   "module": "./dist/{{lowerCase name}}.mjs",
   "types": "./dist/{{lowerCase name}}.d.ts",
   "scripts": {
-    "build": "rimraf ./dist && rollup --config",
+    "build": "rollup --config",
     "dev": "yarn build --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"

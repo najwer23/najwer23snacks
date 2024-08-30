@@ -1,14 +1,13 @@
 {
   "name": "@najwer23snacks/navigation",
-  "version": "1.0.2",
-  "sideEffects": false,
+  "version": "1.0.3",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
   "main": "./dist/navigation.js",
   "module": "./dist/navigation.mjs",
   "types": "./dist/navigation.d.ts",
   "scripts": {
-    "build": "rimraf ./dist && rollup --config",
+    "build": "rollup --config",
     "dev": "yarn build --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"

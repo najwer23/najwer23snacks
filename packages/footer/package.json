@@ -1,13 +1,13 @@
 {
   "name": "@najwer23snacks/footer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
   "main": "./dist/footer.js",
   "module": "./dist/footer.mjs",
   "types": "./dist/footer.d.ts",
   "scripts": {
-    "build": "rimraf ./dist && rollup --config",
+    "build": "rollup --config",
     "dev": "yarn build --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
@@ -17,7 +17,7 @@
     "CHANGELOG.md"
   ],
   "devDependencies": {
-    "@najwer23snacks/grid": "^*",
+    "@najwer23snacks/grid": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*"
   },
