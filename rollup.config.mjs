@@ -4,35 +4,45 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
 import outputSize, { summarize, format } from 'rollup-plugin-output-size';
+import fs from 'fs';
+import path from 'path';
 
-// import { Button } from "najwer23snacks/lib/Button";
-// https://rollupjs.org/configuration-options/
-// https://prateeksurana.me/blog/react-component-library-using-storybook-7/
-
-import * as fs from 'fs';
-
-const getFiles = (dir, filesIn, query) => {
-  const files = filesIn || [];
+/**
+ * Recursively retrieves files from a directory that match a specific query.
+ * @param {string} dir - The directory to search in.
+ * @param {string[]} [filesIn=[]] - Accumulator for found files.
+ * @param {string} query - The query string to match file names.
+ * @returns {string[]} - An array of matching file paths.
+ */
+const getFiles = (dir, filesIn = [], query) => {
   const fsFiles = fs.readdirSync(dir);
-  for (var i in fsFiles) {
-    const name = dir + '/' + fsFiles[i];
-    if (fs.statSync(name).isDirectory()) {
-      getFiles(name, files, query);
-    } else if (name.includes(query)) {
-      files.push(name);
+
+  for (const file of fsFiles) {
+    const fullPath = path.join(dir, file);
+
+    if (fs.statSync(fullPath).isDirectory()) {
+      getFiles(fullPath, filesIn, query);
+    } else if (fullPath.includes(query)) {
+      filesIn.push(fullPath);
     }
   }
-  return files;
+
+  return filesIn;
 };
 
-const filesIndexTs = getFiles('src/stories/', [], 'index.ts').map((v) => v.split('//').at(-1).split('/')[0]);
+// Retrieve all index.ts files from the stories directory
+const filesIndexTs = getFiles('src/stories/', [], 'index.ts')
+  .map((filePath) => path.basename(path.dirname(filePath))); // Get the directory name
 
+// Create an input object for Rollup
 const Input = Object.fromEntries(
-  filesIndexTs.map((v) => [`${v.slice(0, 1).toUpperCase() + v.slice(1)}`, `src/stories/${v}/index.ts`]),
+  filesIndexTs.map((name) => [
+    name.charAt(0).toUpperCase() + name.slice(1), // Capitalize first letter
+    `src/stories/${name}/index.ts`
+  ])
 );
 
-// console.log(Input);
-
+// Rollup configuration
 export default {
   input: Input,
   output: {
