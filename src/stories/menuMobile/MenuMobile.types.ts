@@ -1,3 +1,1 @@
-export interface MenuMobileTypes {
-
-}
+export interface MenuMobileTypes {}

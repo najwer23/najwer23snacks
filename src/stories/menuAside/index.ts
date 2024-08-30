@@ -1,2 +1,2 @@
-import { MenuAside } from "./MenuAside";
+import { MenuAside } from './MenuAside';
 export { MenuAside };

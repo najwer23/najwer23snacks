@@ -1,54 +1,51 @@
 @layer n23GridMasonry {
-	html:has(div[class*="masonryContainer"]) {
-		& {
-			overflow-y: scroll;
-		}
-	}
+  html:has(div[class*='masonryContainer']) {
+    & {
+      overflow-y: scroll;
+    }
+  }
 
-	.masonryContainer {
-		display: flex;
-		column-gap: var(--n23-c-masonry-column-gap);
-	}
+  .masonryContainer {
+    display: flex;
+    column-gap: var(--n23-c-masonry-column-gap);
+  }
 
-	.masonryContainer > * {
-		height: fit-content;
-	}
+  .masonryContainer > * {
+    height: fit-content;
+  }
 
-	.masonryColumn {
-		width: calc(
-			(100% / var(--n23-m-flex-col)) -
-				(
-					((var(--n23-m-flex-col) - 1) / var(--n23-m-flex-col)) *
-						var(--n23-c-masonry-column-gap)
-				)
-		);
-	}
+  .masonryColumn {
+    width: calc(
+      (100% / var(--n23-m-flex-col)) -
+        (((var(--n23-m-flex-col) - 1) / var(--n23-m-flex-col)) * var(--n23-c-masonry-column-gap))
+    );
+  }
 
-	.masonryColumnChild {
-		margin-bottom: var(--n23-c-masonry-row-gap);
-	}
+  .masonryColumnChild {
+    margin-bottom: var(--n23-c-masonry-row-gap);
+  }
 
-	@media (max-width: 767.98px) {
-		.masonryColumn {
-			--n23-m-flex-col: var(--n23-c-masonry-column-mobile);
-		}
-	}
+  @media (max-width: 767.98px) {
+    .masonryColumn {
+      --n23-m-flex-col: var(--n23-c-masonry-column-mobile);
+    }
+  }
 
-	@media (min-width: 768px) and (max-width: 1199.98px) {
-		.masonryColumn {
-			--n23-m-flex-col: var(--n23-c-masonry-column-tablet);
-		}
-	}
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    .masonryColumn {
+      --n23-m-flex-col: var(--n23-c-masonry-column-tablet);
+    }
+  }
 
-	@media (min-width: 1200px) and (max-width: 1599.98px) {
-		.masonryColumn {
-			--n23-m-flex-col: var(--n23-c-masonry-column-small-desktop);
-		}
-	}
+  @media (min-width: 1200px) and (max-width: 1599.98px) {
+    .masonryColumn {
+      --n23-m-flex-col: var(--n23-c-masonry-column-small-desktop);
+    }
+  }
 
-	@media (min-width: 1600px) {
-		.masonryColumn {
-			--n23-m-flex-col: var(--n23-c-masonry-column-desktop);
-		}
-	}
+  @media (min-width: 1600px) {
+    .masonryColumn {
+      --n23-m-flex-col: var(--n23-c-masonry-column-desktop);
+    }
+  }
 }

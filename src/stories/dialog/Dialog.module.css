@@ -1,80 +1,80 @@
 @layer n23Dialog {
-	.dialog {
-		--animation-in-settings: 500ms cubic-bezier(0.25, 0, 0.3, 1) normal;
-		--animation-out-settings: 500ms cubic-bezier(0.5, -0.5, 0.1, 1.5) normal;
+  .dialog {
+    --animation-in-settings: 500ms cubic-bezier(0.25, 0, 0.3, 1) normal;
+    --animation-out-settings: 500ms cubic-bezier(0.5, -0.5, 0.1, 1.5) normal;
 
-		max-inline-size: min(95vw, 95%);
-		max-block-size: min(95vh, 100%);
-		max-block-size: min(95dvb, 100%);
-		padding: 0;
+    max-inline-size: min(95vw, 95%);
+    max-block-size: min(95vh, 100%);
+    max-block-size: min(95dvb, 100%);
+    padding: 0;
 
-		overflow: auto;
+    overflow: auto;
 
-		&[open] {
-			animation: slidein var(--animation-in-settings);
-		}
+    &[open] {
+      animation: slidein var(--animation-in-settings);
+    }
 
-		&.minimize {
-			animation: minimize var(--animation-out-settings);
-		}
+    &.minimize {
+      animation: minimize var(--animation-out-settings);
+    }
 
-		&::backdrop {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: rgba(255, 255, 255, 0.15);
-			backdrop-filter: blur(5px);
-			animation: none;
-		}
+    &::backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      animation: none;
+    }
 
-		&[open]::backdrop {
-			animation: fadein var(--animation-in-settings);
-		}
+    &[open]::backdrop {
+      animation: fadein var(--animation-in-settings);
+    }
 
-		&.minimize::backdrop {
-			animation: fadeout var(--animation-out-settings);
-		}
+    &.minimize::backdrop {
+      animation: fadeout var(--animation-out-settings);
+    }
 
-		& footer {
-			display: flex;
-			justify-content: center;
-		}
-	}
+    & footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
-	@keyframes slidein {
-		from {
-			opacity: 0;
-			transform: translateY(50%);
-		}
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
 
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-	@keyframes fadein {
-		from {
-			opacity: 0;
-		}
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
 
-		to {
-			opacity: 1;
-		}
-	}
+    to {
+      opacity: 1;
+    }
+  }
 
-	@keyframes fadeout {
-		to {
-			opacity: 0;
-		}
-	}
+  @keyframes fadeout {
+    to {
+      opacity: 0;
+    }
+  }
 
-	@keyframes minimize {
-		to {
-			opacity: 0;
-			transform: scale(0);
-		}
-	}
+  @keyframes minimize {
+    to {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
 }

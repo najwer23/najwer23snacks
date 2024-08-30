@@ -1,2 +1,2 @@
-import { Dialog } from "./Dialog";
+import { Dialog } from './Dialog';
 export { Dialog };

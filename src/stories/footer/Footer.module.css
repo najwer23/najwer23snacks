@@ -1,28 +1,28 @@
 @layer n23Footer {
-	html {
-		height: 100%;
-	}
+  html {
+    height: 100%;
+  }
 
-	body {
-		min-height: 100%;
-		position: relative;
+  body {
+    min-height: 100%;
+    position: relative;
 
-		/* special for asideMenu */
-		overflow-x: hidden;
-	}
+    /* special for asideMenu */
+    overflow-x: hidden;
+  }
 
-	.footerPush {
-		padding-bottom: 140px;
-	}
+  .footerPush {
+    padding-bottom: 140px;
+  }
 
-	.footerContainer {
-		position: absolute;
-		bottom: 0;
-	}
+  .footerContainer {
+    position: absolute;
+    bottom: 0;
+  }
 
-	.footerContent {
-		box-sizing: border-box;
-		min-width: 230px;
-		padding-bottom: 30px;
-	}
+  .footerContent {
+    box-sizing: border-box;
+    min-width: 230px;
+    padding-bottom: 30px;
+  }
 }

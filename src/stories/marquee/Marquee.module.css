@@ -1,12 +1,12 @@
 @layer n23Marquee {
-	.marquee {
-		height: var(--n23-marquee-height);
-		overflow: hidden;
-		white-space: nowrap;
-		position: relative;
-		display: flex;
-	}
-/*
+  .marquee {
+    height: var(--n23-marquee-height);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+  }
+  /*
 	.marquee:after {
 		content: '';
 		position: absolute;
@@ -19,26 +19,26 @@
 			linear-gradient(to left , white, rgba(157, 158, 158, 0) 150px);
 	} */
 
-	.marquee:hover .track {
-		animation-play-state: paused;
-	}
+  .marquee:hover .track {
+    animation-play-state: paused;
+  }
 
-	.track {
-		display: flex;
-		animation: var(--n23-marquee-speed) slide infinite linear;
+  .track {
+    display: flex;
+    animation: var(--n23-marquee-speed) slide infinite linear;
 
-		& > * {
-			margin-right: var(--n23-marquee-gap);
-			flex-shrink: 0;
-		}
-	}
+    & > * {
+      margin-right: var(--n23-marquee-gap);
+      flex-shrink: 0;
+    }
+  }
 
-	@keyframes slide {
-		from {
-			transform: translateX(0);
-		}
-		to {
-			transform: translateX(-100%);
-		}
-	}
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }

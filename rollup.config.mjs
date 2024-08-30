@@ -4,7 +4,7 @@ import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
 
-// import { Button } from "najwer23storybook/lib/Button";
+// import { Button } from "najwer23snacks/lib/Button";
 // https://rollupjs.org/configuration-options/
 // https://prateeksurana.me/blog/react-component-library-using-storybook-7/
 

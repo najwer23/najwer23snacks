@@ -1,46 +1,46 @@
 @layer n23Button {
-	.standard {
-		cursor: pointer;
-		border: unset;
-		padding: 10px 17px;
-		border-radius: 16px;
-		color: var(--n23-button-font-color);
-		background-color: var(--n23-button-background-color);
-		font-weight: var(--n23-button-font-weight);
-		font-size: var(--n23-button-font-size);
-		letter-spacing: normal;
-		transition: 0.2s;
-		font-family: var(--n23-button-font-family);
+  .standard {
+    cursor: pointer;
+    border: unset;
+    padding: 10px 17px;
+    border-radius: 16px;
+    color: var(--n23-button-font-color);
+    background-color: var(--n23-button-background-color);
+    font-weight: var(--n23-button-font-weight);
+    font-size: var(--n23-button-font-size);
+    letter-spacing: normal;
+    transition: 0.2s;
+    font-family: var(--n23-button-font-family);
 
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-		box-shadow: var(--n23-button-shadow);
+    box-shadow: var(--n23-button-shadow);
 
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				background-color: var(--n23-button-background-color-on);
-				box-shadow: var(--n23-button-shadow);
-			}
-		}
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--n23-button-background-color-on);
+        box-shadow: var(--n23-button-shadow);
+      }
+    }
 
-		&:active {
-			background-color: var(--n23-button-background-color-active);
-		}
+    &:active {
+      background-color: var(--n23-button-background-color-active);
+    }
 
-		&:focus-visible {
-			outline: none;
-			background-color: var(--n23-button-background-color-focus);
-		}
+    &:focus-visible {
+      outline: none;
+      background-color: var(--n23-button-background-color-focus);
+    }
 
-		&:disabled {
-			cursor: not-allowed;
-			background-color: var(--n23-button-background-color-disabled);
-		}
-	}
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--n23-button-background-color-disabled);
+    }
+  }
 }
