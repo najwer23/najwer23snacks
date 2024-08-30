@@ -53,8 +53,6 @@ export const Example = () => {
 
 # CSS tokens
 
-> Colors are the smiles of nature.
-
 ```css
 :root {
   /* Fonts */
