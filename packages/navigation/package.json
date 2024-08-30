@@ -1,6 +1,6 @@
 {
   "name": "@najwer23snacks/navigation",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "license": "MIT",
   "main": "./dist/navigation.js",

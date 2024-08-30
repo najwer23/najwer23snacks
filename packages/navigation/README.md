@@ -25,6 +25,7 @@ const App = () => {
       navigationBottom={<div>Bottom Links</div>}
       hrColor1="#ccc"
       hrColor2="#eee"
+      navigationWidthMax={1200}
     />
   );
 };
