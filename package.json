@@ -1,8 +1,8 @@
 {
   "name": "najwer23snacks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./lib/index.js",
-  "module": "./lib/index.esm.js",
+  "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
   "author": "Mariusz Najwer (https://najwer23.github.io/)",
   "homepage": "https://najwer23.github.io/najwer23snacks",
