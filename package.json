@@ -17,7 +17,7 @@
     "pub-major": "npm version major --force && npm publish",
     "god": "yarn build && yarn pub && rimraf ./lib && rimraf ./.yarn/cache",
     "plop": "plop",
-    "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css}\""
+    "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css,mjs}\""
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.8.0",
