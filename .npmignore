@@ -16,3 +16,4 @@ plopfile.mjs
 index.html
 tsconfig.node.json
 vite.config.ts
+lib/**/*.stories.d.ts
