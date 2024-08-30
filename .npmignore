@@ -13,6 +13,6 @@ templates
 plopfile.mjs
 .prettierrc
 .prettierignore
-.index.html
+index.html
 tsconfig.node.json
 vite.config.ts
