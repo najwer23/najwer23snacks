@@ -2,7 +2,7 @@ import styles from './Navigation.module.css';
 import { Grid } from '../grid';
 import { useWindowSize } from '../hooks';
 import { Button } from '../button';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const Navigation: React.FC<{
   navigationTitle?: React.ReactNode;
@@ -23,13 +23,14 @@ export const Navigation: React.FC<{
   navigationMobileAtWidth,
   navigationBottom,
 }): JSX.Element => {
+  const ref = useRef<HTMLDivElement>(null);
   const [menuMobileOpen, setMenuMobileOpen] = useState<boolean>(false);
   const { width } = useWindowSize();
 
   useEffect(() => {
     if (width >= navigationMobileAtWidth) {
       setMenuMobileOpen(false);
-      document.body.classList.remove(styles.menuOpen);
+      // document.body.classList.remove(styles.menuOpen);
     }
   }, [width]);
 
@@ -40,6 +41,26 @@ export const Navigation: React.FC<{
       document.body.classList.remove(styles.menuOpen);
     }
   }, [menuMobileOpen]);
+
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (ref.current && event.target instanceof HTMLElement) {
+        if (event.target.tagName === 'A' && ref.current.contains(event.target)) {
+          setMenuMobileOpen(false)
+        }
+      }
+    };
+
+    if (ref.current) {
+      ref.current.addEventListener('click', handleClick);
+    }
+
+    return () => {
+      if (ref.current) {
+        ref.current.removeEventListener('click', handleClick);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -64,7 +85,7 @@ export const Navigation: React.FC<{
         )}
       </Grid>
 
-      <div className={[styles.menuMobile, menuMobileOpen && styles.open].join(' ')}>
+      <div className={[styles.menuMobile, menuMobileOpen && styles.open].join(' ')} ref={ref}>
         <Grid layout="container" widthMax={navigationWidthMax} padding="0 10px 0 10px">
           <div className={styles.navigationItems}>
             <div className={styles.navigationItemLeft}>{navigationTitle}</div>
