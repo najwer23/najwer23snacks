@@ -8,19 +8,29 @@ export const TextBox: React.FC<{
   href?: string;
   target?: string;
   rel?: string;
-  isTitle?: boolean;
+  isTitle?: boolean
 }> = ({ tag = 'p', children, href, target, rel, isTitle, ...props }) => {
   const Tag = tag;
-  const className = `${styles[tag]} ${isTitle ? styles.isTitle : ''}`;
 
-  return href ? (
-    <Tag className={className}>
-      <a href={href} target={target} rel={rel} {...props}>
-        {children}
-      </a>
-    </Tag>
-  ) : (
-    <Tag className={className} {...props}>
+  const tagClassNames: Record<TextBoxTag, string> = {
+    h1: 'heading1',
+    h2: 'heading2',
+    h3: 'heading3',
+    p: 'paragraph',
+  };
+
+  if (href) {
+    return (
+      <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ""}`}>
+        <a href={href} target={target} rel={rel} {...props}>
+          {children}
+        </a>
+      </Tag>
+    );
+  }
+
+  return (
+    <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ""}`} {...props}>
       {children}
     </Tag>
   );
