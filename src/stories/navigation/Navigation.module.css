@@ -35,7 +35,7 @@
     display: none;
     box-sizing: border-box;
     width: 100vw;
-    background-color: red;
+    background-color: var(--najwer23snacks-navigation-mobile-bg-color);
     height: 100vh;
     padding: 0px 0px 150px 0px;
     overflow: auto;
