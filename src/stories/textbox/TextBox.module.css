@@ -8,6 +8,7 @@
   .heading3 a,
   .paragraph a {
     font-family: var(--n23snack-font-family);
+    text-wrap: balance;
   }
 
   /* 32 - 40 */

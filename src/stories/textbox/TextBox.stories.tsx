@@ -4,9 +4,6 @@ import { TextBox } from '.';
 const meta = {
   title: 'Text/TextBox',
   component: TextBox,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
 };
 
