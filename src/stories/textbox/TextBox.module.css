@@ -2,11 +2,7 @@
   .heading1,
   .heading2,
   .heading3,
-  .paragraph,
-  .heading1 a,
-  .heading2 a,
-  .heading3 a,
-  .paragraph a {
+  .paragraph {
     font-family: var(--n23snack-font-family);
     text-wrap: balance;
   }
@@ -37,12 +33,9 @@
   /* 16 - 18 */
   /* 1.5 - 1.3 */
   .paragraph {
+    color: var(--n23snack-textbox-p-font-color);
     font-size: clamp(1rem, 0.231vw + 0.94rem, 1.125rem);
     line-height: clamp(1.463rem, -0.069vw + 1.518rem, 1.5rem);
-  }
-
-  .paragraph {
-    color: var(--n23snack-textbox-p-font-color);
   }
 
   .heading1 a,
@@ -58,6 +51,19 @@
     &:active {
       text-decoration: underline;
       color: var(--n23snack-textbox-a-font-color-hover);
+    }
+  }
+
+  .isTitle a {
+    color: var(--n23snack-textbox-title-a-font-color);
+    text-decoration: unset;
+    transition: color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      text-decoration: underline;
+      color: var(--n23snack-textbox-title-a-font-color-hover);
     }
   }
 }
