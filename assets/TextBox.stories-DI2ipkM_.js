@@ -1,4 +1,4 @@
-import{j as r}from"./jsx-runtime-DEdD30eg.js";import{T as t}from"./TextBox-D6gXjgAP.js";import"./index-RYns6xqu.js";const K={title:"Text/TextBox",component:t,parameters:{layout:"centered"},tags:["autodocs"]},e="Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.",a={args:{children:e},decorators:[D=>r.jsxs(r.Fragment,{children:[r.jsxs(t,{tag:"h1",children:[" ",e," "]}),r.jsxs(t,{tag:"h2",children:[" ",e," "]}),r.jsxs(t,{tag:"h3",children:[" ",e," "]}),r.jsx(D,{}),r.jsx(t,{tag:"p",href:"https://www.example.com",children:e})]})]},n={args:{tag:"h1",children:e}},s={args:{tag:"h2",children:e}},o={args:{tag:"h3",children:e}},c={args:{children:e}},p={args:{tag:"h1",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}},m={args:{tag:"h2",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}},h={args:{tag:"h3",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}},l={args:{tag:"p",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}};var g,d,i;a.parameters={...a.parameters,docs:{...(g=a.parameters)==null?void 0:g.docs,source:{originalSource:`{
+import{j as r}from"./jsx-runtime-DEdD30eg.js";import{T as t}from"./TextBox-CgPeuOmt.js";import"./index-RYns6xqu.js";const K={title:"Text/TextBox",component:t,tags:["autodocs"]},e="Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.",a={args:{children:e},decorators:[D=>r.jsxs(r.Fragment,{children:[r.jsxs(t,{tag:"h1",children:[" ",e," "]}),r.jsxs(t,{tag:"h2",children:[" ",e," "]}),r.jsxs(t,{tag:"h3",children:[" ",e," "]}),r.jsx(D,{}),r.jsx(t,{tag:"p",href:"https://www.example.com",children:e})]})]},n={args:{tag:"h1",children:e}},s={args:{tag:"h2",children:e}},o={args:{tag:"h3",children:e}},c={args:{children:e}},p={args:{tag:"h1",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}},m={args:{tag:"h2",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}},h={args:{tag:"h3",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}},l={args:{tag:"p",href:"https://www.example.com",target:"_blank",rel:"noopener noreferrer",children:e}};var g,i,d;a.parameters={...a.parameters,docs:{...(g=a.parameters)==null?void 0:g.docs,source:{originalSource:`{
   args: {
     children: testText
   },
@@ -13,7 +13,7 @@ import{j as r}from"./jsx-runtime-DEdD30eg.js";import{T as t}from"./TextBox-D6gXj
           </TextBox>
         </>;
   }]
-}`,...(i=(d=a.parameters)==null?void 0:d.docs)==null?void 0:i.source}}};var x,u,w;n.parameters={...n.parameters,docs:{...(x=n.parameters)==null?void 0:x.docs,source:{originalSource:`{
+}`,...(d=(i=a.parameters)==null?void 0:i.docs)==null?void 0:d.source}}};var x,u,w;n.parameters={...n.parameters,docs:{...(x=n.parameters)==null?void 0:x.docs,source:{originalSource:`{
   args: {
     tag: 'h1',
     children: testText
@@ -32,7 +32,7 @@ import{j as r}from"./jsx-runtime-DEdD30eg.js";import{T as t}from"./TextBox-D6gXj
   args: {
     children: testText
   }
-}`,...(j=(_=c.parameters)==null?void 0:_.docs)==null?void 0:j.source}}};var L,y,P;p.parameters={...p.parameters,docs:{...(L=p.parameters)==null?void 0:L.docs,source:{originalSource:`{
+}`,...(j=(_=c.parameters)==null?void 0:_.docs)==null?void 0:j.source}}};var L,P,y;p.parameters={...p.parameters,docs:{...(L=p.parameters)==null?void 0:L.docs,source:{originalSource:`{
   args: {
     tag: 'h1',
     href: 'https://www.example.com',
@@ -40,7 +40,7 @@ import{j as r}from"./jsx-runtime-DEdD30eg.js";import{T as t}from"./TextBox-D6gXj
     rel: 'noopener noreferrer',
     children: testText
   }
-}`,...(P=(y=p.parameters)==null?void 0:y.docs)==null?void 0:P.source}}};var A,E,v;m.parameters={...m.parameters,docs:{...(A=m.parameters)==null?void 0:A.docs,source:{originalSource:`{
+}`,...(y=(P=p.parameters)==null?void 0:P.docs)==null?void 0:y.source}}};var A,E,v;m.parameters={...m.parameters,docs:{...(A=m.parameters)==null?void 0:A.docs,source:{originalSource:`{
   args: {
     tag: 'h2',
     href: 'https://www.example.com',
