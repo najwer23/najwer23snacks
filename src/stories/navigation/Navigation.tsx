@@ -30,7 +30,6 @@ export const Navigation: React.FC<{
   useEffect(() => {
     if (width >= navigationMobileAtWidth) {
       setMenuMobileOpen(false);
-      // document.body.classList.remove(styles.menuOpen);
     }
   }, [width]);
 
