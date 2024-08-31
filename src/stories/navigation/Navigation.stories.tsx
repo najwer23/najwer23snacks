@@ -23,13 +23,13 @@ export const Navigation: Story = {
     navigationMobileAtWidth: 1000,
     navigationTop: (
       <>
-        <TextBox tag={'h3'} href="/1">
+        <TextBox tag={'h3'} href="#">
           Link1
         </TextBox>
-        <TextBox tag={'h3'} href="/2">
+        <TextBox tag={'h3'} href="#">
           Link2
         </TextBox>
-        <TextBox tag={'h3'} href="/3">
+        <TextBox tag={'h3'} href="#">
           Link3
         </TextBox>
       </>

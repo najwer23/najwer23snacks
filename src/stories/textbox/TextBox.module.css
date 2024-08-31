@@ -54,7 +54,7 @@
     transition: color 0.3s ease-in-out;
 
     &:hover,
-    &:focus,
+    &:focus-visible,
     &:active {
       text-decoration: underline;
       color: var(--n23snack-textbox-a-font-color-hover);
