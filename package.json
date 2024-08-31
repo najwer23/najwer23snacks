@@ -1,6 +1,6 @@
 {
   "name": "najwer23snacks",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
@@ -15,7 +15,7 @@
     "publish:patch": "yarn build && npm version patch --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
     "publish:minor": "yarn build && npm version minor --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
     "publish:major": "yarn build && npm version major --force && npm publish && rimraf ./lib && rimraf ./.yarn/cache",
-    "god": "yarn build && yarn publish:patch && rimraf ./lib && rimraf ./.yarn/cache",
+    "god": "yarn publish:patch",
     "plop": "plop && yarn format",
     "format": "prettier --write \"**/*.{json,mdx,ts,tsx,md,css,mjs}\"",
     "release": "yarn build && yarn && changeset && changeset version && changeset publish && rimraf ./lib && rimraf ./.yarn/cache"
