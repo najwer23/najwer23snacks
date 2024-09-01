@@ -2,7 +2,12 @@ import { type FormEvent } from 'react';
 
 export const Form: React.FC<{
   children: React.ReactNode;
-  onSubmit: (formData: Record<string, object>) => void;
+  onSubmit: (formData: {
+    [k: string]: {
+      error: boolean;
+      value: string;
+    };
+  }) => void;
 }> = ({ children, onSubmit, ...props }): JSX.Element => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
