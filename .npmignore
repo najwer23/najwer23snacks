@@ -18,3 +18,4 @@ tsconfig.node.json
 vite.config.ts
 lib/**/*.stories.d.ts
 .github/*
+.changeset
