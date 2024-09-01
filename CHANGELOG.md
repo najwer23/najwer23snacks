@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 1.2.0
+
+### Minor Changes
+
+- Select
+
 ## 1.1.0
 
 ### Minor Changes
