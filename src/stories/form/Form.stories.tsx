@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/react';
-import { Form as FormSnack } from '.';
+import { Form as FormSnack, FormType } from '.';
 import { Button } from '../button';
 import { Input } from '../input';
 import { Select } from '../select';
@@ -23,8 +23,13 @@ export const Form: Story = {
     children: <></>,
   },
   render: () => {
-    const handleOnSubmit = (formData: Record<string, object>) => {
-      console.log('Form:', formData);
+    const handleOnSubmit = (form: FormType) => {
+      console.log('Form:', form);
+      if (Object.values(form).some(({ error }) => error)) {
+        console.log("Form has errors")
+        return;
+      } 
+      console.log("Form submitted")
     };
 
     return (

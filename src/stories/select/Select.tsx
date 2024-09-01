@@ -34,7 +34,7 @@ export const Select: React.FC<
       <Input
         innerRef={select}
         label={label}
-        type="text"
+        type="select"
         kind="input"
         name={name}
         onClick={() => {
