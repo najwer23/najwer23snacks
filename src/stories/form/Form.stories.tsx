@@ -2,6 +2,7 @@ import type { StoryObj } from '@storybook/react';
 import { Form as FormSnack } from '.';
 import { Button } from '../button';
 import { Input } from '../input';
+import { Select } from '../select';
 
 const meta = {
   title: 'Form/Form',
@@ -39,7 +40,17 @@ export const Form: Story = {
             }}
           />
 
-          <Input label="Password" type="password" name="pass" />
+          <Input label="Password" type="password" name="pass" validatorOptions={{
+              empty: true,
+            }}/>
+
+          <Select
+            label='Select'
+            name={'select'}
+            validatorOptions={{
+              empty: true,
+            }}
+            selectOptions={["Option1", "Option2"]}></Select>
 
           <Button type="submit">Submit</Button>
         </FormSnack>

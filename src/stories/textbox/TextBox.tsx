@@ -8,7 +8,7 @@ export const TextBox: React.FC<{
   href?: string;
   target?: string;
   rel?: string;
-  isTitle?: boolean
+  isTitle?: boolean;
 }> = ({ tag = 'p', children, href, target, rel, isTitle, ...props }) => {
   const Tag = tag;
 
@@ -21,7 +21,7 @@ export const TextBox: React.FC<{
 
   if (href) {
     return (
-      <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ""}`}>
+      <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ''}`}>
         <a href={href} target={target} rel={rel} {...props}>
           {children}
         </a>
@@ -30,7 +30,7 @@ export const TextBox: React.FC<{
   }
 
   return (
-    <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ""}`} {...props}>
+    <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ''}`} {...props}>
       {children}
     </Tag>
   );

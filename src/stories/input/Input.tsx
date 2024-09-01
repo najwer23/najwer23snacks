@@ -4,13 +4,14 @@ import { validator, type ValidatorOptions } from '../validator';
 
 export const Input: React.FC<
   React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> & {
-    name: string;
+    name?: string;
     label?: string;
     type?: string;
     kind?: 'input' | 'textarea';
     validatorOptions?: ValidatorOptions;
+    innerRef?: React.RefObject<HTMLInputElement>;
   }
-> = ({ validatorOptions, name, label, type = 'text', kind = 'input', ...props }): JSX.Element => {
+> = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, ...props }): JSX.Element => {
   const errorRef = useRef<HTMLDivElement | null>(null);
 
   const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,6 +40,7 @@ export const Input: React.FC<
       <div className={styles.inputInput}>
         {kind == 'input' && (
           <input
+            ref={innerRef}
             id={name}
             name={name}
             type={type}
