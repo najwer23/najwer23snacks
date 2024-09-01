@@ -26,36 +26,24 @@ export const Form: Story = {
     const handleOnSubmit = (form: FormType) => {
       console.log('Form:', form);
       if (Object.values(form).some(({ error }) => error)) {
-        console.log("Form has errors")
+        console.log('Form has errors');
         return;
-      } 
-      console.log("Form submitted")
+      }
+      console.log('Form submitted');
     };
 
     return (
       <>
         <FormSnack onSubmit={handleOnSubmit}>
-          <Input
-            label="Email"
-            type="text"
-            name="name"
-            validatorOptions={{
-              empty: true,
-              email: true,
-            }}
-          />
+          <Input label="Email" type="text" name="name" validatorOptions={[{ type: 'empty' }, { type: 'email' }]} />
 
-          <Input label="Password" type="password" name="pass" validatorOptions={{
-              empty: true,
-            }}/>
+          <Input label="Password" type="password" name="pass" validatorOptions={[{ type: 'empty' }]} />
 
           <Select
-            label='Select'
+            label="Select"
             name={'select'}
-            validatorOptions={{
-              empty: true,
-            }}
-            selectOptions={["Option1", "Option2"]}></Select>
+            validatorOptions={[{ type: 'empty' }]}
+            selectOptions={['Option1', 'Option2']}></Select>
 
           <Button type="submit">Submit</Button>
         </FormSnack>

@@ -19,10 +19,7 @@ export const InputText: Story = {
     name: 'test',
     label: 'Label',
     placeholder: 'Input',
-    validatorOptions: {
-      empty: true,
-      email: true,
-    },
+    validatorOptions: [{ type: 'empty' }],
   },
 };
 
@@ -32,9 +29,7 @@ export const InputTextarea: Story = {
     name: 'test',
     label: 'Label',
     kind: 'textarea',
-    validatorOptions: {
-      empty: true,
-    },
+    validatorOptions: [{ type: 'empty' }],
   },
   decorators: [
     (Story, ctx) => {
