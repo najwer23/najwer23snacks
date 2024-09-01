@@ -1,6 +1,6 @@
 import styles from './TextBox.module.css';
 
-type TextBoxTag = 'h1' | 'h2' | 'h3' | 'p';
+export type TextBoxTag = 'h1' | 'h2' | 'h3' | 'p';
 
 export const TextBox: React.FC<{
   tag?: TextBoxTag;

@@ -1,2 +1,4 @@
-import { TextBox } from './TextBox';
+import { TextBox, type TextBoxTag } from './TextBox';
 export { TextBox };
+
+export type { TextBoxTag };
