@@ -20,6 +20,7 @@
 
   .footerContent {
     height: 75px;
-    display: contents;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
