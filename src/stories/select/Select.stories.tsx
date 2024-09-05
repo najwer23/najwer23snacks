@@ -19,7 +19,7 @@ export const Select: Story = {
   args: {
     name: 'mylabel',
     label: 'Label',
-    selectOptions: ["Option1", "Option2"],
+    selectOptions: ['Option1', 'Option2'],
   },
   decorators: [
     (Story) => (

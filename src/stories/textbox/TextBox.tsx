@@ -22,8 +22,7 @@ export const TextBox: React.FC<{
 
   if (href) {
     return (
-      <Tag
-        className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ''} ${className ? className : ''}`}>
+      <Tag className={`${styles[tagClassNames[tag]]} ${isTitle ? styles.isTitle : ''} ${className ? className : ''}`}>
         <a href={href} target={target} rel={rel} {...props}>
           {children}
         </a>

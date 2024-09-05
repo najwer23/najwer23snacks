@@ -14,25 +14,27 @@ interface ValidatorOption {
 export type ValidatorOptions = ValidatorOption[];
 
 export const validator = (value: string, validatorOptions: ValidatorOptions) => {
-  const validatorArrMsg = validatorOptions.map((option) => {
-    let msg;
-    switch (option.type) {
-      case 'empty':
-        msg = testEmptyString(value);
-        break;
-      case 'email':
-        msg = testEmail(value);
-        break;
-      case 'numberInRange':
-        msg = testNumberInRange(value, option.options);
-        break;
-      default: {
-        msg = null;
+  const validatorArrMsg = validatorOptions
+    .map((option) => {
+      let msg;
+      switch (option.type) {
+        case 'empty':
+          msg = testEmptyString(value);
+          break;
+        case 'email':
+          msg = testEmail(value);
+          break;
+        case 'numberInRange':
+          msg = testNumberInRange(value, option.options);
+          break;
+        default: {
+          msg = null;
+        }
       }
-    }
 
-    return msg;
-  }).filter((v) => v !== null);
+      return msg;
+    })
+    .filter((v) => v !== null);
 
   return validatorArrMsg;
 };
@@ -45,7 +47,7 @@ const testEmail = (value: string): string | null => {
   return !/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(value) ? 'Incorrect email address' : null;
 };
 
-const testNumberInRange = (value: string, options?: { min?: number, max?: number }): string | null => {
+const testNumberInRange = (value: string, options?: { min?: number; max?: number }): string | null => {
   const number = Number(value);
   const min = options?.min ?? 0;
   const max = options?.max ?? 10000;
@@ -55,4 +57,4 @@ const testNumberInRange = (value: string, options?: { min?: number, max?: number
   }
 
   return null;
-}
+};

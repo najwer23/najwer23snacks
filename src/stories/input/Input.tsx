@@ -17,7 +17,7 @@ export const Input: React.FC<
   const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target as HTMLInputElement | HTMLTextAreaElement;
 
-    if (type == "select" && e.type == "blur") return;
+    if (type == 'select' && e.type == 'blur') return;
 
     if (document.activeElement !== target) {
       if (errorRef.current) errorRef.current.textContent = '';

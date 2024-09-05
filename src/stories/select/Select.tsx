@@ -30,7 +30,7 @@ export const Select: React.FC<
   }, [open, selectWrapper]);
 
   return (
-    <div ref={selectWrapper} className={[styles.selectWrapper, styles.arrowUp].join(" ")}>
+    <div ref={selectWrapper} className={[styles.selectWrapper, styles.arrowUp].join(' ')}>
       <Input
         innerRef={select}
         label={label}
