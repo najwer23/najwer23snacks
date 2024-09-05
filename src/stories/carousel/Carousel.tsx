@@ -5,23 +5,21 @@ import { useWindowSize } from '../hooks';
 
 export const Carousel: React.FC<{
   children: React.ReactNode;
-	arrowLeftIcon: React.ReactNode;
-	arrowRightIcon: React.ReactNode;
-	gap?: string;
-}
-> = ({ children, arrowLeftIcon, arrowRightIcon, gap="60px"}) => {
-
-  const carouselRef = useRef<any>(null);
+  arrowLeftIcon: React.ReactNode;
+  arrowRightIcon: React.ReactNode;
+  gap?: string;
+}> = ({ children, arrowLeftIcon, arrowRightIcon, gap = '60px' }) => {
+  const carouselRef = useRef<HTMLDivElement | null>(null);
   const [showArrowLeft, setShowArrowLeft] = useState<boolean>(false);
   const [showArrowRight, setShowArrowRight] = useState<boolean>(false);
   const { width } = useWindowSize();
 
   const getChildWidth = () => {
-    let style = getComputedStyle(carouselRef.current?.childNodes[1]);
+    let style = getComputedStyle(carouselRef.current?.childNodes[1] as HTMLElement);
     return (
       parseInt(style.marginLeft) +
       parseInt(style.marginRight) +
-      carouselRef.current?.childNodes[1].offsetWidth +
+      (carouselRef.current?.childNodes[1] as HTMLElement)?.offsetWidth +
       Number(gap?.slice(0, -2))
     );
   };
@@ -35,7 +33,7 @@ export const Carousel: React.FC<{
   }, [width]);
 
   const slideLeft = () => {
-    carouselRef.current.scrollLeft -= Math.floor(carouselRef.current.offsetWidth / getChildWidth()) * getChildWidth();
+    carouselRef.current!.scrollLeft -= Math.floor(carouselRef.current!.offsetWidth / getChildWidth()) * getChildWidth();
 
     // let trans = carouselRef.current.scrollLeft - Math.floor(carouselRef.current.offsetWidth / getChildWidth()) * getChildWidth()
     // let transFinal = 0;
@@ -53,7 +51,7 @@ export const Carousel: React.FC<{
   };
 
   const slideRight = () => {
-    carouselRef.current.scrollLeft += Math.floor(carouselRef.current.offsetWidth / getChildWidth()) * getChildWidth();
+    carouselRef.current!.scrollLeft += Math.floor(carouselRef.current!.offsetWidth / getChildWidth()) * getChildWidth();
 
     // let trans = carouselRef.current.scrollLeft + Math.floor(carouselRef.current.offsetWidth / getChildWidth()) * getChildWidth()
     // let transFinal = 0;
@@ -69,26 +67,29 @@ export const Carousel: React.FC<{
   };
 
   const handleScroll = () => {
-    if (carouselRef.current.scrollLeft <= 0) {
-      setShowArrowLeft(false);
-      if (carouselRef.current.scrollWidth - carouselRef.current.clientWidth !== 0) {
-        setShowArrowRight(true);
-      } else {
+    if (carouselRef.current) {
+      if (carouselRef.current.scrollLeft <= 0) {
+        setShowArrowLeft(false);
+        if (carouselRef.current.scrollWidth - carouselRef.current.clientWidth !== 0) {
+          setShowArrowRight(true);
+        } else {
+          setShowArrowRight(false);
+        }
+      } else if (carouselRef.current.scrollLeft >= carouselRef.current.scrollWidth - carouselRef.current.clientWidth) {
+        setShowArrowLeft(true);
         setShowArrowRight(false);
+      } else {
+        setShowArrowLeft(true);
+        setShowArrowRight(true);
       }
-    } else if (carouselRef.current.scrollLeft >= carouselRef.current.scrollWidth - carouselRef.current.clientWidth) {
-      setShowArrowLeft(true);
-      setShowArrowRight(false);
-    } else {
-      setShowArrowLeft(true);
-      setShowArrowRight(true);
     }
   };
 
-  const drag = useRef<any>({
+  const drag = useRef<{ isDown: boolean; startX: number; scrollLeft: number; isMove: boolean }>({
     isDown: false,
     startX: 0,
     scrollLeft: 0,
+    isMove: false,
   });
 
   const getEventKind = (event: MouseEvent | TouchEvent) => {
@@ -103,9 +104,9 @@ export const Carousel: React.FC<{
 
   const onMouseDown = (e: MouseEvent) => {
     drag.current.isDown = true;
-    drag.current.startX = e.pageX - carouselRef.current.offsetLeft;
-    drag.current.scrollLeft = carouselRef.current.scrollLeft;
-    carouselRef.current.style.scrollBehavior = 'unset';
+    drag.current.startX = e.pageX - (carouselRef.current?.offsetLeft || 0);
+    drag.current.scrollLeft = carouselRef.current?.scrollLeft || 0;
+    carouselRef.current!.style.scrollBehavior = 'unset';
   };
 
   const onClick = (e: MouseEvent) => {
@@ -117,7 +118,7 @@ export const Carousel: React.FC<{
 
   const onMouseUp = (e: MouseEvent) => {
     drag.current.isDown = false;
-    carouselRef.current.style.scrollBehavior = 'smooth';
+    carouselRef.current!.style.scrollBehavior = 'smooth';
   };
 
   const onMouseMove = (e: MouseEvent) => {
@@ -128,14 +129,14 @@ export const Carousel: React.FC<{
 
     e.preventDefault();
 
-    const x = getEventKind(e) - carouselRef.current.offsetLeft;
+    const x = getEventKind(e) - (carouselRef.current?.offsetLeft || 0);
     const walk = (x - drag.current.startX) * 1;
 
     if (Math.abs(walk) > 5) {
       drag.current.isMove = true;
     }
 
-    carouselRef.current.scrollLeft = drag.current.scrollLeft - walk;
+    carouselRef.current!.scrollLeft = drag.current.scrollLeft - walk;
   };
 
   return (
@@ -143,7 +144,7 @@ export const Carousel: React.FC<{
       className={styles.carouselWrapper}
       style={
         {
-          '--n23-c-carousel-gap': gap,
+          '--najwer23snack-carousel-gap': gap,
         } as React.CSSProperties
       }>
       <div
@@ -170,3 +171,5 @@ export const Carousel: React.FC<{
     </div>
   );
 };
+
+Carousel.displayName = 'Carousel';
