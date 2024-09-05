@@ -57,20 +57,20 @@ export const Example = () => {
 ```css
 :root {
   /* Fonts */
-  --n23snack-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+  --n23snacks-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
     Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 
   /* Button */
-  --n23snack-button-bg-color: #00a76f;
-  --n23snack-button-bg-color-hover: #007867;
-  --n23snack-button-bg-color-active: #004b50;
-  --n23snack-button-bg-color-focus: #00b8d9;
-  --n23snack-button-bg-color-disabled: #919eab;
-  --n23snack-button-font-color: #ffffff;
-  --n23snack-button-font-size: 18px;
-  --n23snack-button-font-weight: 700;
-  --n23snack-button-font-family: var(--n23snack-font-family);
-  --n23snack-button-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --n23snacks-button-bg-color: #00a76f;
+  --n23snacks-button-bg-color-hover: #007867;
+  --n23snacks-button-bg-color-active: #004b50;
+  --n23snacks-button-bg-color-focus: #00b8d9;
+  --n23snacks-button-bg-color-disabled: #919eab;
+  --n23snacks-button-font-color: #ffffff;
+  --n23snacks-button-font-size: 18px;
+  --n23snacks-button-font-weight: 700;
+  --n23snacks-button-font-family: var(--n23snacks-font-family);
+  --n23snacks-button-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 ```
 

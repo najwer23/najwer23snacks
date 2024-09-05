@@ -3,14 +3,14 @@
   .heading2,
   .heading3,
   .paragraph {
-    font-family: var(--n23snack-font-family);
+    font-family: var(--n23snacks-font-family);
     text-wrap: balance;
   }
 
   /* 32 - 40 */
   /* 1.2 - 1.3 */
   .heading1 {
-    color: var(--n23snack-textbox-h1-font-color);
+    color: var(--n23snacks-textbox-h1-font-color);
     font-size: clamp(2rem, 0.924vw + 1.761rem, 2.5rem);
     line-height: clamp(2.4rem, 0.647vw + 2.233rem, 2.75rem);
   }
@@ -18,14 +18,14 @@
   /* 24 - 34 */
   /* 24 - 34 */
   .heading2 {
-    color: var(--n23snack-textbox-h2-font-color);
+    color: var(--n23snacks-textbox-h2-font-color);
     font-size: clamp(1.5rem, 0.558vw + 1.5rem, 2rem);
     line-height: clamp(1.8rem, 0.5vw + 2rem, 2.25rem);
   }
 
   /* 20 - 28 */
   .heading3 {
-    color: var(--n23snack-textbox-h3-font-color);
+    color: var(--n23snacks-textbox-h3-font-color);
     font-size: clamp(1.25rem, 0.462vw + 1.25rem, 1.75rem);
     line-height: clamp(1.5rem, 0.25vw + 1.5rem, 2rem);
   }
@@ -33,7 +33,7 @@
   /* 16 - 18 */
   /* 1.5 - 1.3 */
   .paragraph {
-    color: var(--n23snack-textbox-p-font-color);
+    color: var(--n23snacks-textbox-p-font-color);
     font-size: clamp(1rem, 0.231vw + 0.94rem, 1.125rem);
     line-height: clamp(1.463rem, -0.069vw + 1.518rem, 1.5rem);
   }
@@ -42,7 +42,7 @@
   .heading2 a,
   .heading3 a,
   .paragraph a {
-    color: var(--n23snack-textbox-a-font-color);
+    color: var(--n23snacks-textbox-a-font-color);
     text-decoration: unset;
     transition: color 0.3s ease-in-out;
 
@@ -50,12 +50,12 @@
     &:focus-visible,
     &:active {
       text-decoration: underline;
-      color: var(--n23snack-textbox-a-font-color-hover);
+      color: var(--n23snacks-textbox-a-font-color-hover);
     }
   }
 
   .isTitle a {
-    color: var(--n23snack-textbox-title-a-font-color);
+    color: var(--n23snacks-textbox-title-a-font-color);
     text-decoration: unset;
     transition: color 0.3s ease-in-out;
 
@@ -63,7 +63,7 @@
     &:focus-visible,
     &:active {
       text-decoration: underline;
-      color: var(--n23snack-textbox-title-a-font-color-hover);
+      color: var(--n23snacks-textbox-title-a-font-color-hover);
     }
   }
 }

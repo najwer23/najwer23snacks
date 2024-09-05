@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 2.0.0
+
+### Major Changes
+
+- Renamed CSS tokens, Picture component
+
 ## 1.4.0
 
 ### Minor Changes

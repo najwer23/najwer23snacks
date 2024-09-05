@@ -35,7 +35,7 @@
     display: none;
     border: 1px solid var(--n23snacks-input-input-border-color);
     cursor: pointer;
-    box-shadow: var(--n23snack-button-shadow);
+    box-shadow: var(--n23snacks-button-shadow);
     border-radius: 5px;
 
     &.open {
@@ -46,7 +46,7 @@
       box-sizing: border-box;
       padding: 10px 10px;
       color: var(--n23snacks-input-input-font-color);
-      font-family: var(--n23snack-font-family);
+      font-family: var(--n23snacks-font-family);
       font-weight: var(--n23snacks-input-input-font-weight);
       font-size: var(--n23snacks-input-input-font-size);
       width: 100%;
