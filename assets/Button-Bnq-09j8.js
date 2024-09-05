@@ -1,0 +1,1 @@
+import{j as a}from"./jsx-runtime-DEdD30eg.js";const c="_classic_1bomn_2",n={classic:c},s=({children:t,kind:e="classic",...o})=>a.jsx("button",{type:"button",...o,className:n[e],children:t});s.displayName="Button";s.__docgenInfo={description:"",methods:[],displayName:"Button",props:{kind:{defaultValue:{value:"'classic'",computed:!1},required:!1}}};export{s as B};
