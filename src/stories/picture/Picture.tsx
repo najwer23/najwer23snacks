@@ -6,13 +6,18 @@ export const Picture: React.FC<{
 	alt: string;
 	ar?: number;
 	kind?: "border";
-	draggable? : boolean
+	draggable? : boolean;
+	borderColor?: string
 }
-> = ({ src, alt, ar, kind, draggable }): JSX.Element => {
+> = ({ src, alt, ar, kind, draggable, borderColor="black" }): JSX.Element => {
 	const [loaded, setLoaded] = useState(false);
 
 	return (
-		<picture className={[styles.picture, loaded && styles.loaded, styles[kind ?? ""]].join(" ")}>
+		<picture className={[styles.picture, loaded && styles.loaded, styles[kind ?? ""]].join(" ")} style={
+			{
+			  '--n23snacks-picture-borderColor': borderColor,
+			} as React.CSSProperties
+		  }>
 			<img width={ar} height={1} src={src} alt={alt} loading='lazy' onLoad={() => setLoaded(true)} draggable={draggable} />
 		</picture>
 	);
