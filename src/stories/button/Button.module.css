@@ -4,13 +4,13 @@
     border: unset;
     padding: 10px 17px;
     border-radius: 8px;
-    color: var(--n23snacks-button-font-color);
-    background-color: var(--n23snacks-button-bg-color);
-    font-weight: var(--n23snacks-button-font-weight);
-    font-size: var(--n23snacks-button-font-size);
+    color: var(--najwer23snacks-button-font-color);
+    background-color: var(--najwer23snacks-button-bg-color);
+    font-weight: var(--najwer23snacks-button-font-weight);
+    font-size: var(--najwer23snacks-button-font-size);
     letter-spacing: normal;
     transition: 0.1s;
-    font-family: var(--n23snacks-font-family);
+    font-family: var(--najwer23snacks-font-family);
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -26,26 +26,26 @@
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        background-color: var(--n23snacks-button-bg-color-hover);
-        box-shadow: var(--n23snacks-button-shadow);
+        background-color: var(--najwer23snacks-button-bg-color-hover);
+        box-shadow: var(--najwer23snacks-button-shadow);
       }
     }
 
     &:active {
-      background-color: var(--n23snacks-button-bg-color-active);
-      box-shadow: var(--n23snacks-button-shadow);
+      background-color: var(--najwer23snacks-button-bg-color-active);
+      box-shadow: var(--najwer23snacks-button-shadow);
     }
 
     &:focus-visible {
       outline: none;
-      background-color: var(--n23snacks-button-bg-color-focus);
-      box-shadow: var(--n23snacks-button-shadow);
+      background-color: var(--najwer23snacks-button-bg-color-focus);
+      box-shadow: var(--najwer23snacks-button-shadow);
     }
 
     &:disabled {
       cursor: not-allowed;
       box-shadow: none;
-      background-color: var(--n23snacks-button-bg-color-disabled);
+      background-color: var(--najwer23snacks-button-bg-color-disabled);
     }
   }
 }

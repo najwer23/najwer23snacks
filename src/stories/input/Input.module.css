@@ -5,10 +5,10 @@
   }
 
   .inputLabel {
-    font-size: var(--n23snacks-input-label-font-size);
-    font-family: var(--n23snacks-input-label-font-family);
-    font-weight: var(--n23snacks-input-label-font-weight);
-    color: var(--n23snacks-input-label-font-color);
+    font-size: var(--najwer23snacks-input-label-font-size);
+    font-family: var(--najwer23snacks-input-label-font-family);
+    font-weight: var(--najwer23snacks-input-label-font-weight);
+    color: var(--najwer23snacks-input-label-font-color);
     line-height: 22px;
   }
 
@@ -17,11 +17,11 @@
 
     & input,
     & textarea {
-      color: var(--n23snacks-input-input-font-color);
-      font-family: var(--n23snacks-input-input-font-family);
-      font-weight: var(--n23snacks-input-input-font-weight);
-      font-size: var(--n23snacks-input-input-font-size);
-      border: 1px solid var(--n23snacks-input-input-border-color);
+      color: var(--najwer23snacks-input-input-font-color);
+      font-family: var(--najwer23snacks-input-input-font-family);
+      font-weight: var(--najwer23snacks-input-input-font-weight);
+      font-size: var(--najwer23snacks-input-input-font-size);
+      border: 1px solid var(--najwer23snacks-input-input-border-color);
       border-radius: 5px;
       box-sizing: border-box;
     }
@@ -43,16 +43,16 @@
 
     & ::placeholder {
       filter: brightness(150%);
-      font-weight: var(--n23snacks-input-input-placeholder-font-weight);
+      font-weight: var(--najwer23snacks-input-input-placeholder-font-weight);
     }
   }
 
   .inputError {
-    font-size: var(--n23snacks-input-error-font-size);
-    font-family: var(--n23snacks-input-error-font-family);
-    font-weight: var(--n23snacks-input-error-font-weight);
+    font-size: var(--najwer23snacks-input-error-font-size);
+    font-family: var(--najwer23snacks-input-error-font-family);
+    font-weight: var(--najwer23snacks-input-error-font-weight);
     line-height: 1;
     margin: 2px;
-    color: var(--n23snacks-input-error-font-color);
+    color: var(--najwer23snacks-input-error-font-color);
   }
 }
