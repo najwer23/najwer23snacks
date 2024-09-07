@@ -1,2 +1,2 @@
-import { GridMasonry } from "./GridMasonry";
+import { GridMasonry } from './GridMasonry';
 export { GridMasonry };

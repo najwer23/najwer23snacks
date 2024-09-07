@@ -4,9 +4,9 @@ import { GridMasonryColumn } from './GridMasonryColumn';
 import { useWindowSize } from '../hooks';
 
 interface ChildrenMasonry {
-	name: string;
-	arrWithElm: React.ReactNode[];
-	height: number;
+  name: string;
+  arrWithElm: React.ReactNode[];
+  height: number;
 }
 
 export const GridMasonry: React.FC<{

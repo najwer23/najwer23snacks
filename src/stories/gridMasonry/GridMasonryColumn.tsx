@@ -3,11 +3,10 @@ import styles from './GridMasonry.module.css';
 import { useResizeObserver } from '../hooks';
 
 export const GridMasonryColumn: React.FC<{
-    arrWithChildren?: ReactNode[];
-    onHeightChange: (height: number) => void;
-    id: string;
-  }
-> = ({ arrWithChildren, onHeightChange, id }): JSX.Element => {
+  arrWithChildren?: ReactNode[];
+  onHeightChange: (height: number) => void;
+  id: string;
+}> = ({ arrWithChildren, onHeightChange, id }): JSX.Element => {
   const col = useRef<HTMLDivElement>(null);
 
   const { height = 0 } = useResizeObserver({
