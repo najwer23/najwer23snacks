@@ -1,7 +1,7 @@
 @layer najwer23snacksDialog {
   .dialog {
     --n23snacks-dialog-animation-out-settings: 500ms cubic-bezier(0.5, -0.5, 0.1, 1.5) normal;
-    
+
     min-height: 100px;
     max-inline-size: min(95vw, 95%);
     max-block-size: min(95vh, 100%);

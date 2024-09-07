@@ -33,28 +33,26 @@ export const Dialog: React.FC<{
 
   return (
     <dialog
-      className={[title ? styles.hasTitle : "", styles.dialog].join(' ')}
+      className={[title ? styles.hasTitle : '', styles.dialog].join(' ')}
       modal-mode="mega"
       ref={ref}
       onCancel={modalClose}>
-      <div className={styles.dialogContent}>
-        <div className={styles.dialogCloseButton}>
-          <Button onClick={modalClose} kind="close" aria-label="close dialog" />
-        </div>
-
-        {title && (
-          <>
-            <header>
-              <TextBox tag="h2">
-                <b>{title}</b>
-              </TextBox>
-            </header>
-            <article>{children}</article>
-          </>
-        )}
-
-        {!title && <article>{children}</article>}
+      <div className={styles.dialogCloseButton}>
+        <Button onClick={modalClose} kind="close" aria-label="close dialog" />
       </div>
+
+      {title && (
+        <>
+          <header>
+            <TextBox tag="h2">
+              <b>{title}</b>
+            </TextBox>
+          </header>
+          <article>{children}</article>
+        </>
+      )}
+
+      {!title && <article>{children}</article>}
     </dialog>
   );
 };

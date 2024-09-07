@@ -69,8 +69,6 @@ export const Dialog: Story = {
   ],
 };
 
-
-
 export const DialogWithoutTitle: Story = {
   args: {
     modalOpen: false,
