@@ -28,4 +28,4 @@ export const GridMasonryColumn: React.FC<{
   );
 };
 
-GridMasonryColumn.displayName = 'GridMasonryColumn'
+GridMasonryColumn.displayName = 'GridMasonryColumn';

@@ -15,8 +15,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Carousel: Story = {
   args: {
-    arrowLeftIcon: <div>L</div>,
-    arrowRightIcon: <div>R</div>,
     children: (
       <>
         {Array.from({ length: 15 }, (_, i) => (
@@ -29,8 +27,6 @@ export const Carousel: Story = {
 
 export const CarouselStandardSmallerChild: Story = {
   args: {
-    arrowLeftIcon: <div>L</div>,
-    arrowRightIcon: <div>R</div>,
     children: (
       <>
         {Array.from({ length: 20 }, (_, i) => (

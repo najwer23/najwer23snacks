@@ -5,8 +5,8 @@ import { useWindowSize } from '../hooks';
 
 export const Carousel: React.FC<{
   children: React.ReactNode;
-  arrowLeftIcon: React.ReactNode;
-  arrowRightIcon: React.ReactNode;
+  arrowLeftIcon?: React.ReactNode;
+  arrowRightIcon?: React.ReactNode;
   gap?: string;
 }> = ({ children, arrowLeftIcon, arrowRightIcon, gap = '60px' }) => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -158,13 +158,13 @@ export const Carousel: React.FC<{
         onMouseMove={onMouseMove}>
         <div className={[styles.arrowLeft, showArrowLeft && styles.arrowShow].join(' ')}>
           <Button type={'button'} onClick={slideLeft}>
-            {arrowLeftIcon}
+            {!arrowLeftIcon ? <div className={[styles.buttonArrowLeft].join(' ')}></div> : arrowLeftIcon}
           </Button>
         </div>
         {children}
         <div className={[styles.arrowRight, showArrowRight && styles.arrowShow].join(' ')}>
           <Button type={'button'} onClick={slideRight}>
-            {arrowRightIcon}
+            {!arrowRightIcon ? <div className={[styles.buttonArrowRight].join(' ')}></div> : arrowRightIcon}
           </Button>
         </div>
       </div>

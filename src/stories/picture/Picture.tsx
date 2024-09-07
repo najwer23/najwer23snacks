@@ -32,4 +32,4 @@ export const Picture: React.FC<{
   );
 };
 
-Picture.displayName = 'Picture'
+Picture.displayName = 'Picture';

@@ -147,4 +147,4 @@ export const GridMasonry: React.FC<{
   );
 };
 
-GridMasonry.displayName = 'GridMasonry'
+GridMasonry.displayName = 'GridMasonry';
