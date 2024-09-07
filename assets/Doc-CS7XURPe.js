@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as t}from"./index-CcnH5Kt0.js";import{ae as a}from"./index-0QmREs2d.js";import"./index-RYns6xqu.js";import"./iframe-B-1TCySJ.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function o(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...t(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(a,{title:"Doc"}),`
+import{j as n}from"./jsx-runtime-DEdD30eg.js";import{useMDXComponents as t}from"./index-CcnH5Kt0.js";import{ae as a}from"./index-Mg8UziyI.js";import"./index-RYns6xqu.js";import"./iframe-DDURSnYj.js";import"../sb-preview/runtime.js";import"./index-D16Yfzz8.js";import"./index-D-8MO0q_.js";import"./index-B23dhaOI.js";import"./index-DrFu-skq.js";function o(s){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...t(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(a,{title:"Doc"}),`
 `,n.jsx(e.h1,{id:"najwer23snacks",children:"najwer23snacks"}),`
 `,n.jsxs(e.p,{children:[n.jsx(e.a,{href:"https://najwer23.github.io/najwer23snacks",rel:"nofollow",children:n.jsx(e.img,{src:"https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white",alt:"Storybook"})})," ",n.jsx(e.a,{href:"https://github.com/najwer23/najwer23snacks",rel:"nofollow",children:n.jsx(e.img,{src:"https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white",alt:"GitHub"})})," ",n.jsx(e.a,{href:"https://www.npmjs.com/search?q=najwer23snacks",rel:"nofollow",children:n.jsx(e.img,{src:"https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white",alt:"NPM"})})]}),`
 `,n.jsx(e.p,{children:'A design system is a comprehensive collection of reusable components, guidelines, and standards that help teams create consistent and cohesive digital products. It serves as a "single source of truth," ensuring that design and development processes are streamlined across various platforms and teams.'}),`
@@ -53,8 +53,8 @@ export const Example = () => {
 `]}),`
 `,n.jsx(e.pre,{children:n.jsx(e.code,{className:"language-css",children:`:root {
   /* Fonts */
-  --najwer23snacks--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
-    Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --najwer23snacks--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue,
+    helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 
   /* Button */
   --najwer23snacks--button-bg-color: #00a76f;
