@@ -37,7 +37,7 @@ export const Dialog: React.FC<{
       ref={ref}
       onCancel={modalClose}
       {...props}>
-      <div className={styles.dialogCloseButton}>
+      <div className={styles.dialogCloseButton} style={{display: modalOpen ? "block" : "none"}}>
         <Button onClick={modalClose} kind="close" aria-label="close dialog" />
       </div>
 

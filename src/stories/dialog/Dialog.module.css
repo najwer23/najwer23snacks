@@ -17,9 +17,9 @@
     }
 
     & .dialogCloseButton {
-      position: absolute;
-      right: 20px;
-      top: 20px;
+      position: fixed !important;
+      right: 10px;
+      top: 10px;
     }
 
     &.minimize {
