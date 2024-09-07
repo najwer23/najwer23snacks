@@ -1,22 +1,22 @@
 @layer najwer23Picture {
-	.picture {
-		display: block;
+  .picture {
+    display: block;
 
-		&.border {
-			border: 2px solid var(--n23snacks-picture-borderColor);
-			box-sizing: border-box;
-		}
+    &.border {
+      border: 2px solid var(--n23snacks-picture-borderColor);
+      box-sizing: border-box;
+    }
 
-		& img {
-			opacity: 0;
-			transition: opacity 250ms ease-in-out;
-			display: grid;
-			width: 100%;
-			height: auto;
-		}
+    & img {
+      opacity: 0;
+      transition: opacity 250ms ease-in-out;
+      display: grid;
+      width: 100%;
+      height: auto;
+    }
 
-		&.loaded img {
-			opacity: 1;
-		}
-	}
+    &.loaded img {
+      opacity: 1;
+    }
+  }
 }
