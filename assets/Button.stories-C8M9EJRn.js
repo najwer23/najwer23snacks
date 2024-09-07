@@ -1,4 +1,4 @@
-import{B as t}from"./Button-V9SA-DzW.js";import"./jsx-runtime-DEdD30eg.js";import"./index-RYns6xqu.js";const u={title:"Button/Button",component:t,parameters:{layout:"centered"},tags:["autodocs"]},e={args:{children:"Click!",disabled:!1,onClick:()=>{console.log("Hello Click!")}}},o={args:{children:"Click!",disabled:!0,onClick:()=>{console.log("Hello Click!")}}};var l,r,s;e.parameters={...e.parameters,docs:{...(l=e.parameters)==null?void 0:l.docs,source:{originalSource:`{
+import{B as t}from"./Button-CWdDAt4z.js";import"./jsx-runtime-DEdD30eg.js";import"./index-RYns6xqu.js";const u={title:"Button/Button",component:t,parameters:{layout:"centered"},tags:["autodocs"]},e={args:{children:"Click!",disabled:!1,onClick:()=>{console.log("Hello Click!")}}},o={args:{children:"Click!",disabled:!0,onClick:()=>{console.log("Hello Click!")}}};var l,r,s;e.parameters={...e.parameters,docs:{...(l=e.parameters)==null?void 0:l.docs,source:{originalSource:`{
   args: {
     children: 'Click!',
     disabled: false,
