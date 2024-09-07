@@ -70,11 +70,7 @@ export const Navigation: React.FC<{
           <div className={styles.navigationItemRight}>
             {width >= navigationMobileAtWidth && <>{navigationTop}</>}
             {width < navigationMobileAtWidth && (
-              <Button onClick={() => setMenuMobileOpen((prev) => !prev)} kind="strawberry" aria-label="open menu">
-                <div className={styles.menuStrawberryContainer}>
-                  <div className={styles.menuStrawberry}></div>
-                </div>
-              </Button>
+              <Button onClick={() => setMenuMobileOpen((prev) => !prev)} kind="strawberry" aria-label="open menu" />
             )}
           </div>
         </div>
@@ -94,11 +90,7 @@ export const Navigation: React.FC<{
           <div className={styles.navigationItems}>
             <div className={styles.navigationItemLeft}>{navigationTitle}</div>
             <div className={styles.navigationItemRight}>
-              <Button onClick={() => setMenuMobileOpen((prev) => !prev)} kind="strawberry" aria-label="close menu">
-                <div className={styles.menuStrawberryContainer}>
-                  <div className={styles.menuClose}></div>
-                </div>
-              </Button>
+              <Button onClick={() => setMenuMobileOpen((prev) => !prev)} kind="close" aria-label="close menu" />
             </div>
           </div>
         </Grid>

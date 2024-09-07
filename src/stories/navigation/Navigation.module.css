@@ -48,66 +48,7 @@
       display: block;
     }
   }
-
-  .menuStrawberryContainer {
-    position: relative;
-    display: flex;
-  }
-
-  .menuStrawberry {
-    background-color: white;
-
-    height: 4px;
-    width: 20px;
-    border-radius: 10px;
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      background-color: white;
-      border-radius: 10px;
-    }
-    &::after {
-      top: 10px;
-      bottom: -10px;
-      left: 5px;
-      right: 5px;
-    }
-    &::before {
-      top: -10px;
-      bottom: 10px;
-      left: -5px;
-      right: -5px;
-    }
-  }
-
-  .menuClose {
-    position: relative;
-    width: 20px; /* Adjust width as needed */
-    height: 25px; /* Adjust height as needed */
-  }
-
-  .menuClose::before,
-  .menuClose::after {
-    content: '';
-    position: absolute;
-    background-color: white; /* Color of the close button */
-    border-radius: 10px;
-    height: 4px; /* Thickness of the bars */
-    width: 40px; /* Length of the bars */
-    left: -9px; /* Center the bars horizontally */
-  }
-
-  .menuClose::before {
-    top: 10.5px; /* Position the top bar */
-    transform: rotate(45deg); /* Initial rotation */
-  }
-
-  .menuClose::after {
-    top: 10.5px; /* Position the bottom bar */
-    transform: rotate(-45deg); /* Initial rotation */
-  }
-
+  
   .menuOpen {
     overflow: hidden;
   }

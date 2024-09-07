@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 2.3.4
+
+### Patch Changes
+
+- Dialog layout
+
 ## 2.3.0
 
 ### Minor Changes

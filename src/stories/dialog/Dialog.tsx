@@ -32,37 +32,29 @@ export const Dialog: React.FC<{
   }, [modalOpen]);
 
   return (
-    <dialog className={styles.dialog} modal-mode="mega" ref={ref} onCancel={modalClose}>
-      <Grid
-        gap={{
-          col: '0px',
-          row: '20px',
-        }}
-        col={{
-          mobile: 1,
-          smallDesktop: 1,
-          desktop: 1,
-          tablet: 1,
-        }}
-        layout={'columns'}>
-        <>
-          {title && (
+    <dialog
+      className={[title ? styles.hasTitle : "", styles.dialog].join(' ')}
+      modal-mode="mega"
+      ref={ref}
+      onCancel={modalClose}>
+      <div className={styles.dialogContent}>
+        <div className={styles.dialogCloseButton}>
+          <Button onClick={modalClose} kind="close" aria-label="close dialog" />
+        </div>
+
+        {title && (
+          <>
             <header>
-              <TextBox>
+              <TextBox tag="h2">
                 <b>{title}</b>
               </TextBox>
             </header>
-          )}
+            <article>{children}</article>
+          </>
+        )}
 
-          <article>{children}</article>
-
-          <footer>
-            <Button onClick={modalClose} type={'button'}>
-              Close
-            </Button>
-          </footer>
-        </>
-      </Grid>
+        {!title && <article>{children}</article>}
+      </div>
     </dialog>
   );
 };
