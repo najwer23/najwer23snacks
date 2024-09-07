@@ -3,6 +3,7 @@ import { Grid } from '../grid';
 import { useWindowSize } from '../hooks';
 import { Button } from '../button';
 import { useEffect, useRef, useState } from 'react';
+import { ClassNames } from 'storybook/internal/theming';
 
 export const Navigation: React.FC<{
   navigationTitle?: React.ReactNode;
@@ -69,7 +70,11 @@ export const Navigation: React.FC<{
           <div className={styles.navigationItemRight}>
             {width >= navigationMobileAtWidth && <>{navigationTop}</>}
             {width < navigationMobileAtWidth && (
-              <Button onClick={() => setMenuMobileOpen((prev) => !prev)}>Menu</Button>
+              <Button onClick={() => setMenuMobileOpen((prev) => !prev)} kind="strawberry" aria-label="open menu">
+                <div className={styles.menuStrawberryContainer}>
+                  <div className={styles.menuStrawberry}></div>
+                </div>
+              </Button>
             )}
           </div>
         </div>
@@ -89,7 +94,11 @@ export const Navigation: React.FC<{
           <div className={styles.navigationItems}>
             <div className={styles.navigationItemLeft}>{navigationTitle}</div>
             <div className={styles.navigationItemRight}>
-              <Button onClick={() => setMenuMobileOpen((prev) => !prev)}>Menu</Button>
+              <Button onClick={() => setMenuMobileOpen((prev) => !prev)} kind="strawberry" aria-label="close menu">
+                <div className={styles.menuStrawberryContainer}>
+                  <div className={styles.menuClose}></div>
+                </div>
+              </Button>
             </div>
           </div>
         </Grid>

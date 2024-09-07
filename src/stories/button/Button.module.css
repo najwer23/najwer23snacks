@@ -1,5 +1,6 @@
 @layer najwer23snacksButton {
-  .classic {
+  .classic,
+  .strawberry {
     cursor: pointer;
     border: unset;
     padding: 10px 17px;
@@ -47,5 +48,9 @@
       box-shadow: none;
       background-color: var(--najwer23snacks-button-bg-color-disabled);
     }
+  }
+
+  .strawberry {
+    height: 50px;
   }
 }
