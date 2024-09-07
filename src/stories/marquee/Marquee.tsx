@@ -25,3 +25,5 @@ export const Marquee: React.FC<{
     </div>
   );
 };
+
+Marquee.displayName = 'Marquee'

@@ -66,3 +66,6 @@ export const Dialog: React.FC<{
     </dialog>
   );
 };
+
+Dialog.displayName = 'Dialog';
+

@@ -31,3 +31,5 @@ export const Picture: React.FC<{
     </picture>
   );
 };
+
+Picture.displayName = 'Picture'

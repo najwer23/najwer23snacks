@@ -63,3 +63,5 @@ export const Select: React.FC<
     </div>
   );
 };
+
+Select.displayName = 'Select'
