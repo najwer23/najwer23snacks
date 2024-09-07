@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 2.2.0
+
+### Minor Changes
+
+- GridMasonry
+
 ## 2.1.0
 
 ### Minor Changes
