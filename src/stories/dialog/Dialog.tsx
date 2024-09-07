@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styles from './Dialog.module.css';
 import { Button } from '../button';
-import { Grid } from '../grid';
 import { TextBox } from '../textbox';
 
 export const Dialog: React.FC<{
@@ -9,7 +8,7 @@ export const Dialog: React.FC<{
   title?: string;
   children: React.ReactNode;
   modalClose: () => void;
-}> = ({ modalOpen, modalClose, children, title }): JSX.Element => {
+}> = ({ modalOpen, modalClose, children, title, ...props }): JSX.Element => {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -36,7 +35,8 @@ export const Dialog: React.FC<{
       className={[title ? styles.hasTitle : '', styles.dialog].join(' ')}
       modal-mode="mega"
       ref={ref}
-      onCancel={modalClose}>
+      onCancel={modalClose}
+      {...props}>
       <div className={styles.dialogCloseButton}>
         <Button onClick={modalClose} kind="close" aria-label="close dialog" />
       </div>
