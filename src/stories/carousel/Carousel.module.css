@@ -1,7 +1,7 @@
 @layer najwer23snacksCarouel {
   .carousel {
     display: flex;
-    gap: var(--n23snacks-carousel-gap);
+    gap: var(--gap);
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-behavior: smooth;

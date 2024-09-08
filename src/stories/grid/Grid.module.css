@@ -1,16 +1,16 @@
 @layer najwer23snacksGrid {
   .container {
-    max-width: var(--n23snacks-grid-widthMax);
-    min-width: var(--n23snacks-grid-widthMin);
-    padding: var(--n23snacks-grid-padding);
-    margin: var(--n23snacks-grid-margin);
+    max-width: var(--widthMax);
+    min-width: var(--widthMin);
+    padding: var(--padding);
+    margin: var(--margin);
     box-sizing: border-box;
   }
 
   .columns {
     display: flex;
-    column-gap: var(--n23snacks-grid-column-gap);
-    row-gap: var(--n23snacks-grid-row-gap);
+    column-gap: var(--col-gap);
+    row-gap: var(--row-gap);
     flex-wrap: wrap;
     width: 100%;
   }
@@ -18,32 +18,32 @@
   .columns > div {
     width: calc(
       (100% / var(--n23snacks-flex-col)) -
-        (((var(--n23snacks-flex-col) - 1) / var(--n23snacks-flex-col)) * var(--n23snacks-grid-column-gap))
+        (((var(--n23snacks-flex-col) - 1) / var(--n23snacks-flex-col)) * var(--col-gap))
     );
   }
 
   /* breakpoints */
   @media (max-width: 767.98px) {
     .columns > div {
-      --n23snacks-flex-col: var(--n23snacks-grid-column-mobile);
+      --n23snacks-flex-col: var(--col-mobile);
     }
   }
 
   @media (min-width: 768px) and (max-width: 1199.98px) {
     .columns > div {
-      --n23snacks-flex-col: var(--n23snacks-grid-column-tablet);
+      --n23snacks-flex-col: var(--col-tablet);
     }
   }
 
   @media (min-width: 1200px) and (max-width: 1599.98px) {
     .columns > div {
-      --n23snacks-flex-col: var(--n23snacks-grid-column-small-desktop);
+      --n23snacks-flex-col: var(--col-small-desktop);
     }
   }
 
   @media (min-width: 1600px) {
     .columns > div {
-      --n23snacks-flex-col: var(--n23snacks-grid-column-desktop);
+      --n23snacks-flex-col: var(--col-desktop);
     }
   }
 }

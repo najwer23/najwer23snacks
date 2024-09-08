@@ -1,6 +1,6 @@
 @layer najwer23snacksMarquee {
   .marquee {
-    height: var(--n23snacks-marquee-height);
+    height: var(--height);
     overflow: hidden;
     white-space: nowrap;
     position: relative;
@@ -26,10 +26,10 @@
 
   .track {
     display: flex;
-    animation: var(--n23snacks-marquee-speed) slide infinite linear;
+    animation: var(--speed) slide infinite linear;
 
     & > * {
-      margin-right: var(--n23snacks-marquee-gap);
+      margin-right: var(--gap);
       flex-shrink: 0;
     }
   }

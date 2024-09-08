@@ -34,10 +34,10 @@ export const Grid: React.FC<{
         className={styles.container}
         style={
           {
-            '--n23snacks-grid-widthMin': widthMin + 'px',
-            '--n23snacks-grid-widthMax': widthMax + 'px',
-            '--n23snacks-grid-padding': padding,
-            '--n23snacks-grid-margin': margin,
+            '--widthMin': widthMin + 'px',
+            '--widthMax': widthMax + 'px',
+            '--padding': padding,
+            '--margin': margin,
           } as React.CSSProperties
         }
         {...props}>
@@ -55,12 +55,12 @@ export const Grid: React.FC<{
       className={styles.columns}
       style={
         {
-          '--n23snacks-grid-column-mobile': col.mobile,
-          '--n23snacks-grid-column-tablet': col.tablet,
-          '--n23snacks-grid-column-small-desktop': col.smallDesktop,
-          '--n23snacks-grid-column-desktop': col.desktop,
-          '--n23snacks-grid-column-gap': gap.col,
-          '--n23snacks-grid-row-gap': gap.row,
+          '--col-mobile': col.mobile,
+          '--col-tablet': col.tablet,
+          '--col-small-desktop': col.smallDesktop,
+          '--col-desktop': col.desktop,
+          '--col-gap': gap.col,
+          '--row-gap': gap.row,
         } as React.CSSProperties
       }
       {...props}>

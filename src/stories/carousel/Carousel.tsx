@@ -144,7 +144,7 @@ export const Carousel: React.FC<{
       className={styles.carouselWrapper}
       style={
         {
-          '--n23snacks-carousel-gap': gap,
+          '--gap': gap,
         } as React.CSSProperties
       }>
       <div

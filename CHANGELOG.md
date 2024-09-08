@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 2.4.0
+
+### Minor Changes
+
+- Rethinking css variables
+
 ## 2.3.4
 
 ### Patch Changes

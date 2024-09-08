@@ -16,7 +16,7 @@ export const Picture: React.FC<{
       className={[styles.picture, loaded && styles.loaded, styles[kind ?? '']].join(' ')}
       style={
         {
-          '--n23snacks-picture-borderColor': borderColor,
+          '--borderColor': borderColor,
         } as React.CSSProperties
       }>
       <img

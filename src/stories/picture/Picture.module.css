@@ -3,7 +3,7 @@
     display: block;
 
     &.border {
-      border: 2px solid var(--n23snacks-picture-borderColor);
+      border: 2px solid var(--borderColor);
       box-sizing: border-box;
     }
 

@@ -11,9 +11,9 @@ export const Marquee: React.FC<{
       className={styles.marquee}
       style={
         {
-          '--n23snakcs-marquee-height': height,
-          '--n23snacks-marquee-gap': gap,
-          '--n23snacks-marquee-speed': speed,
+          '--height': height,
+          '--gap': gap,
+          '--speed': speed,
         } as React.CSSProperties
       }>
       <div className={styles.track}>

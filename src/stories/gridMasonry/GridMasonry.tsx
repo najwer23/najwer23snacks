@@ -127,12 +127,12 @@ export const GridMasonry: React.FC<{
       className={styles.masonryContainer}
       style={
         {
-          '--n23snacks-c-masonry-column-mobile': col.mobile,
-          '--n23snacks-c-masonry-column-tablet': col.tablet,
-          '--n23snacks-c-masonry-column-small-desktop': col.smallDesktop,
-          '--n23snacks-c-masonry-column-desktop': col.desktop,
-          '--n23snacks-c-masonry-column-gap': gap.col,
-          '--n23snacks-c-masonry-row-gap': gap.row,
+          '--col-mobile': col.mobile,
+          '--col-tablet': col.tablet,
+          '--col-small-desktop': col.smallDesktop,
+          '--col-desktop': col.desktop,
+          '--col-gap': gap.col,
+          '--row-gap': gap.row,
         } as React.CSSProperties
       }>
       {childrenMasonry.map(({ arrWithElm, name }) => (
