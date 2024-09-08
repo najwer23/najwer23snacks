@@ -23,16 +23,25 @@ export const Footer: React.FC<{
                 row: '30px',
               }}
               col={{
-                mobile: 1,
-                smallDesktop: 3,
-                desktop: 3,
-                tablet: 2,
+                mobile: 2,
+                smallDesktop: 4,
+                desktop: 4,
+                tablet: 3,
               }}>
               <div>
                 <TextBox tag="h3"> Author </TextBox>
-                <TextBox tag="p"> Mariusz Najwer, 2024 </TextBox>
+                <TextBox tag="p"> Mariusz Najwer </TextBox>
                 <TextBox tag="p" href="https://najwer23.github.io" target="_blank">
                   My website
+                </TextBox>
+              </div>
+              <div>
+                <TextBox tag="h3"> Shortcut </TextBox>
+                <TextBox tag="p" href="https://najwer23.github.io/resume/" target="_blank">
+                  Résumé
+                </TextBox>
+                <TextBox tag="p" href="https://najwer23.github.io/najwer23snacks/" target="_blank">
+                  Design system
                 </TextBox>
               </div>
               <div>
@@ -54,7 +63,7 @@ export const Footer: React.FC<{
                 </TextBox>
               </div>
               <div>
-                <TextBox tag="h3"> Utils </TextBox>
+                <TextBox tag="h3"> Rise </TextBox>
                 <Button
                   type="button"
                   onClick={() =>

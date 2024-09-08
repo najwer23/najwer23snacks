@@ -25,11 +25,11 @@
 
   @media (max-width: 767.98px) {
     .footerPush {
-      padding-bottom: 725px;
+      padding-bottom: 575px;
     }
 
     .footerContent {
-      height: 650px;
+      height: 500px;
     }
   }
 
