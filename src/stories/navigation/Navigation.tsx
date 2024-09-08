@@ -3,7 +3,6 @@ import { Grid } from '../grid';
 import { useWindowSize } from '../hooks';
 import { Button } from '../button';
 import { useEffect, useRef, useState } from 'react';
-import { ClassNames } from 'storybook/internal/theming';
 
 export const Navigation: React.FC<{
   navigationTitle?: React.ReactNode;

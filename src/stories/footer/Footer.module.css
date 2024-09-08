@@ -9,7 +9,8 @@
   }
 
   .footerPush {
-    padding-bottom: 125px;
+    /* footerContent + 75px */
+    padding-bottom: 425px;
   }
 
   .footerContainer {
@@ -19,8 +20,33 @@
   }
 
   .footerContent {
-    height: 75px;
-    display: flex;
-    flex-direction: row-reverse;
+    height: 350px;
+  }
+
+  @media (max-width: 767.98px) {
+    .footerPush {
+      padding-bottom: 725px;
+    }
+
+    .footerContent {
+      height: 650px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    .footerPush {
+      padding-bottom: 575px;
+    }
+
+    .footerContent {
+      height: 500px;
+    }
+  }
+
+  /* others */
+
+  .hr {
+    height: 1px;
+    width: 100%;
   }
 }
