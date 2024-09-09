@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './Input.module.css';
 import { validator, type ValidatorOptions } from '../validator';
 
@@ -8,16 +8,22 @@ export const Input: React.FC<
     label?: string;
     type?: string;
     kind?: 'input' | 'textarea';
+    inputState?: string;
     validatorOptions?: ValidatorOptions;
     innerRef?: React.RefObject<HTMLInputElement>;
   }
-> = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, ...props }): JSX.Element => {
+> = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, inputState, ...props }): JSX.Element => {
   const errorRef = useRef<HTMLDivElement | null>(null);
 
   const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target as HTMLInputElement | HTMLTextAreaElement;
 
     if (type == 'select' && e.type == 'blur') return;
+
+    if (type == 'calendar' && inputState != 'out') {
+      target.focus();
+      return;
+    }
 
     if (document.activeElement !== target) {
       if (errorRef.current) errorRef.current.textContent = '';
@@ -33,6 +39,12 @@ export const Input: React.FC<
       }
     }
   };
+
+  useEffect(() => {
+    if (inputState && inputState != 'out') {
+      if (innerRef?.current) innerRef.current.focus();
+    }
+  }, [inputState]);
 
   return (
     <div className={styles.inputWrapper}>

@@ -30,8 +30,8 @@ export const CarouselStandardSmallerChild: Story = {
     children: (
       <>
         {Array.from({ length: 20 }, (_, i) => (
-          <a draggable="false" href="/jkg">
-            <img draggable="false" key={i} src="https://picsum.photos/300/400" height="400" width="300" alt="" />
+          <a draggable="false" href="/jkg" key={i}>
+            <img draggable="false" src="https://picsum.photos/300/400" height="400" width="300" alt="" />
           </a>
         ))}
       </>
