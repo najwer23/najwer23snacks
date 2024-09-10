@@ -3,7 +3,7 @@ import { Input } from '../input';
 import styles from './Calendar.module.css';
 import { type ValidatorOptions } from '../validator';
 import { TextBox } from '../textbox';
-import { calculateNewDayOfMonth, generateDaysArray, getDateForInput, getDaysInMonth } from './Calendar.utils';
+import { addMonths, calculateNewDayOfMonth, generateDaysArray, getDateForInput, getDaysInMonth } from './Calendar.utils';
 
 export const Calendar: React.FC<
   React.InputHTMLAttributes<HTMLInputElement> & {
@@ -23,7 +23,7 @@ export const Calendar: React.FC<
 
   const [datePicked, setDatePicked] = useState(() => {
     const now = new Date();
-    now.setHours(0,0,0,0)
+    now.setHours(0, 0, 0, 0);
     return now;
   });
 
@@ -54,6 +54,10 @@ export const Calendar: React.FC<
 
   const changeDayOfMonth = (day: number) => {
     setDatePicked(calculateNewDayOfMonth(datePicked, day));
+  };
+
+  const changeMonth = (n: number) => {
+    setDatePicked(addMonths(datePicked, n));
   };
 
   const weekdays = useMemo(
@@ -100,20 +104,20 @@ export const Calendar: React.FC<
 
       <div className={[styles.dropdown, calendarState.open ? styles.open : ''].join(' ')}>
         <div className={[styles.controls].join(' ')}>
-          <div style={{ width: '25%' }} className={styles.controls}>
+          <div style={{ width: '25%' }} className={styles.controls} onClick={() => changeMonth(-1)}>
             L
           </div>
           <div style={{ width: '50%' }} className={styles.controls}>
             <TextBox>1</TextBox>
           </div>
-          <div style={{ width: '25%' }} className={styles.controls}>
+          <div style={{ width: '25%' }} className={styles.controls} onClick={() => changeMonth(1)}>
             P
           </div>
         </div>
         <div className={[styles.weekdays].join(' ')}>
           {weekdays.map((v) => (
             <div key={v} className={styles.weekdaysChild}>
-              <>{v}</>
+              {v}
             </div>
           ))}
         </div>
@@ -121,11 +125,15 @@ export const Calendar: React.FC<
         <div className={[styles.daysOfMonth].join(' ')}>
           {daysOfMonth.map((v) => (
             <div
-              key={v.day + datePicked.getMonth()}
-              className={styles.weekdaysChild}
-              onClick={() => changeDayOfMonth(v.day)}>
-              <>{(v.day <= 0 || v.day > getDaysInMonth(datePicked)) ? " " : v.day}</>
-              {/* <>{v.day}</> */}
+              key={v.day + String(datePicked)}
+              className={[
+                styles.weekdaysChild,
+                styles.daysOfMonthChild,
+                v.cssClass == 'active' && styles.daysOfMonthActive,
+                v.cssClass == 'clickable' && styles.daysOfMonthClickable,
+              ].join(' ')}
+              onClick={() => v.day > 0 && changeDayOfMonth(v.day)}>
+              {v.day <= 0 || v.day > getDaysInMonth(datePicked) ? ' ' : v.day}
             </div>
           ))}
         </div>
