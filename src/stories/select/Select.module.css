@@ -30,7 +30,7 @@
     }
   }
 
-  .selectDropdown {
+  .dropdown {
     position: absolute;
     z-index: 3;
     margin-top: 70px;
@@ -48,7 +48,7 @@
       display: block;
     }
 
-    .selectDropdownItem {
+    .dropdownItem {
       box-sizing: border-box;
       padding: 10px 10px;
       color: var(--najwer23snacks-input-input-font-color);

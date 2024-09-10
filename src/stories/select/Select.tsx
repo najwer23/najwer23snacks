@@ -80,10 +80,10 @@ export const Select: React.FC<
         {...props}
       />
 
-      <div className={[styles.selectDropdown, selectState.open ? styles.open : ''].join(' ')}>
+      <div className={[styles.dropdown, selectState.open ? styles.open : ''].join(' ')}>
         {selectOptions.map((value, i) => (
           <div
-            className={styles.selectDropdownItem}
+            className={styles.dropdownItem}
             key={i}
             onClick={() => {
               select.current!.value = value;
