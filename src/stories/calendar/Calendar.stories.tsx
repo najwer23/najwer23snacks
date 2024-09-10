@@ -17,9 +17,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Calendar: Story = {
   args: {
-    name: 'mylabel',
-    label: 'Label',
-    validatorOptions: [{ type: 'empty'}, {type: "email" }]
+    name: 'date',
+    label: 'Date',
+    validatorOptions: [{ type: 'empty' }, { type: 'date' }],
   },
   decorators: [
     (Story) => (

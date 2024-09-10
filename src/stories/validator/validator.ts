@@ -4,7 +4,7 @@
 //   { type: 'positiveNumber', options: { min: 1, max: 1000 } },
 // ];
 
-export type ValidatorType = 'empty' | 'email' | 'numberInRange';
+export type ValidatorType = 'empty' | 'email' | 'numberInRange' | 'date';
 
 interface ValidatorOption {
   type: ValidatorType;
@@ -26,6 +26,9 @@ export const validator = (value: string, validatorOptions: ValidatorOptions) => 
           break;
         case 'numberInRange':
           msg = testNumberInRange(value, option.options);
+          break;
+        case 'date':
+          msg = testDate(value);
           break;
         default: {
           msg = null;
@@ -54,6 +57,27 @@ const testNumberInRange = (value: string, options?: { min?: number; max?: number
 
   if (isNaN(number) || number < min || number > max) {
     return `The number must be between ${min} and ${max}`;
+  }
+
+  return null;
+};
+
+const testDate = (value: string): string | null => {
+  const checkIfDateIsCorrect = (inputDate: string | Date) => {
+    const date = typeof inputDate === 'string' ? new Date(inputDate) : inputDate;
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+
+    let monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) monthLength[1] = 29;
+
+    return day > 0 && day <= monthLength[month - 1];
+  };
+
+  if (!checkIfDateIsCorrect(value)) {
+    return `The date is invalid`;
   }
 
   return null;

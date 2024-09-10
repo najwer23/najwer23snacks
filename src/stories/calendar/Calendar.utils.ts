@@ -11,7 +11,6 @@ export const generateYears = (inputDate: string | Date) => {
   const date = typeof inputDate === 'string' ? new Date(inputDate) : inputDate;
   const startYear = date.getFullYear() - 4;
   const endYear = date.getFullYear() + 4;
-
   return Array.from({ length: endYear - startYear + 1 }, (_, index) => startYear + index);
 };
 

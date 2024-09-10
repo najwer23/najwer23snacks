@@ -3,6 +3,7 @@ import { Form as FormSnack, FormType } from '.';
 import { Button } from '../button';
 import { Input } from '../input';
 import { Select } from '../select';
+import { Calendar } from '../calendar';
 
 const meta = {
   title: 'Form/Form',
@@ -44,6 +45,8 @@ export const Form: Story = {
             name={'select'}
             validatorOptions={[{ type: 'empty' }]}
             selectOptions={['Option1', 'Option2']}></Select>
+
+          <Calendar name={'date'} label={'Date'} validatorOptions={[{ type: 'empty' }, { type: 'date' }]} />
 
           <Button type="submit">Submit</Button>
         </FormSnack>
