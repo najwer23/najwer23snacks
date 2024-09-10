@@ -15,10 +15,22 @@ export const Input: React.FC<
 > = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, inputState, ...props }): JSX.Element => {
   const errorRef = useRef<HTMLDivElement | null>(null);
 
+  useEffect(() => {
+    if (inputState && inputState != 'out') {
+      if (innerRef?.current) innerRef.current.focus();
+    } 
+    if (inputState && inputState == 'out') {
+      if (innerRef?.current) innerRef.current.blur();
+    }
+  }, [inputState]);
+
   const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target as HTMLInputElement | HTMLTextAreaElement;
-
-    if (type == 'select' && e.type == 'blur') return;
+    
+    if (type == 'select' && inputState != 'out') {
+      target.focus();
+      return;
+    }
 
     if (type == 'calendar' && inputState != 'out') {
       target.focus();
@@ -39,12 +51,6 @@ export const Input: React.FC<
       }
     }
   };
-
-  useEffect(() => {
-    if (inputState && inputState != 'out') {
-      if (innerRef?.current) innerRef.current.focus();
-    }
-  }, [inputState]);
 
   return (
     <div className={styles.inputWrapper}>

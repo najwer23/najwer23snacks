@@ -11,14 +11,33 @@ export const Select: React.FC<
     validatorOptions?: ValidatorOptions;
   }
 > = ({ validatorOptions, name, label, selectOptions, ...props }): JSX.Element => {
-  const selectWrapper = useRef<HTMLDivElement>(null);
+  const wrapper = useRef<HTMLDivElement>(null);
   const select = useRef<HTMLInputElement>(null);
-  const [open, setOpen] = useState<boolean>(false);
+  const icon = useRef<HTMLDivElement>(null);
+
+  const [selectState, setSelectState] = useState<{
+    open: boolean;
+    inputState: string;
+  }>({
+    open: false,
+    inputState: 'out',
+  });
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (selectWrapper.current && !selectWrapper.current.contains(event.target as HTMLElement) && open) {
-        setOpen(false);
+      if (
+        wrapper.current &&
+        !wrapper.current.contains(event.target as HTMLElement) &&
+        icon.current &&
+        !icon.current.contains(event.target as HTMLElement) &&
+        document.activeElement === select.current
+      ) {
+        setSelectState((prevState) => ({
+          ...prevState,
+          inputState: 'out',
+          open: false,
+        }));
+        select.current!.dispatchEvent(new Event('input', { bubbles: true }))
       }
     }
 
@@ -27,34 +46,52 @@ export const Select: React.FC<
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [open, selectWrapper]);
+  }, []);
 
   return (
-    <div ref={selectWrapper} className={[styles.selectWrapper, styles.arrowUp].join(' ')}>
+    <div ref={wrapper} className={[styles.wrapper].join(' ')}>
+      <div
+        ref={icon}
+        className={[styles.icon, selectState.open ? styles.iconRotate : ''].join(" ")}
+        onClick={() => {
+          setSelectState((prevState) => ({
+            ...prevState,
+            inputState: 'icon',
+            open: !prevState.open,
+          }));
+        }}></div>
+
       <Input
         innerRef={select}
         label={label}
         type="select"
         kind="input"
         name={name}
+        inputState={selectState.inputState}
         onClick={() => {
-          setOpen(!open);
+          setSelectState((prevState) => ({
+            ...prevState,
+            inputState: 'input',
+            open: !prevState.open,
+          }));
         }}
         readOnly
         validatorOptions={validatorOptions}
-        className={open ? styles.arrowDown : styles.arrowUp}
         {...props}
       />
 
-      <div className={[styles.selectDropdown, open ? styles.open : ''].join(' ')}>
+      <div className={[styles.selectDropdown, selectState.open ? styles.open : ''].join(' ')}>
         {selectOptions.map((value, i) => (
           <div
             className={styles.selectDropdownItem}
             key={i}
             onClick={() => {
               select.current!.value = value;
-              setOpen(false);
-              select.current!.dispatchEvent(new Event('input', { bubbles: true }));
+              setSelectState((prevState) => ({
+                ...prevState,
+                inputState: 'out',
+                open: false,
+              }));
             }}>
             {value}
           </div>

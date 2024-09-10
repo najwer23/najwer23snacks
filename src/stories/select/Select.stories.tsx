@@ -19,6 +19,7 @@ export const Select: Story = {
   args: {
     name: 'mylabel',
     label: 'Label',
+    validatorOptions: [{ type: 'empty' }],
     selectOptions: ['Option1', 'Option2'],
   },
   decorators: [
