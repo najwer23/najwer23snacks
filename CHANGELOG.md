@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 3.0.0
+
+### Major Changes
+
+- Calendar
+
 ## 2.4.0
 
 ### Minor Changes
