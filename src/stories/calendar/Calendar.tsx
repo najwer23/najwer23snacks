@@ -2,8 +2,16 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Input } from '../input';
 import styles from './Calendar.module.css';
 import { type ValidatorOptions } from '../validator';
-import { TextBox } from '../textbox';
-import { addMonths, calculateNewDayOfMonth, generateDaysArray, getDateForInput, getDaysInMonth } from './Calendar.utils';
+import {
+  addMonths,
+  calculateNewDayOfMonth,
+  changeYearInDate,
+  generateDaysArray,
+  generateYears,
+  getDateForInput,
+  getDaysInMonth,
+} from './Calendar.utils';
+import { Button } from '../button';
 
 export const Calendar: React.FC<
   React.InputHTMLAttributes<HTMLInputElement> & {
@@ -16,9 +24,14 @@ export const Calendar: React.FC<
   const icon = useRef<HTMLDivElement>(null);
   const calendar = useRef<HTMLInputElement>(null);
 
-  const [calendarState, setCalendarState] = useState<{ open: boolean; inputState: string }>({
+  const [calendarState, setCalendarState] = useState<{
+    open: boolean;
+    inputState: string;
+    dropDwonState: 'years' | 'days' | 'months';
+  }>({
     open: false,
     inputState: 'out',
+    dropDwonState: 'days',
   });
 
   const [datePicked, setDatePicked] = useState(() => {
@@ -40,6 +53,7 @@ export const Calendar: React.FC<
           ...prevState,
           inputState: 'out',
           open: false,
+          dropDwonState: 'days',
         }));
         calendar.current!.dispatchEvent(new Event('input', { bubbles: true }));
       }
@@ -60,13 +74,24 @@ export const Calendar: React.FC<
     setDatePicked(addMonths(datePicked, n));
   };
 
+  const changeYear = (n: number) => {
+    setDatePicked(changeYearInDate(datePicked, n));
+  };
+
   const weekdays = useMemo(
     () =>
       Array.from({ length: 7 }, (_, i) => new Date(2021, 0, (i + 4) % 7).toLocaleString('en-US', { weekday: 'short' })),
     [],
   );
 
-  const daysOfMonth = generateDaysArray(datePicked);
+  const months = useMemo(
+    () => Array.from({ length: 12 }, (_, i) => new Date(2021, i + 1, 0).toLocaleString('en-US', { month: 'short' })),
+    [],
+  );
+
+  const days = generateDaysArray(datePicked);
+
+  const years = generateYears(datePicked);
 
   return (
     <div ref={wrapper} className={[styles.wrapper].join(' ')}>
@@ -78,6 +103,7 @@ export const Calendar: React.FC<
             ...prevState,
             inputState: 'icon',
             open: !prevState.open,
+            dropDwonState: 'days',
           }));
         }}></div>
 
@@ -92,6 +118,7 @@ export const Calendar: React.FC<
             ...prevState,
             inputState: 'input',
             open: !prevState.open,
+            dropDwonState: 'days',
           }));
         }}
         value={getDateForInput(datePicked)}
@@ -99,44 +126,153 @@ export const Calendar: React.FC<
         validatorOptions={validatorOptions}
         className={styles.arrowUp}
         autoComplete="off"
+        readOnly
         {...props}
       />
 
       <div className={[styles.dropdown, calendarState.open ? styles.open : ''].join(' ')}>
-        <div className={[styles.controls].join(' ')}>
-          <div style={{ width: '25%' }} className={styles.controls} onClick={() => changeMonth(-1)}>
-            L
-          </div>
-          <div style={{ width: '50%' }} className={styles.controls}>
-            <TextBox>1</TextBox>
-          </div>
-          <div style={{ width: '25%' }} className={styles.controls} onClick={() => changeMonth(1)}>
-            P
-          </div>
-        </div>
-        <div className={[styles.weekdays].join(' ')}>
-          {weekdays.map((v) => (
-            <div key={v} className={styles.weekdaysChild}>
-              {v}
-            </div>
-          ))}
-        </div>
+        {/* YEARS */}
+        {calendarState.dropDwonState == 'years' && (
+          <>
+            <div className={[styles.controls].join(' ')} style={{ marginBottom: '10px' }}>
+              <div style={{ width: '30px' }} onClick={() => changeYear(datePicked.getFullYear() - 9)}>
+                <Button kind="calendar">
+                  <div className={[styles.buttonArrowLeft].join(' ')}> </div>
+                </Button>
+              </div>
 
-        <div className={[styles.daysOfMonth].join(' ')}>
-          {daysOfMonth.map((v) => (
-            <div
-              key={v.day + String(datePicked)}
-              className={[
-                styles.weekdaysChild,
-                styles.daysOfMonthChild,
-                v.cssClass == 'active' && styles.daysOfMonthActive,
-                v.cssClass == 'clickable' && styles.daysOfMonthClickable,
-              ].join(' ')}
-              onClick={() => v.day > 0 && changeDayOfMonth(v.day)}>
-              {v.day <= 0 || v.day > getDaysInMonth(datePicked) ? ' ' : v.day}
+              <div style={{ width: '60%' }} className={styles.controlsDate}>
+                <div
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => {
+                    setCalendarState((prevState) => ({
+                      ...prevState,
+                      dropDwonState: 'days',
+                    }));
+                  }}>
+                  {datePicked.getFullYear()}
+                </div>
+              </div>
+
+              <div style={{ width: '30px' }} onClick={() => changeYear(datePicked.getFullYear() + 9)}>
+                <Button kind="calendar">
+                  <div className={[styles.buttonArrowRight].join(' ')}> </div>
+                </Button>
+              </div>
             </div>
-          ))}
-        </div>
+
+            <div className={[styles.years].join(' ')}>
+              {years.map((v) => (
+                <div className={styles.yearsChild} key={v + String(datePicked)}>
+                  <Button
+                    style={{ width: '80px' }}
+                    onClick={() => {
+                      changeYear(v);
+                      setCalendarState((prevState) => ({
+                        ...prevState,
+                        dropDwonState: 'days',
+                      }));
+                    }}
+                    disabled={datePicked.getFullYear() == v}>
+                    {v}
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* MONTHS */}
+        {calendarState.dropDwonState == 'months' && (
+          <>
+            <div className={[styles.months].join(' ')}>
+              {months.map((v, i) => (
+                <div className={styles.monthsChild} key={v + String(datePicked)}>
+                  <Button
+                    style={{ width: '80px' }}
+                    onClick={() => {
+                      changeMonth(i - datePicked.getMonth());
+                      setCalendarState((prevState) => ({
+                        ...prevState,
+                        dropDwonState: 'days',
+                      }));
+                    }}
+                    disabled={datePicked.getMonth() == i}>
+                    {v}
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* DAYS */}
+        {calendarState.dropDwonState == 'days' && (
+          <>
+            <div className={[styles.controls].join(' ')}>
+              <div style={{ width: '30px' }} onClick={() => changeMonth(-1)}>
+                <Button kind="calendar">
+                  <div className={[styles.buttonArrowLeft].join(' ')}> </div>
+                </Button>
+              </div>
+
+              <div style={{ width: '60%' }} className={styles.controlsDate}>
+                <div
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => {
+                    setCalendarState((prevState) => ({
+                      ...prevState,
+                      dropDwonState: 'years',
+                    }));
+                  }}>
+                  {datePicked.getFullYear()}
+                </div>
+                <div>-</div>
+                <div
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => {
+                    setCalendarState((prevState) => ({
+                      ...prevState,
+                      dropDwonState: 'months',
+                    }));
+                  }}>
+                  {String(datePicked.getMonth() + 1).padStart(2, '0')}
+                </div>
+                <div>-</div>
+                <div>{String(datePicked.getDate()).padStart(2, '0')}</div>
+              </div>
+
+              <div style={{ width: '30px' }} onClick={() => changeMonth(1)}>
+                <Button kind="calendar">
+                  <div className={[styles.buttonArrowRight].join(' ')}> </div>
+                </Button>
+              </div>
+            </div>
+            <div className={[styles.weekdays].join(' ')}>
+              {weekdays.map((v) => (
+                <div key={v} className={styles.weekdaysChild}>
+                  {v}
+                </div>
+              ))}
+            </div>
+
+            <div className={[styles.days].join(' ')}>
+              {days.map((v) => (
+                <div
+                  key={v.day + String(datePicked)}
+                  className={[
+                    styles.weekdaysChild,
+                    styles.daysChild,
+                    v.cssClass == 'active' && styles.daysActive,
+                    v.cssClass == 'clickable' && styles.daysClickable,
+                  ].join(' ')}
+                  onClick={() => v.day > 0 && changeDayOfMonth(v.day)}>
+                  {v.day <= 0 || v.day > getDaysInMonth(datePicked) ? ' ' : v.day}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

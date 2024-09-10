@@ -1,6 +1,7 @@
 @layer najwer23snacksButton {
   .classic,
   .close,
+  .calendar,
   .strawberry {
     cursor: pointer;
     border: unset;
@@ -49,6 +50,10 @@
       box-shadow: none;
       background-color: var(--najwer23snacks-button-bg-color-disabled);
     }
+  }
+
+  .calendar {
+    padding: 7px 10px;
   }
 
   .strawberry {

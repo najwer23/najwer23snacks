@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 export const Button: React.FC<
   React.ButtonHTMLAttributes<HTMLButtonElement> & {
     children?: React.ReactNode;
-    kind?: 'classic' | 'strawberry' | 'close';
+    kind?: 'classic' | 'strawberry' | 'close' | 'calendar';
   }
 > = ({ children, kind = 'classic', ...props }): JSX.Element => {
   if (kind == 'close' || kind == 'strawberry') {

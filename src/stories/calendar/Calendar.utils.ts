@@ -7,12 +7,35 @@ export const calculateNewDayOfMonth = (inputDate: string | Date, newDayOfMonth: 
   return new Date(year, month, adjustedNewDayOfMonth);
 };
 
+export const generateYears = (inputDate: string | Date) => {
+  const date = typeof inputDate === 'string' ? new Date(inputDate) : inputDate;
+  const startYear = date.getFullYear() - 4;
+  const endYear = date.getFullYear() + 4;
+
+  return Array.from({ length: endYear - startYear + 1 }, (_, index) => startYear + index);
+};
+
+export const changeYearInDate = (inputDate: string | Date, n: number) => {
+  const date = typeof inputDate === 'string' ? new Date(inputDate) : inputDate;
+  const year = n;
+  const month = date.getMonth();
+  const day = date.getDate();
+  return new Date(year, month, day);
+};
+
 export const addMonths = (inputDate: string | Date, n: number) => {
   const date = typeof inputDate === 'string' ? new Date(inputDate) : inputDate;
   const year = date.getFullYear();
   const month = date.getMonth() + n;
   const day = date.getDate();
-  return new Date(year,month,day);
+  const newDate = new Date(year, month, day);
+
+  if (newDate.getDate() !== day) {
+    const lastDayOfMonth = new Date(year, month + 1, 0).getDate();
+    return new Date(year, month, lastDayOfMonth);
+  }
+
+  return newDate;
 };
 
 export const getDaysInMonth = (inputDate: string | Date): number => {
