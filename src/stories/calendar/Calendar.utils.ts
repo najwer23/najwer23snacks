@@ -11,7 +11,7 @@ export const addMonths = (inputDate: string | Date, n: number) => {
   const date = typeof inputDate === 'string' ? new Date(inputDate) : inputDate;
   const year = date.getFullYear();
   const month = date.getMonth() + n;
-  const day = date.getDay();
+  const day = date.getDate();
   return new Date(year,month,day);
 };
 
