@@ -1,5 +1,11 @@
 # najwer23snacks
 
+## 3.1.0
+
+### Minor Changes
+
+- Rotated arrow in select and fixed focus
+
 ## 3.0.0
 
 ### Major Changes
