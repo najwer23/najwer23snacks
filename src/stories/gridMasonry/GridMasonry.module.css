@@ -1,9 +1,9 @@
 @layer n23GridMasonry {
-  html:has(div[class*='masonryContainer']) {
+  /* html:has(div[class*='masonryContainer']) {
     & {
       overflow-y: scroll;
     }
-  }
+  } */
 
   .masonryContainer {
     display: flex;
