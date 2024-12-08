@@ -73,7 +73,7 @@ const testDate = (value: string): string | null => {
 
     if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) monthLength[1] = 29;
 
-    return day > 0 && day <= monthLength[month - 1];
+    return day > 0 && day <= monthLength[month];
   };
 
   if (!checkIfDateIsCorrect(value)) {
