@@ -37,7 +37,7 @@ export const Select: React.FC<
           inputState: 'out',
           open: false,
         }));
-        select.current!.dispatchEvent(new Event('input', { bubbles: true }))
+        select.current!.dispatchEvent(new Event('input', { bubbles: true }));
       }
     }
 
@@ -52,7 +52,7 @@ export const Select: React.FC<
     <div ref={wrapper} className={[styles.wrapper].join(' ')}>
       <div
         ref={icon}
-        className={[styles.icon, selectState.open ? styles.iconRotate : ''].join(" ")}
+        className={[styles.icon, selectState.open ? styles.iconRotate : ''].join(' ')}
         onClick={() => {
           setSelectState((prevState) => ({
             ...prevState,

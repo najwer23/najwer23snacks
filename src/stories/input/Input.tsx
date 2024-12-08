@@ -10,7 +10,7 @@ export const Input: React.FC<
     kind?: 'input' | 'textarea';
     inputState?: string;
     validatorOptions?: ValidatorOptions;
-    innerRef?: React.RefObject<HTMLInputElement>;
+    innerRef?: React.RefObject<HTMLInputElement | null>;
   }
 > = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, inputState, ...props }): JSX.Element => {
   const errorRef = useRef<HTMLDivElement | null>(null);

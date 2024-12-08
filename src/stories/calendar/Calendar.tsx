@@ -20,9 +20,9 @@ export const Calendar: React.FC<
     validatorOptions?: ValidatorOptions;
   }
 > = ({ validatorOptions, name, label, ...props }): JSX.Element => {
-  const wrapper = useRef<HTMLDivElement>(null);
-  const icon = useRef<HTMLDivElement>(null);
-  const calendar = useRef<HTMLInputElement>(null);
+  const wrapper = useRef<HTMLDivElement | null>(null);
+  const icon = useRef<HTMLDivElement | null>(null);
+  const calendar = useRef<HTMLInputElement | null>(null);
 
   const [calendarState, setCalendarState] = useState<{
     open: boolean;
