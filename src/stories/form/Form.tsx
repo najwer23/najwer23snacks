@@ -10,7 +10,7 @@ export interface FormType {
 export const Form: React.FC<{
   children: React.ReactNode;
   onSubmit: (formData: FormType) => void;
-}> = ({ children, onSubmit, ...props }): JSX.Element => {
+}> = ({ children, onSubmit, ...props }) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

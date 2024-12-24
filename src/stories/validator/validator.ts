@@ -47,7 +47,9 @@ const testEmptyString = (value: string): string | null => {
 };
 
 const testEmail = (value: string): string | null => {
-  return !/^(?!.*\.{2})(?!.*\.$)(?!^\.)([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(value) ? 'Incorrect email address' : null;
+  return !/^(?!.*\.{2})(?!.*\.$)(?!^\.)([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(value)
+    ? 'Incorrect email address'
+    : null;
 };
 
 const testNumberInRange = (value: string, options?: { min?: number; max?: number }): string | null => {

@@ -6,7 +6,7 @@ export const GridMasonryColumn: React.FC<{
   arrWithChildren?: ReactNode[];
   onHeightChange: (height: number) => void;
   id: string;
-}> = ({ arrWithChildren, onHeightChange, id }): JSX.Element => {
+}> = ({ arrWithChildren, onHeightChange, id }) => {
   const col = useRef<HTMLDivElement | null>(null);
 
   const { height = 0 } = useResizeObserver({

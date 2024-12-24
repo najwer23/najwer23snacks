@@ -6,7 +6,7 @@ import { Button } from '../button';
 export const Footer: React.FC<{
   footerWidthMax: number;
   hrColor1?: string;
-}> = ({ footerWidthMax, hrColor1 = '#2f3031' }): JSX.Element => {
+}> = ({ footerWidthMax, hrColor1 = '#2f3031' }) => {
   return (
     <footer>
       <div className={styles.footerPush}></div>

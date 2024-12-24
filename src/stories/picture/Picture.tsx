@@ -8,7 +8,7 @@ export const Picture: React.FC<{
   kind?: 'border';
   draggable?: boolean;
   borderColor?: string;
-}> = ({ src, alt, ar, kind, draggable, borderColor = 'black' }): JSX.Element => {
+}> = ({ src, alt, ar, kind, draggable, borderColor = 'black' }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (

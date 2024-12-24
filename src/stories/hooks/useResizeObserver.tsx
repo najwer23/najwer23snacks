@@ -8,7 +8,7 @@ type Size = {
   height: number | undefined;
 };
 
-type UseResizeObserverOptions<T extends HTMLElement = HTMLElement > = {
+type UseResizeObserverOptions<T extends HTMLElement = HTMLElement> = {
   ref: RefObject<T | null>;
   onResize?: (size: Size) => void;
   box?: 'border-box' | 'content-box' | 'device-pixel-content-box';

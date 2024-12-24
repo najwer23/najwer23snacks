@@ -23,7 +23,7 @@ export const GridMasonry: React.FC<{
   };
   delay?: number;
   onGridMasonryLoadEnd?: (isGridMasonryLoadEnd: boolean) => void;
-}> = ({ children, gap, col, onGridMasonryLoadEnd, delay = 0 }): JSX.Element => {
+}> = ({ children, gap, col, onGridMasonryLoadEnd, delay = 0 }) => {
   const [itemCnt, setItemCnt] = useState<number>(0);
   const { width } = useWindowSize();
 

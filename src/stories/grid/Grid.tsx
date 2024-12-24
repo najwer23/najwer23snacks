@@ -17,17 +17,7 @@ export const Grid: React.FC<{
     tablet: number;
   };
   layout: 'columns' | 'container';
-}> = ({
-  children,
-  widthMin = 0,
-  widthMax = 1920,
-  padding = 0,
-  margin = 'auto',
-  layout,
-  gap,
-  col,
-  ...props
-}): JSX.Element => {
+}> = ({ children, widthMin = 0, widthMax = 1920, padding = 0, margin = 'auto', layout, gap, col, ...props }) => {
   if (layout == 'container') {
     return (
       <div

@@ -10,7 +10,7 @@ export const Select: React.FC<
     selectOptions: string[];
     validatorOptions?: ValidatorOptions;
   }
-> = ({ validatorOptions, name, label, selectOptions, ...props }): JSX.Element => {
+> = ({ validatorOptions, name, label, selectOptions, ...props }) => {
   const wrapper = useRef<HTMLDivElement>(null);
   const select = useRef<HTMLInputElement>(null);
   const icon = useRef<HTMLDivElement>(null);

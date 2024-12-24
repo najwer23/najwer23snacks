@@ -19,7 +19,7 @@ export const Calendar: React.FC<
     label: string;
     validatorOptions?: ValidatorOptions;
   }
-> = ({ validatorOptions, name, label, ...props }): JSX.Element => {
+> = ({ validatorOptions, name, label, ...props }) => {
   const wrapper = useRef<HTMLDivElement | null>(null);
   const icon = useRef<HTMLDivElement | null>(null);
   const calendar = useRef<HTMLInputElement | null>(null);

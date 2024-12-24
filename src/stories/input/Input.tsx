@@ -12,13 +12,13 @@ export const Input: React.FC<
     validatorOptions?: ValidatorOptions;
     innerRef?: React.RefObject<HTMLInputElement | null>;
   }
-> = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, inputState, ...props }): JSX.Element => {
+> = ({ validatorOptions, name, label, type = 'text', kind = 'input', innerRef, inputState, ...props }) => {
   const errorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (inputState && inputState != 'out') {
       if (innerRef?.current) innerRef.current.focus();
-    } 
+    }
     if (inputState && inputState == 'out') {
       if (innerRef?.current) innerRef.current.blur();
     }
@@ -26,7 +26,7 @@ export const Input: React.FC<
 
   const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target as HTMLInputElement | HTMLTextAreaElement;
-    
+
     if (type == 'select' && inputState != 'out') {
       target.focus();
       return;

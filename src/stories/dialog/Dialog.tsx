@@ -8,7 +8,7 @@ export const Dialog: React.FC<{
   title?: string;
   children: React.ReactNode;
   modalClose: () => void;
-}> = ({ modalOpen, modalClose, children, title, ...props }): JSX.Element => {
+}> = ({ modalOpen, modalClose, children, title, ...props }) => {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {

@@ -22,7 +22,7 @@ export const Navigation: React.FC<{
   navigationMobile,
   navigationMobileAtWidth,
   navigationBottom,
-}): JSX.Element => {
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const [menuMobileOpen, setMenuMobileOpen] = useState<boolean>(false);
   const { width } = useWindowSize();

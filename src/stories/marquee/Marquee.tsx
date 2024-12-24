@@ -5,7 +5,7 @@ export const Marquee: React.FC<{
   height?: string;
   speed?: string;
   gap?: string;
-}> = ({ children, gap = '40px', height = '200px', speed = '10s' }): JSX.Element => {
+}> = ({ children, gap = '40px', height = '200px', speed = '10s' }) => {
   return (
     <div
       className={styles.marquee}
