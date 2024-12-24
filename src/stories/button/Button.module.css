@@ -58,6 +58,7 @@
 
   .strawberry {
     height: 50px;
+    padding: 12px;
 
     & > * {
       position: relative;
@@ -67,7 +68,7 @@
         background-color: white;
 
         height: 4px;
-        width: 20px;
+        width: 30px;
         border-radius: 10px;
         &::after,
         &::before {
@@ -79,14 +80,14 @@
         &::after {
           top: 10px;
           bottom: -10px;
-          left: 5px;
-          right: 5px;
+          left: 0;
+          right: 0;
         }
         &::before {
           top: -10px;
           bottom: 10px;
-          left: -5px;
-          right: -5px;
+          left: 0;
+          right: 0;
         }
       }
     }
@@ -97,29 +98,29 @@
 
     & > * {
       position: relative;
-      width: 20px; /* Adjust width as needed */
-      height: 25px; /* Adjust height as needed */
+      width: 20px; 
+      height: 25px; 
 
       & > * {
         &::before,
         &::after {
           content: '';
           position: absolute;
-          background-color: white; /* Color of the close button */
+          background-color: white; 
           border-radius: 10px;
-          height: 4px; /* Thickness of the bars */
-          width: 40px; /* Length of the bars */
-          left: -9px; /* Center the bars horizontally */
+          height: 4px; 
+          width: 40px; 
+          left: -9px; 
         }
 
         &::before {
-          top: 10.5px; /* Position the top bar */
-          transform: rotate(45deg); /* Initial rotation */
+          top: 10.5px; 
+          transform: rotate(45deg);
         }
 
         &::after {
-          top: 10.5px; /* Position the bottom bar */
-          transform: rotate(-45deg); /* Initial rotation */
+          top: 10.5px; 
+          transform: rotate(-45deg); 
         }
       }
     }
