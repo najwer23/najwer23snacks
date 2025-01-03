@@ -1,6 +1,6 @@
 {
   "name": "najwer23snacks",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
