@@ -45,7 +45,10 @@ export const Navigation: React.FC<{
     const handleClick = (event: MouseEvent) => {
       if (ref.current && event.target instanceof HTMLElement) {
         if (event.target.tagName === 'A' && ref.current.contains(event.target)) {
-          setMenuMobileOpen(false);
+          const timeoutId = setTimeout(() => {
+            setMenuMobileOpen(false);
+          }, 150);
+          return () => clearTimeout(timeoutId);
         }
       }
     };
